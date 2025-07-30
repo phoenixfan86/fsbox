@@ -20,19 +20,22 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function Page({ params }: { params: { page: string } }
-) {
+export default async function Page({ params }: { params: Promise<{ page: string }> }) {
+  const { page } = await params;
+
   const mods = getSortedModsData();
-  const page = parseInt(params.page, 10);
+  const pageNumber = parseInt(page, 10);
   const totalPages = Math.ceil(mods.length / MODS_PER_PAGE);
 
-  if (isNaN(page) || page < 1 || page > totalPages) {
-    notFound();
+  if (isNaN(pageNumber) || pageNumber < 1 || pageNumber > totalPages) {
+    return notFound();
   }
 
-  const startIndex = (page - 1) * MODS_PER_PAGE;
+  const startIndex = (pageNumber - 1) * MODS_PER_PAGE;
   const endIndex = startIndex + MODS_PER_PAGE;
   const pageMods = mods.slice(startIndex, endIndex);
+
+
 
   return (
     <div className="wrapper">
@@ -79,12 +82,12 @@ export default function Page({ params }: { params: { page: string } }
         </ul>
 
         <div className="mt-8 flex justify-center">
-          {page > 1 ? (
-            <Link href={page === 2 ? `/` : `/page/${page - 1}`} className="hover:-translate-x-2">
+          {pageNumber > 1 ? (
+            <Link href={pageNumber === 2 ? `/` : `/page/${pageNumber - 1}`} className="hover:-translate-x-2">
               ← Назад
             </Link>
           ) : <span />} <span className="text-center"> [ {page} ] </span>
-          {page < totalPages && (
+          {pageNumber < totalPages && (
             <Link href={`/page/${page + 1}`} className="hover:translate-x-2">
               Вперед →
             </Link>

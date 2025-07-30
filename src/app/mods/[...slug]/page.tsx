@@ -4,16 +4,11 @@ import { Metadata } from "next";
 import Markdown from "react-markdown";
 import { ModData } from "@/types/ModsData";
 
-type ParamsType = {
-  params: {
-    slug: string[]
-  }
-};
+type SlugParams = Promise<{ slug: string[] }>;
 
-
-export async function generateMetadata({ params }: ParamsType
-): Promise<Metadata> {
-  const slugPatch = params.slug.join("/");
+export async function generateMetadata({ params }: { params: SlugParams }): Promise<Metadata> {
+  const { slug } = await params;
+  const slugPatch = slug.join("/");
   const mod: ModData = getModData(slugPatch);
   if (!mod) return {};
   return {
@@ -22,14 +17,15 @@ export async function generateMetadata({ params }: ParamsType
   };
 }
 
-export default function ModPage({ params }: ParamsType) {
-  if (!params.slug || params.slug.length !== 2) {
+export default async function ModPage({ params }: { params: SlugParams }) {
+  const { slug } = await params;
+
+  if (!slug || slug.length !== 2) {
     return notFound();
   }
 
-  const [game, file] = params.slug;
+  const [game, file] = slug;
   const slugPath = `${game}/${file}`;
-
   const mod = getModData(slugPath);
 
   if (!mod) return notFound();
@@ -61,25 +57,37 @@ export default function ModPage({ params }: ParamsType) {
           className="postImg h-auto rounded mb-6"
         />
       </div>
+
       <div className="flex gap-5 flex-col mt-5">
         <h3 className="text-xl text-center">Опис моду</h3>
         <div className="text-sm text-(--color-3) px-10">
-          <Markdown >
-            {mod.content}
-          </Markdown>
+          <Markdown>{mod.content}</Markdown>
         </div>
+
         {mod.mod_dependencies && (
           <div className="px-3">
-            <span className="py-1 px-3 text-(--color-1) rounded-sm bg-(--bg-3)">Для роботи цього мода потрібен:
+            <span className="py-1 px-3 text-(--color-1) rounded-sm bg-(--bg-3)">
+              Для роботи цього мода потрібен:
             </span>
-            <span className="py-1 px-3 bg-(--color-4)"><a href={mod.dependencies_link} className="tracking-wide text-shadow-xs font-thin">{mod.mod_dependencies}</a></span>
+            <span className="py-1 px-3 bg-(--color-4)">
+              <a
+                href={mod.dependencies_link}
+                className="tracking-wide text-shadow-xs font-thin"
+              >
+                {mod.mod_dependencies}
+              </a>
+            </span>
           </div>
         )}
+
         <p>
           Автор:
-          <a href={mod.author_link} className="!text-(--primary-color-1)">{mod.author}</a>
+          <a href={mod.author_link} className="!text-(--primary-color-1)">
+            {mod.author}
+          </a>
         </p>
       </div>
+
       {mod.download_link && (
         <div className="text-center mt-6">
           <a
@@ -88,7 +96,7 @@ export default function ModPage({ params }: ParamsType) {
             rel="noopener noreferrer"
             className="downloadBtn"
           >
-            <span className="">Завантажити</span>
+            <span>Завантажити</span>
             <span className="text-extra">: {mod.mod_name}</span>
           </a>
         </div>
