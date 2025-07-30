@@ -8,7 +8,7 @@ type Params = {
   slug: string[];
 };
 
-export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+export function generateMetadata({ params }: { params: Params }): Metadata {
   const slug = params.slug.join("/");
   const mod: ModData = getModData(params.slug);
   if (!mod) return {};
