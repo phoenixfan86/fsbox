@@ -5,7 +5,7 @@ import Markdown from "react-markdown";
 import { ModData } from "@/types/ModsData";
 
 type Params = {
-  slug: string;
+  slug: string[];
 };
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
