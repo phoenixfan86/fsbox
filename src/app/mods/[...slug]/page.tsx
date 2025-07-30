@@ -15,7 +15,8 @@ type PageProps = {
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const mod: ModData = getModData(params.slug);
+  const slug = params.slug.join("/");
+  const mod: ModData = getModData(slug);
   if (!mod) return {};
   return {
     title: mod.title,
