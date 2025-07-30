@@ -9,6 +9,7 @@ type Params = {
 };
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+  const slug = params.slug.join("/");
   const mod: ModData = getModData(params.slug);
   if (!mod) return {};
   return {
