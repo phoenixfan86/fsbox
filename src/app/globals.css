@@ -1,26 +1,112 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #ffffff;
+	--foreground: #171717;
+	--primary-color-1: #f44336;
+	--bg-1: #111;
+	--bg-2: #1e1e1e;
+	--bg-3: #ffddab;
+	--color-1: #4f4f4f;
+	--color-2: #ddd;
+	--color-3: #5e5e5e;
+	--color-4: #a5a5a5;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
+}
+
+* {
+	text-decoration: none;
+	list-style: none;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background-image: url('/img/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	background-attachment: fixed;
+	color: var(--color-1);
+	font-family: var(--font-oswald-sans), Arial, Helvetica, sans-serif;
+}
+
+a {
+	color: #fff;
+	transition: all 0.3s ease-in;
+}
+
+a:hover {
+	color: var(--primary-color-1);
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: #fff;
+	box-shadow: 0 0 5px RGBA(0, 0, 0, 0);
+}
+
+main a {
+	color: var(--primary-color-1);
+}
+
+.postImg {
+	width: 300px;
+	filter: drop-shadow(1px 1px 10px #000);
+	transition: scale 0.5s ease;
+}
+
+.postImg:hover {
+	scale: 1.5;
+}
+
+.downloadBtn {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	width: fit-content;
+	max-width: 135px;
+	height: auto;
+	font-size: 20px;
+	letter-spacing: 1.5px;
+	color: #fff;
+	background-color: var(--primary-color-1);
+	border: none;
+	border-radius: 8px;
+	margin: 15px 0;
+	padding: 6px 12px;
+	filter: drop-shadow(1px 1px 10px #000);
+	transition: all 0.7s ease;
+}
+
+.downloadBtn:hover {
+	max-width: 100%;
+	color: #fff;
+	filter: drop-shadow(1px 1px 5px #8b8b8b);
+	transform: scale(0.9);
+}
+
+.downloadBtn:hover .text-extra {
+	opacity: 1;
+}
+
+.text-extra {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.inform {
+	background-color: var(--bg-3);
 }

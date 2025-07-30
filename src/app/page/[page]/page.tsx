@@ -1,19 +1,32 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { getSortedModsData } from "@/lib/mods";
 import { stripMarkdown } from "@/lib/stripMarkDown";
-import { ModData } from "@/types/ModsData";
 
 const MODS_PER_PAGE = 5;
 
-export default function Home() {
-  const mods: ModData[] = getSortedModsData();
-  const pageMods = mods.slice(0, MODS_PER_PAGE);
+type Props = {
+  params: {
+    page: string;
+  };
+};
+
+export default function Page({ params }: Props) {
+  const mods = getSortedModsData();
+  const page = parseInt(params.page, 10);
   const totalPages = Math.ceil(mods.length / MODS_PER_PAGE);
+
+  if (isNaN(page) || page < 1 || page > totalPages) {
+    notFound();
+  }
+
+  const startIndex = (page - 1) * MODS_PER_PAGE;
+  const endIndex = startIndex + MODS_PER_PAGE;
+  const pageMods = mods.slice(startIndex, endIndex);
 
   return (
     <div className="wrapper">
       <main className="p-6">
-        <h1 className="text-2xl font-bold mb-6">Нові моди</h1>
         <ul className="space-y-8">
           {pageMods.map((mod) => (
             <li key={mod.slug} className="p-4 rounded shadow">
@@ -55,13 +68,18 @@ export default function Home() {
           ))}
         </ul>
 
-        {totalPages > 1 && (
-          <div className="mt-8 mt-8 flex justify-center">
-            <Link href={`/page/2`} className="hover:translate-x-2">
+        <div className="mt-8 flex justify-center">
+          {page > 1 ? (
+            <Link href={page === 2 ? `/` : `/page/${page - 1}`} className="hover:-translate-x-2">
+              ← Назад
+            </Link>
+          ) : <span />} <span className="text-center"> [ {page} ] </span>
+          {page < totalPages && (
+            <Link href={`/page/${page + 1}`} className="hover:translate-x-2">
               Вперед →
             </Link>
-          </div>
-        )}
+          )}
+        </div>
       </main>
     </div>
   );
