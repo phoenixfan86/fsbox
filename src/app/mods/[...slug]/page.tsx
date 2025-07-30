@@ -14,7 +14,7 @@ type PageProps = {
   };
 };
 
-export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const mod: ModData = getModData(params.slug);
   if (!mod) return {};
   return {
