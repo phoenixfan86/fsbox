@@ -4,17 +4,15 @@ import { Metadata } from "next";
 import Markdown from "react-markdown";
 import { ModData } from "@/types/ModsData";
 
-type Params = {
-  slug: string[];
-};
-
-type PageProps = {
+type ParamsType = {
   params: {
-    slug: string[];
-  };
+    slug: string[]
+  }
 };
 
-export function generateMetadata({ params }: PageProps): Metadata {
+
+export async function generateMetadata({ params }: ParamsType
+): Promise<Metadata> {
   const slugPatch = params.slug.join("/");
   const mod: ModData = getModData(slugPatch);
   if (!mod) return {};
@@ -24,7 +22,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   };
 }
 
-export default function ModPage({ params }: PageProps) {
+export default function ModPage({ params }: ParamsType) {
   if (!params.slug || params.slug.length !== 2) {
     return notFound();
   }
