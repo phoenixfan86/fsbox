@@ -11,7 +11,17 @@ type Props = {
   };
 };
 
-export default function Page({ params }: Props) {
+export async function generateStaticParams() {
+  const mods = getSortedModsData();
+  const totalPages = Math.ceil(mods.length / MODS_PER_PAGE);
+
+  return Array.from({ length: totalPages }, (_, i) => ({
+    page: (i + 1).toString(),
+  }));
+}
+
+export default function Page({ params }: { params: { page: string } }
+) {
   const mods = getSortedModsData();
   const page = parseInt(params.page, 10);
   const totalPages = Math.ceil(mods.length / MODS_PER_PAGE);
