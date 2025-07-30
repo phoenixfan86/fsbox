@@ -8,8 +8,13 @@ type Params = {
   slug: string[];
 };
 
-export function generateMetadata({ params }: { params: Params }): Metadata {
-  const slug = params.slug.join("/");
+type PageProps = {
+  params: {
+    slug: string[];
+  };
+};
+
+export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const mod: ModData = getModData(params.slug);
   if (!mod) return {};
   return {
@@ -18,7 +23,7 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
   };
 }
 
-export default function ModPage({ params }: { params: Params }) {
+export default function ModPage({ params }: PageProps) {
   if (!params.slug || params.slug.length !== 2) {
     return notFound();
   }
