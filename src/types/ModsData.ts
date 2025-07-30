@@ -2,6 +2,7 @@ export type ModData = {
   title: string;
   mod_name: string;
   game: string;
+  gameSlug?: string;
   date: string;
   tags: string[];
   image_first: string;

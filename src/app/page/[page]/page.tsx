@@ -22,7 +22,6 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: { params: Promise<{ page: string }> }) {
   const { page } = await params;
-
   const mods = getSortedModsData();
   const pageNumber = parseInt(page, 10);
   const totalPages = Math.ceil(mods.length / MODS_PER_PAGE);
@@ -43,7 +42,7 @@ export default async function Page({ params }: { params: Promise<{ page: string 
         <ul className="space-y-8">
           {pageMods.map((mod) => (
             <li key={mod.slug} className="p-4 rounded shadow">
-              <Link href={`/mods/${mod.game}/${mod.slug}`}>
+              <Link href={`/mods/${mod.gameSlug}/${mod.slug}`}>
                 <div className="flex gap-4 cursor-pointer hover:opacity-90 transition">
                   <img
                     src={mod.image_first}
@@ -52,7 +51,7 @@ export default async function Page({ params }: { params: Promise<{ page: string 
                   />
                   <div className="flex gap-5 flex-col justify-between">
                     <div>
-                      <h2 className="text-xl font-semibold">{mod.title}</h2>
+                      <h2 className="text-xl font-semibold">{mod.title} для {mod.game}</h2>
                       <div className="flex items-center text-xs text-gray-500 gap-1">
                         <span className="material-symbols-outlined text-gray-400" style={{ fontSize: 16 }}>
                           calendar_month
@@ -88,7 +87,7 @@ export default async function Page({ params }: { params: Promise<{ page: string 
             </Link>
           ) : <span />} <span className="text-center"> [ {page} ] </span>
           {pageNumber < totalPages && (
-            <Link href={`/page/${page + 1}`} className="hover:translate-x-2">
+            <Link href={`/page/${pageNumber + 1}`} className="hover:translate-x-2">
               Вперед →
             </Link>
           )}

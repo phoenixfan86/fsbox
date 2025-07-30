@@ -1,7 +1,7 @@
 ---
 title: "Скачати мод Scholar"
 mod_name: "Scholar"
-game: "minecraft"
+game: "Minecraft"
 tags: ["Minecraft", "Mods", "Fabric", "Forge", "NeoForge", "1.20.1", "1.21.1"]
 author: "mortuusars"
 author_link: "https://www.curseforge.com/members/mortuusars"

@@ -28,7 +28,8 @@ export function getSortedModsData(): ModData[] {
         slug,
         title: data.title,
         mod_name: data.mod_name,
-        game,
+        game: data.game,
+        gameSlug: game,
         date: data.date,
         tags: data.tags || [],
         image_first: data.image_first || "",
@@ -64,7 +65,7 @@ export function getModData(slug: string | string[]): ModData {
 
   return {
     slug: file,
-    game,
+    game: data.game,
     title: data.title,
     mod_name: data.mod_name,
     date: data.date,
@@ -79,6 +80,34 @@ export function getModData(slug: string | string[]): ModData {
     content,
   };
 }
+
+export function getAllGames(): string[] {
+  return fs
+    .readdirSync(modsDirectory)
+    .filter((folder) => {
+      const folderPath = path.join(modsDirectory, folder);
+      return fs.statSync(folderPath).isDirectory();
+    });
+}
+
+export function getModsByGame(game: string): ModData[] {
+  const gamePath = path.join(modsDirectory, game);
+  if (!fs.existsSync(gamePath)) return [];
+
+  const fileNames = fs.readdirSync(gamePath);
+  return fileNames.map((fileName) => {
+    const fullPath = path.join(gamePath, fileName);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const { data, content } = matter(fileContents);
+
+    return {
+      ...(data as ModData),
+      content,
+      slug: `${game}/${fileName.replace(/\.md$/, "")}`,
+    };
+  });
+}
+
 
 
 

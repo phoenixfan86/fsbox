@@ -1,39 +1,16 @@
-import type { topNavItemsProps } from "@/types/TopNavItemsProps";
+import { getAllGames } from "@/lib/mods";
+import TopNav from "./TopNav";
 
 const Header = () => {
-  const topNavItems: topNavItemsProps[] = [
-    {
-      label: 'Home',
-      link: '#'
-    },
-    {
-      label: 'Minecraft',
-      link: '#'
-    },
-    {
-      label: 'Terraria',
-      link: '#'
-    },
-    {
-      label: 'Stardew valley',
-      link: '#'
-    },
-    {
-      label: 'Kerbal Space Program',
-      link: '#'
-    },
-  ]
+  const games = getAllGames()
 
 
   return (
     <header>
       <div className="h-10 flex items-center bg-(--bg-1)">
+        <TopNav games={games} />
         <ul className="flex gap-3 items-center mx-6 text-[11px] uppercase">
-          {topNavItems.map((item, index) => (
-            <li key={index}>
-              <a href={item.link}>{item.label}</a>
-            </li>
-          ))}
+
         </ul>
       </div>
       <div className="h-35 flex gap-30 items-center justify-between py-[30px] px-[25px] bg-(--bg-2)">

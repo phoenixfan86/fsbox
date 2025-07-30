@@ -32,7 +32,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
 
   return (
     <div className="flex flex-col p-6">
-      <h1 className="text-3xl font-bold mb-2">{mod.title}</h1>
+      <h1 className="text-3xl font-bold mb-2">{mod.title} для {mod.game}</h1>
       <p className="text-xs text-(--color-4) mb-4">Додано: {mod.date}</p>
       <div className="mb-5 space-x-2">
         {(mod.tags ?? []).map((tag) => (
@@ -51,11 +51,14 @@ export default async function ModPage({ params }: { params: SlugParams }) {
           alt={mod.title}
           className="postImg h-auto rounded mb-6"
         />
-        <img
-          src={mod.image_second}
-          alt={mod.title}
-          className="postImg h-auto rounded mb-6"
-        />
+        {mod.image_second && (
+          <img
+            src={mod.image_second}
+            alt={mod.title}
+            className="postImg h-auto rounded mb-6"
+          />
+        )}
+
       </div>
 
       <div className="flex gap-5 flex-col mt-5">
