@@ -9,13 +9,13 @@ const Header = () => {
       <div className="h-10 flex items-center bg-(--bg-1) ">
         <TopNav games={games} />
       </div>
-      <div className="h-35 flex gap-30 items-center justify-between py-[25px] px-[30px] bg-(--bg-2)">
-        <div className="w-[40%]">
+      <div className="h-35 flex gap-10 md:gap-30 items-center justify-between py-[25px] px-[25px] md:px-[30px] bg-(--bg-2)">
+        <div className="md:w-[40%]">
           <a href="/" className="group text-3xl uppercase font-bold">
             <h1 className="text-(--primary-color-1) group-hover:text-white transition-colors duration-600">FS<span className="text-white group-hover:text-(--primary-color-1) transition-colors duration-600">box</span>
             </h1>
           </a>
-          <span>Кращі моди для ігор</span>
+          <span className="text-xs md:text-sm" >Кращі моди для ігор</span>
         </div>
         <div className="w-[60%] flex gap-4 justify-end">
           <input

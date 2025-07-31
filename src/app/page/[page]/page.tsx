@@ -43,7 +43,7 @@ export default async function Page({ params }: { params: Promise<{ page: string 
           {pageMods.map((mod) => (
             <li key={mod.slug} className="p-4 rounded shadow">
               <Link href={`/mods/${mod.gameSlug}/${mod.slug}`}>
-                <div className="flex gap-4 cursor-pointer hover:opacity-90 transition">
+                <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 cursor-pointer hover:opacity-90 transition">
                   <img
                     src={mod.image_first}
                     alt={mod.title}
@@ -63,15 +63,17 @@ export default async function Page({ params }: { params: Promise<{ page: string 
                       {stripMarkdown(mod.content).slice(0, 100)}...
                     </p>
                     <div>
-                      <div className="mt-2 space-x-2">
+                      <div className="flex gap-1.5 flex-wrap mt-1 md:mt-2 space-x-0  md:space-x-2">
                         {mod.tags?.map((tag) => (
-                          <span key={tag} className="text-xs bg-gray-200 hover:bg-blue-500 hover:text-white duration-300 px-2 py-1 rounded-full">
+                          <span key={tag} className="text-[10px] md:text-xs bg-gray-200 hover:bg-blue-500 hover:text-white duration-300 px-2 py-1 rounded-full">
                             {tag}
                           </span>
                         ))}
                       </div>
-                      <span className="text-xs text-gray-500 block">Автор: {mod.author}</span>
-                      <span className="text-xs text-gray-500 block">Гра: {mod.game}</span>
+                      <div className="flex justify-between mt-4">
+                        <span className="text-xs text-gray-500 block">Автор: {mod.author}</span>
+                        <span className="text-xs text-gray-500 block">для: {mod.game}</span>
+                      </div>
                     </div>
                   </div>
                 </div>

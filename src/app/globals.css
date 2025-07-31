@@ -110,3 +110,13 @@ main a {
 .inform {
 	background-color: var(--bg-3);
 }
+
+@media (max-width: 425px) {
+	.wrapper {
+		max-width: 400px;
+	}
+
+	.postImg:hover {
+		scale: 1;
+	}
+}
