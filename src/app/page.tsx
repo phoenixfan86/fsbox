@@ -37,7 +37,7 @@ export default function Home() {
                     {stripMarkdown(mod.content).slice(0, 100)}...
                   </p>
                   <div>
-                    <div className="mt-2 space-x-2">
+                    <div className="flex gap-1.5 flex-wrap mt-1 md:mt-2 space-x-0  md:space-x-2">
                       {mod.tags?.map((tag) => (
                         <span key={tag} className="text-xs bg-gray-200 hover:bg-blue-500 hover:text-white duration-300 px-2 py-1 rounded-full">
                           {tag}
