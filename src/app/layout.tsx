@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Nunito, Oswald } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 
 const geistSans = Geist({
@@ -50,6 +51,7 @@ export default function RootLayout({
         <div className="wrapper">
           <Header />
           {children}
+          <Footer />
         </div>
       </body>
     </html>

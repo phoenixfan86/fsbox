@@ -47,7 +47,7 @@ export default async function Page({ params }: { params: Promise<{ page: string 
                   <img
                     src={mod.image_first}
                     alt={mod.title}
-                    className="!w-100 postImg hover:!scale-none object-cover rounded mb-3"
+                    className="postImg hover:!scale-none object-cover rounded "
                   />
                   <div className="flex gap-5 flex-col justify-between">
                     <div>

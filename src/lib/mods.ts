@@ -81,14 +81,40 @@ export function getModData(slug: string | string[]): ModData {
   };
 }
 
-export function getAllGames(): string[] {
+export function getAllGames(): { slug: string; name: string }[] {
+  return fs
+    .readdirSync(modsDirectory)
+    .filter((folder) => {
+      const folderPath = path.join(modsDirectory, folder);
+      return fs.statSync(folderPath).isDirectory();
+    })
+    .map((folder) => {
+      const folderPath = path.join(modsDirectory, folder);
+      const files = fs.readdirSync(folderPath);
+      const firstMd = files.find((f) => f.endsWith(".md"));
+      
+      if (!firstMd) {
+        return { slug: folder, name: folder }; // fallback
+      }
+
+      const fileContents = fs.readFileSync(path.join(folderPath, firstMd), "utf8");
+      const { data } = matter(fileContents);
+      return {
+        slug: folder,
+        name: data.game || folder, // fallback якщо нема game:
+      };
+    });
+}
+
+
+{/*export function getAllGames(): string[] {
   return fs
     .readdirSync(modsDirectory)
     .filter((folder) => {
       const folderPath = path.join(modsDirectory, folder);
       return fs.statSync(folderPath).isDirectory();
     });
-}
+}*/}
 
 export function getModsByGame(game: string): ModData[] {
   const gamePath = path.join(modsDirectory, game);

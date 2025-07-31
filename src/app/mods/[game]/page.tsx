@@ -7,7 +7,7 @@ import { stripMarkdown } from "@/lib/stripMarkDown";
 
 export function generateStaticParams() {
   const games = getAllGames();
-  return games.map((game) => ({ game }));
+  return games.map((game) => ({ game: game.slug }));
 }
 
 export default async function GameModsPage({ params }: { params: Promise<{ game: string }> }) {
@@ -34,7 +34,7 @@ export default async function GameModsPage({ params }: { params: Promise<{ game:
                 <img
                   src={mod.image_first}
                   alt={mod.title}
-                  className="!w-100 postImg hover:!scale-none object-cover rounded mb-3"
+                  className="postImg hover:!scale-none object-cover rounded"
                 />
                 <div className="flex gap-5 flex-col justify-between">
                   <div>
