@@ -9,8 +9,8 @@ image_first: "https://media.forgecdn.net/avatars/thumbnails/261/481/64/64/637217
 image_second: "https://imgur.com/bXFetOj.png"
 download_link: "https://www.curseforge.com/minecraft/mc-mods/rare-ice/files/all?page=1&amp;pageSize=20"
 mod_dependencies: "Для установки мода на Fabric потрібно установити Fabric API"
-dependencies_link: ""
-date: "2024-07-29"
+dependencies_link: "/mods/minecraft/fabric-api"
+date: "2024-07-31"
 ---
 
 Додає у світ рідкісний лід
