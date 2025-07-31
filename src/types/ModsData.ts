@@ -4,6 +4,7 @@ export type ModData = {
   game: string;
   gameSlug?: string;
   date: string;
+  updated?: string;
   tags: string[];
   image_first: string;
   image_second: string;

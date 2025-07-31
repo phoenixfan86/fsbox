@@ -94,14 +94,14 @@ export function getAllGames(): { slug: string; name: string }[] {
       const firstMd = files.find((f) => f.endsWith(".md"));
       
       if (!firstMd) {
-        return { slug: folder, name: folder }; // fallback
+        return { slug: folder, name: folder };
       }
 
       const fileContents = fs.readFileSync(path.join(folderPath, firstMd), "utf8");
       const { data } = matter(fileContents);
       return {
         slug: folder,
-        name: data.game || folder, // fallback якщо нема game:
+        name: data.game || folder,
       };
     });
 }
