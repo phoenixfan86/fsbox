@@ -11,6 +11,7 @@
 	--color-2: #ddd;
 	--color-3: #5e5e5e;
 	--color-4: #a5a5a5;
+	--color-5: rgb(0, 0, 0, 0.1);
 }
 
 @theme inline {

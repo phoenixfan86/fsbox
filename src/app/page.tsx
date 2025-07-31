@@ -11,7 +11,7 @@ export default function Home() {
   const totalPages = Math.ceil(mods.length / MODS_PER_PAGE);
 
   return (
-    <main className="py-[15px] px-[20px] md:py-[25px] md:px-[30px]">
+    <main className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px]">
       <h1 className="text-xl font-bold mb-6">Нові моди</h1>
       <ul className="space-y-4 md:space-y-8">
         {pageMods.map((mod) => (

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Nunito, Oswald } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Sidebar from "@/components/Sidebar";
 
 
 const geistSans = Geist({
@@ -50,7 +51,10 @@ export default function RootLayout({
       >
         <div className="wrapper">
           <Header />
-          {children}
+          <div className="md:flex">
+            {children}
+            <Sidebar />
+          </div>
           <Footer />
         </div>
       </body>

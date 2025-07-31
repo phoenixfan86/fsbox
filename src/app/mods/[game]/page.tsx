@@ -22,7 +22,7 @@ export default async function GameModsPage({ params }: { params: Promise<{ game:
   const gameName = gameMods[0].game;
 
   return (
-    <main className="py-[15px] px-[20px] md:py-[25px] md:px-[30px]">
+    <main className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px]">
       <h1 className="text-xl font-bold mb-6">
         Моди для {gameName}
       </h1>
