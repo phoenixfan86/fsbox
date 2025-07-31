@@ -38,10 +38,10 @@ export default async function Page({ params }: { params: Promise<{ page: string 
 
   return (
     <div className="wrapper">
-      <main className="p-6">
+      <main className="py-[15px] px-[20px] md:py-[25px] md:px-[30px]">
         <ul className="space-y-8">
           {pageMods.map((mod) => (
-            <li key={mod.slug} className="p-4 rounded shadow">
+            <li key={mod.slug} className="p-0 md:p-4 rounded shadow">
               <Link href={`/mods/${mod.gameSlug}/${mod.slug}`}>
                 <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 cursor-pointer hover:opacity-90 transition">
                   <img

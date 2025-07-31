@@ -11,11 +11,11 @@ export default function Home() {
   const totalPages = Math.ceil(mods.length / MODS_PER_PAGE);
 
   return (
-    <main className=" py-[15px] px-[20px] md:py-[25px] md:px-[30px]">
+    <main className="py-[15px] px-[20px] md:py-[25px] md:px-[30px]">
       <h1 className="text-xl font-bold mb-6">Нові моди</h1>
       <ul className="space-y-4 md:space-y-8">
         {pageMods.map((mod) => (
-          <li key={mod.slug} className="p-3 md:p-4 rounded shadow">
+          <li key={mod.slug} className="p-0 md:p-4 rounded shadow">
             <Link href={`/mods/${mod.gameSlug}/${mod.slug}`}>
               <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 cursor-pointer hover:opacity-90 transition">
                 <img
@@ -46,7 +46,7 @@ export default function Home() {
                     </div>
                     <div className="flex justify-between mt-4">
                       <span className="text-xs text-gray-500 block">Автор: {mod.author}</span>
-                      <span className="text-xs text-gray-500 block">Гра: {mod.game}</span>
+                      <span className="text-xs text-gray-500 block">для: {mod.game}</span>
                     </div>
                   </div>
                 </div>
