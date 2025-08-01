@@ -14,9 +14,10 @@ const Footer = () => {
         </a>
         <span className="text-xs md:text-sm">Кращі моди для ігор</span>
       </div>
-      <span className="text-xs">2025 Fan</span>
-      <div className="">
+      
+      <div className="flex flex-col items-start">
         <TopNav games={games} className="text-xs"/>
+        <span className="text-xs">2025 Fan</span>
       </div>
     </footer>
   );
