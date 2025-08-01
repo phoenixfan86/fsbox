@@ -19,7 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const mods = await getSortedModsData();
 
   const modEntries: MetadataRoute.Sitemap = mods.map((mod) => ({
-    url: `${baseUrl}/mods/${mod.slug}`,
+    url: `${baseUrl}/mods/${mod.game}/${mod.slug}`,
     lastModified: resolveLastModified(mod),
   }));
 
