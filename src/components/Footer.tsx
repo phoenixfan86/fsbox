@@ -16,7 +16,7 @@ const Footer = () => {
       </div>
       <span className="text-xs">2025 Fan</span>
       <div className="">
-        <TopNav games={games} />
+        <TopNav games={games} className="text-xs"/>
       </div>
     </footer>
   );
