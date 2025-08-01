@@ -1,22 +1,28 @@
 import Link from "next/link";
-import { getSortedModsData } from "@/lib/mods";
+import { getSortedModsData, getAllGames } from "@/lib/mods";
 import { pickRandomMods } from "@/lib/randomMods";
 import type { ModData } from "@/types/ModsData";
+import TopNav from "./TopNav";
 
 type Props = {
-  exclude?: string; // slug того, що зараз відкрито, щоб не повторювати
+  exclude?: string;
 };
 
 
 const Sidebar = ({ exclude }: Props) => {
+  const games = getAllGames();
   const allMods: ModData[] = getSortedModsData();
   const randoms = pickRandomMods(allMods, 3, exclude);
 
   if (randoms.length === 0) return null;
 
   return (
-    <aside className="hidden md:flex md:flex-col md:py-[25px] md:px-[30px] border-l-1 border-(--color-5)">
-      <div className="">
+    <aside className="hidden md:flex md:gap-10 md:flex-col md:py-[25px] md:px-[30px] border-l-1 border-(--color-5)">
+      <div className="shadow">
+        <h4>Моди для:</h4>
+        <TopNav games={games} variant="logos" className="items-start flex-col" />
+      </div>
+      <div className="mt-10">
         <h4>Інші моди:</h4>
         <ul className="space-y-1">
           {randoms.map((mod) => (
