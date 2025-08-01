@@ -9,8 +9,8 @@ image_first: "https://media.forgecdn.net/attachments/37/125/screenshotwaystones.
 image_second: "https://media.forgecdn.net/attachments/37/127/2016-06-07_10.png"
 download_link: "https://www.curseforge.com/minecraft/mc-mods/waystones/files/all?page=1&pageSize=20"
 mod_dependencies: "Для роботи моду потрібно встановити Balm"
-dependencies_link: ""
-date: "2024-07-31"
+dependencies_link: "/mods/minecraft/balm"
+date: "2024-08-1"
 ---
 
 Цей мод додає блоки, до яких гравець може повернутися після активації за допомогою сувою викривлення, перезаряджаємого каменю викривлення або використовуючи наявний камінь, щоб перестрибнути з одного на інший.
