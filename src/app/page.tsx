@@ -11,13 +11,13 @@ export default function Home() {
   const totalPages = Math.ceil(mods.length / MODS_PER_PAGE);
 
   return (
-    <main className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px]">
+    <main className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
       <h1 className="text-xl font-bold mb-6">Нові моди</h1>
       <ul className="space-y-4 md:space-y-8">
         {pageMods.map((mod) => (
           <li key={mod.slug} className="p-0 md:p-4 rounded shadow">
             <Link href={`/mods/${mod.gameSlug}/${mod.slug}`}>
-              <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 cursor-pointer hover:opacity-90 transition">
+              <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 md:py-4 cursor-pointer hover:opacity-90 transition">
                 <img
                   src={mod.image_first}
                   alt={mod.title}

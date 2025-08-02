@@ -112,6 +112,29 @@ main a {
 	background-color: var(--bg-3);
 }
 
+.about h3 {
+	color: var(--bg-2);
+	font-size: 16px;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+.about ul {
+	padding-left: 20px;
+}
+
+.about ul li {
+	list-style-type: square;
+}
+
+.about a {
+	color: var(--primary-color-1);
+}
+
+.about a:hover {
+	opacity: 0.7;
+}
+
 @media (max-width: 425px) {
 	.wrapper {
 		max-width: 400px;
