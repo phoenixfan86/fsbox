@@ -107,15 +107,6 @@ export function getAllGames(): { slug: string; name: string }[] {
 }
 
 
-{/*export function getAllGames(): string[] {
-  return fs
-    .readdirSync(modsDirectory)
-    .filter((folder) => {
-      const folderPath = path.join(modsDirectory, folder);
-      return fs.statSync(folderPath).isDirectory();
-    });
-}*/}
-
 export function getModsByGame(game: string): ModData[] {
   const gamePath = path.join(modsDirectory, game);
   if (!fs.existsSync(gamePath)) return [];
