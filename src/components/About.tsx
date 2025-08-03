@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const About = () => {
   return (
-    <section className="about flex gap-2 flex-col text-(--color-3) py-[15px] px-[40px] md:py-[25px] md:px-[30px] my-5 mx-5">
+    <section className="about flex gap-2 flex-col text-(--color-3) py-[15px] px-[10px] md:py-[25px] md:px-[30px] my-5 mx-5">
       <h2 className="text-lg text-(--bg-2) font-bold">Завантажуйте моди для улюблених ігор</h2>
       <p>Шукаєте нові враження від знайомих ігор? На нашому сайті зібрані найкращі моди для <Link href={`/mods/ksp`}>Kerbal Space Program (KSP)</Link>, <Link href={`/mods/minecraft`}>Minecraft</Link>, <Link href={`/mods/stardew-valley`}>Stardew Valley</Link>, <Link href={`/mods/terraria`}>Terraria</Link> та <Link href={`/mods/wow`}>World of Warcraft (WoW)</Link>. Тут ви знайдете як глобальні доповнення, що змінюють гру з нуля, так і невеликі, але корисні модифікації для щоденного використання. Кожен мод має детальний опис, скріншоти та інструкцію з встановлення.</p>
 
