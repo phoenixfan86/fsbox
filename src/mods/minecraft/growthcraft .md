@@ -2,7 +2,7 @@
 title: "Скачати мод Growthcraft"
 mod_name: "Growthcraft"
 game: "Minecraft"
-tags: ["Minecraft", "Mods", "Forge", "1.7.10","1.16.5", "1.20.1"]
+tags: ["Minecraft", "Mods", "Forge", "1.7.10","1.16.5", "1.12.2", "1.20.1"]
 author: "alatyami"
 author_link: "https://www.curseforge.com/members/alatyami"
 image_first: "https://media.forgecdn.net/attachments/236/50/2018-08-29_17.png"
