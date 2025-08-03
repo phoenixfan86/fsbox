@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import Markdown from "react-markdown";
 import { ModData } from "@/types/ModsData";
+import { stripMarkdown } from "@/lib/stripMarkDown";
 
 type SlugParams = Promise<{ slug: string[] }>;
 
@@ -13,7 +14,7 @@ export async function generateMetadata({ params }: { params: SlugParams }): Prom
   if (!mod) return {};
   return {
     title: mod.title,
-    description: `${mod.title} — мод від ${mod.author}`,
+    description: `${mod.title} — ${stripMarkdown(mod.content).slice(0, 100)}...`,
   };
 }
 
