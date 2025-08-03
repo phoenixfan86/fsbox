@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   title: "FSbox - кращі моди для ігор",
   description: "Cкачати моди для Minecraft, скачати моди для Stardew Valley, скачати моди для Terraria та інших ігор. Безплатно, швидко, без реєстрації.",
   icons: {
-    icon: "/public/favicon.ico"
+    icon: "/favicon.ico"
   }
 };
 

@@ -14,11 +14,11 @@ type Props = {
 }
 
 const LOGO_MAP: Record<string, { src: string; alt: string }> = {
-  "minecraft": { src: "img/logos/minecraft-logo.jpg", alt: "Minecraft" },
-  "stardew-valley": { src: "img/logos/stardew-valley-logo.jpg", alt: "Stardew Valley" },
-  "terraria": { src: "img/logos/terraria-logo.jpg", alt: "Terraria" },
-  "ksp": { src: "img/logos/ksp-logo.png", alt: "KSP" },
-  "wow": { src: "img/logos/wow-logo.png", alt: "WoW" },
+  "minecraft": { src: "/img/logos/minecraft-logo.jpg", alt: "Minecraft" },
+  "stardew-valley": { src: "/img/logos/stardew-valley-logo.jpg", alt: "Stardew Valley" },
+  "terraria": { src: "/img/logos/terraria-logo.jpg", alt: "Terraria" },
+  "ksp": { src: "/img/logos/ksp-logo.png", alt: "KSP" },
+  "wow": { src: "/img/logos/wow-logo.png", alt: "WoW" },
 };
 
 
@@ -26,9 +26,11 @@ const TopNav = ({ games, variant = "text", className = "" }: Props) => {
 
   return (
     <nav className={`w-full flex gap-2 items-center ${className}`}>
-      <Link href="/" className="text-[11px] uppercase">
-        Home
-      </Link>
+      {variant === "text" && (
+        <Link href="/" className="text-[11px] uppercase">
+          Home
+        </Link>
+      )}
       {games.map((game) => {
         const logo = LOGO_MAP[game.slug.toLowerCase()];
         return (
