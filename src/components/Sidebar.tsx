@@ -17,18 +17,18 @@ const Sidebar = ({ exclude }: Props) => {
   if (randoms.length === 0) return null;
 
   return (
-    <aside className="hidden md:flex md:gap-10 md:flex-col md:py-[25px] md:px-[30px] border-l-1 border-(--color-5)">
+    <aside className="hidden md:flex md:gap-10 md:flex-col md:p-[25px] border-l-1 border-(--color-5)">
       <div className="shadow">
         <h4>Моди для:</h4>
-        <TopNav games={games} variant="logos" className="items-start flex-col" />
+        <TopNav games={games} variant="logos" className="items-center flex-col py-5" />
       </div>
       <div className="mt-10">
         <h4>Інші моди:</h4>
-        <ul className="space-y-1">
+        <ul className="space-y-1 py-5">
           {randoms.map((mod) => (
             <li key={mod.slug} className=" p-2 rounded hover:opacity-90 transition hover:shadow">
               <Link href={`/mods/${mod.gameSlug}/${mod.slug}`} className="block">
-                <div className="flex gap-3 flex-col items-baseline">
+                <div className="flex gap-3 flex-col items-center">
                   <img
                     src={mod.image_first}
                     alt={mod.title}

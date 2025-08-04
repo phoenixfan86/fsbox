@@ -32,7 +32,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
   if (!mod) return notFound();
 
   return (
-    <div className="flex flex-col p-6">
+    <div className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
       <h1 className="text-3xl font-bold mb-2">{mod.title} для {mod.game}</h1>
       <p className="text-xs text-(--color-4) mb-4">Додано: {mod.date}</p>
       <div className="mb-5 space-x-2">
@@ -46,7 +46,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
         ))}
       </div>
 
-      <div className="flex gap-4 items-center justify-center">
+      <div className="flex gap-4 items-center justify-center pt-5">
         <img
           src={mod.image_first}
           alt={mod.title}
@@ -64,7 +64,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
 
       <div className="flex gap-5 flex-col mt-5">
         <h3 className="text-xl text-center">Опис моду</h3>
-        <div className="text-sm text-(--color-3) px-10">
+        <div className="text-sm text-(--color-3)">
           <Markdown>{mod.content}</Markdown>
         </div>
 
@@ -99,6 +99,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
             target="_blank"
             rel="noopener noreferrer"
             className="downloadBtn"
+            aria-label="Завантажити мод"
           >
             <span>Завантажити</span>
             <span className="text-extra">: {mod.mod_name}</span>
