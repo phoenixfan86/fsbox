@@ -15,7 +15,6 @@ export async function generateMetadata({
   const { game } = await params;
   const canonical = `https://fsbox.pp.ua/mods/${game}`;
 
-  // Capitalize first letter of game name for title
   const gameTitle = game.charAt(0).toUpperCase() + game.slice(1);
   const title = `Моди для ${gameTitle}`;
   const description = `Моди для ${game}`;
