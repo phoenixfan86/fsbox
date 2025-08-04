@@ -1,9 +1,14 @@
 import Link from "next/link";
+import { Metadata } from "next";
 import { getSortedModsData } from "@/lib/mods";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 import { ModData } from "@/types/ModsData";
 
 const MODS_PER_PAGE = 5;
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://fsbox.pp.ua/" },
+};
 
 export default function Home() {
   const mods: ModData[] = getSortedModsData();
