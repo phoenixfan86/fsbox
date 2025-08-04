@@ -2,16 +2,20 @@ import { getSortedModsData } from "@/lib/mods";
 import type { ModData } from "@/types/ModsData";
 import { NextResponse } from "next/server";
 
+function formatDate(date: Date): string {
+  return date.toISOString().split("T")[0]; // YYYY-MM-DD
+}
+
 function resolveLastModified(mod: ModData): string {
   if ("updated" in mod && mod.updated) {
     const d = new Date(mod.updated);
-    if (!isNaN(d.valueOf())) return d.toISOString();
+    if (!isNaN(d.valueOf())) return formatDate(d);
   }
   if (mod.date) {
     const d = new Date(mod.date);
-    if (!isNaN(d.valueOf())) return d.toISOString();
+    if (!isNaN(d.valueOf())) return formatDate(d);
   }
-  return new Date().toISOString();
+  return formatDate(new Date());
 }
 
 export async function GET() {
@@ -26,7 +30,7 @@ export async function GET() {
   const urls = [
     {
       loc: baseUrl,
-      lastmod: new Date().toISOString(),
+      lastmod: formatDate(new Date()),
     },
     ...validMods.map((mod) => ({
       loc: `${baseUrl}/mods/${encodeURIComponent(mod.gameSlug)}/${encodeURIComponent(mod.slug)}`,
