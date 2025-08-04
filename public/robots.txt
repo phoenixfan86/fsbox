@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fsbox.pp.ua/sitemap.xml/
+Sitemap: https://fsbox.pp.ua/sitemap.xml
