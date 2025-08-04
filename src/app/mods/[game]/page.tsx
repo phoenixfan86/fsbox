@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import { ModData } from "@/types/ModsData";
-import { getAllGames, getSortedModsData, getModData } from "@/lib/mods";
+import { getAllGames, getSortedModsData } from "@/lib/mods";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 
 type GameParams = Promise<{ game: string }>;
