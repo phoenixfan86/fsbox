@@ -42,12 +42,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="uk">
       <head>
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=calendar_month" />
-        <link rel="canonical" href="https://fsbox.pp.ua/" />
         <link rel="stylesheet" href="https://fsbox.pp.ua/page/2" />
         <meta property="og:title" content="FSBox pp ua" />
         <meta property="og:description" content="Cкачати моди для Minecraft, скачати моди для Stardew Valley, скачати моди для Terraria та інших ігор. Безплатно, швидко, без реєстрації." />

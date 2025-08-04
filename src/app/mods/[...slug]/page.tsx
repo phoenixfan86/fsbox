@@ -10,9 +10,11 @@ type SlugParams = Promise<{ slug: string[] }>;
 export async function generateMetadata({ params }: { params: SlugParams }): Promise<Metadata> {
   const { slug } = await params;
   const slugPatch = slug.join("/");
+  const canonical = `https://fsbox.pp.ua/${slugPatch}`
   const mod: ModData = getModData(slugPatch);
   if (!mod) return {};
   return {
+    alternates: { canonical },
     title: mod.title,
     description: `${mod.title} — ${stripMarkdown(mod.content).slice(0, 100)}...`,
   };
