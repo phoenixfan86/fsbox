@@ -1,8 +1,31 @@
 
 import Link from "next/link";
-import { notFound } from "next/navigation";
-import { getAllGames, getSortedModsData } from "@/lib/mods";
+import { Metadata } from "next";
+import { ModData } from "@/types/ModsData";
+import { getAllGames, getSortedModsData, getModData } from "@/lib/mods";
 import { stripMarkdown } from "@/lib/stripMarkDown";
+
+type GameParams = Promise<{ game: string }>;
+
+export async function generateMetadata({
+  params
+}: {
+  params: GameParams
+}): Promise<Metadata> {
+  const { game } = await params;
+  const canonical = `https://fsbox.pp.ua/mods/${game}`;
+
+  // Capitalize first letter of game name for title
+  const gameTitle = game.charAt(0).toUpperCase() + game.slice(1);
+  const title = `Моди для ${gameTitle}`;
+  const description = `Моди для ${game}`;
+
+  return {
+    alternates: { canonical },
+    title,
+    description,
+  };
+}
 
 
 export function generateStaticParams() {
