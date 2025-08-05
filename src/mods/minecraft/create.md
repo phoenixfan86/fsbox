@@ -2,6 +2,7 @@
 title: "Скачати мод Create"
 mod_name: "Create"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "Forge", "NeoForge", "1.16.5", "1.18", "1.20.1", "1.21.1"]
 author: "simibubi"
 author_link: "https://www.curseforge.com/members/simibubi"

@@ -2,6 +2,7 @@
 title: "Скачати мод OP Mod"
 mod_name: "OP Mod"
 game: "Terraria"
+game_collection: "/mods/terraria"
 tags: ["Terraria", "Mods",]
 author: "ls1"
 author_link: "https://www.curseforge.com/members/ls1"

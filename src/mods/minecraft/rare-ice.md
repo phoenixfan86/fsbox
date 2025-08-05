@@ -2,6 +2,7 @@
 title: "Скачати мод  Rare Ice (Forge/Fabric)"
 mod_name: " Rare Ice (Forge/Fabric)"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "Forge", "Fabric", "1.16.5", "1.20", "1.20.1", "1.21", "1.21.1", "1.21.3", "1.21.4", "1.21.5"]
 author: "shedaniel"
 author_link: "https://www.curseforge.com/members/shedaniel/"

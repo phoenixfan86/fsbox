@@ -2,6 +2,7 @@
 title: "Скачати мод Xaero's Minimap"
 mod_name: "Xaero's Minimap"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "Forge", "Fabric", "1.20.1","1.12.1", "1.21.1", "1.21.3", "1.21.4", "1.21.5"]
 author: "xaero96"
 author_link: "https://www.curseforge.com/members/xaero96"

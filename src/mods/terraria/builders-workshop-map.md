@@ -2,6 +2,7 @@
 title: "Скачати карту Builder's Workshop"
 mod_name: "Builder's Workshop"
 game: "Terraria"
+game_collection: "/mods/terraria"
 tags: ["Terraria", "Map", "1.4.1.1"]
 author: "telbuilds"
 author_link: "https://www.curseforge.com/members/telbuilds"

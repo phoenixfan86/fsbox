@@ -2,6 +2,7 @@
 title: "Скачати бібліотеку Bookshelf"
 mod_name: "Bookshelf"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "Fabric", "Forge", "NeoForge", "1.16.5", "1.20", "1.20.1", "1.20.2", "1.20.3", "1.20.4", "1.21.1"]
 author: "darkhaxdev"
 author_link: "https://www.curseforge.com/members/darkhaxdev"

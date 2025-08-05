@@ -2,6 +2,7 @@
 title: "Скачати мод More Biomes"
 mod_name: "More Biomes"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "Forge", "1.7.10","1.16.5", "1.20.1"]
 author: "lupin"
 author_link: "https://www.curseforge.com/members/lupin"

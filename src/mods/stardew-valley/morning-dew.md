@@ -2,6 +2,7 @@
 title: "Скачати мод Morning Dew"
 mod_name: "Morning Dew"
 game: "Stardew Valley"
+game_collection: "/mods/stardew-valley"
 tags: ["Stardew Valley", "Mods", "1.16.15"]
 author: "kehaan"
 author_link: "https://www.curseforge.com/members/kehaan"

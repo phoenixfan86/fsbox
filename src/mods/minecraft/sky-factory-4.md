@@ -2,6 +2,7 @@
 title: "Скачати мод SkyFactory 4"
 mod_name: "SkyFactory 4"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "1.12","1.12.1", "1.12.2"]
 author: "darkosto"
 author_link: "https://www.curseforge.com/members/darkosto"

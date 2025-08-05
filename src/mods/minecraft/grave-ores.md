@@ -2,6 +2,7 @@
 title: "Скачати мод Gravel Ores (Fabric)"
 mod_name: "Gravel Ores (Fabric)"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "Fabric", "1.16.5", "1.17.1"]
 author: "shedaniel"
 author_link: "https://www.curseforge.com/members/shedaniel"

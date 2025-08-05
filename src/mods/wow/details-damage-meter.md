@@ -2,6 +2,7 @@
 title: "Скачати мод Details! Damage Meter"
 mod_name: "Details! Damage Meter"
 game: "WoW"
+game_collection: "/mods/wow"
 tags: ["WoW", "Addon", "11.1.7"]
 author: "terciob"
 author_link: "https://www.curseforge.com/members/terciob"

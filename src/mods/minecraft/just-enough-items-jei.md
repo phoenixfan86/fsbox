@@ -2,6 +2,7 @@
 title: "Скачати мод Just Enough Items (JEI)"
 mod_name: "Just Enough Items (JEI)"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "Fabric", "Forge", "NeoForge", "1.16.5", "1.20.1", "1.20.2", "1.20.4", "1.20.6", "1.21.1", "1.21.3", "1.21.4", "1.21.5"]
 author: "mezz"
 author_link: "https://www.curseforge.com/members/mezz/projects"

@@ -2,6 +2,7 @@
 title: "Скачати мод Kerbal Planetary Base Systems"
 mod_name: "Kerbal Planetary Base Systems"
 game: "KSP"
+game_collection: "/mods/ksp"
 tags: ["KSP", "Mods", "1.12.3"]
 
 author: "nils2778"

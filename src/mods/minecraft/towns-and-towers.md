@@ -2,6 +2,7 @@
 title: "Скачати мод Towns and Towers"
 mod_name: "Towns and Towers"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "1.6.13", "1.6.14", "1.6.15"]
 author: "biban_auriu"
 author_link: "https://www.curseforge.com/members/biban_auriu"

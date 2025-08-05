@@ -2,6 +2,7 @@
 title: "Скачати мод Tractor Mod"
 mod_name: "Tractor Mod"
 game: "Stardew Valley"
+game_collection: "/mods/stardew-valley"
 tags: ["Stardew Valley", "Mods", "1.16.15"]
 author: "pathoschild"
 author_link: "https://www.curseforge.com/members/pathoschild/"

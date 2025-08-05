@@ -2,6 +2,7 @@
 title: "Скачати мод CocumiT's Well"
 mod_name: "CocumiT's Well"
 game: "Stardew Valley"
+game_collection: "/mods/stardew-valley"
 tags: ["Stardew Valley", "Mods", "1.6.13", "1.6.14", "1.6.15"]
 author: "cocumit"
 author_link: "https://www.curseforge.com/members/cocumit"

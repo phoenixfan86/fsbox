@@ -2,6 +2,7 @@
 title: "Скачати мод Cobbled Farms"
 mod_name: "Cobbled Farms"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "Forge", "Fabric", "1.7.10", "1.16.5", "1.20.2", "1.21", "1.21.1"]
 author: "cobbledstudios"
 author_link: "https://www.curseforge.com/members/cobbledstudios"

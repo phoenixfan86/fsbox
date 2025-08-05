@@ -2,6 +2,7 @@
 title: "Скачати мод Plumber"
 mod_name: "Plumber"
 game: "WoW"
+game_collection: "/mods/wow"
 tags: ["WoW", "Addon", "11.1.7"]
 author: "peterodox"
 author_link: "https://www.curseforge.com/members/peterodox"

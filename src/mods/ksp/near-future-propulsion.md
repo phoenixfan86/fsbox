@@ -2,6 +2,7 @@
 title: "Скачати мод Near Future Propulsion"
 mod_name: "Near Future Propulsion"
 game: "KSP"
+game_collection: "/mods/ksp"
 tags: ["KSP", "Mods", "1.12.5"]
 author: "nertea_01"
 author_link: "https://www.curseforge.com/members/nertea_01"

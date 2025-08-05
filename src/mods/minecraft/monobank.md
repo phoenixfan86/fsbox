@@ -2,6 +2,7 @@
 title: "Скачати мод Monobank"
 mod_name: "Monobank"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "Fabric", "Forge", "NeoForge", "1.18.2", "1.19.2", "1.19.3", "1.20.1", "1.21.1"]
 author: "mortuusars"
 author_link: "https://www.curseforge.com/members/mortuusars"

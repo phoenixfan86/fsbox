@@ -2,6 +2,7 @@
 title: "Скачати мод Fabric API"
 mod_name: "Fabric API"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "Fabric", "1.16.5", "1.17.1"]
 author: "modmuss50"
 author_link: "https://www.curseforge.com/members/modmuss50"

@@ -2,6 +2,7 @@
 title: "Скачати мод Kerbal Engineer Redux"
 mod_name: "Kerbal Engineer Redux"
 game: "KSP"
+game_collection: "/mods/ksp"
 tags: ["KSP", "Mods", "1.12.1", "1.12.2", "1.12.3", "1.12.5"]
 author: "forge_user_12915058"
 author_link: "https://www.curseforge.com/members/forge_user_12915058"

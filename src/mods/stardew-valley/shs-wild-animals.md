@@ -2,6 +2,7 @@
 title: "Скачати мод SH's Wild Animals"
 mod_name: "SH's Wild Animals"
 game: "Stardew Valley"
+game_collection: "/mods/stardew-valley"
 tags: ["Stardew Valley", "Mods", "1.16.15", "1.16.14"]
 author: "plurffle"
 author_link: "https://www.curseforge.com/members/plurffle"

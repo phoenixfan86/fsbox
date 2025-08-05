@@ -2,6 +2,7 @@
 title: "Скачати мод All the Mods 10 - ATM10"
 mod_name: "All the Mods 10 - ATM10"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "NeoForge", "1.21", "1.21.1"]
 author: "atmteam"
 author_link: "https://www.curseforge.com/members/atmteam"

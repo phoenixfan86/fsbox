@@ -2,6 +2,7 @@
 title: "Скачати мод The Pixelmon Modpack"
 mod_name: "The Pixelmon Modpack"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Modpack", "1.16.5","1.20.1", "1.20.2", "1.21.1"]
 author: "pixelmonmod"
 author_link: "https://www.curseforge.com/members/pixelmonmod"

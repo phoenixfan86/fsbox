@@ -2,6 +2,7 @@
 title: "Скачати мод Earth map (World)"
 mod_name: "Earth map (World)"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Map", "1.20", "1.20.1", "1.21"]
 author: "salotsar"
 author_link: "https://www.curseforge.com/members/salotsar"

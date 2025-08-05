@@ -2,6 +2,7 @@
 title: "Скачати бібліотеку Balm"
 mod_name: "Balm"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Libs", "Forge", "Fabric", "1.7.10", "1.16.5", "1.20.2", "1.21", "1.21.1", "1.21.3", "1.21.4", "1.21.5"]
 author: "blaytheninth"
 author_link: "https://www.curseforge.com/members/blaytheninth"

@@ -2,6 +2,7 @@
 title: "Скачати карту Oneblock (Spring to Life!)"
 mod_name: "Oneblock (Spring to Life!)"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Map", "1.16.5", "1.20", "1.20.1", "1.21", "1.21.1", "1.21.3", "1.21.5"]
 author: "crepi"
 author_link: "https://www.curseforge.com/members/crepi"

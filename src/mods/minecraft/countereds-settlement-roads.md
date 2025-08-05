@@ -2,6 +2,7 @@
 title: "Скачати мод Countered's Settlement Roads"
 mod_name: "Countered's Settlement Roads"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "Forge", "Fabric", "1.20.1","1.12.1", "1.21.1", "1.21.3", "1.21.4", "1.21.5"]
 author: "countered"
 author_link: "https://www.curseforge.com/members/countered"

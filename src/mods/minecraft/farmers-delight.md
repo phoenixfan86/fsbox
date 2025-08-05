@@ -2,6 +2,7 @@
 title: "Скачати мод Farmer's Delight"
 mod_name: "Farmer's Delight"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "Forge", "1.16.5", "1.20", "1.20.1", "1.21.1"]
 author: "vectorwing"
 author_link: "https://www.curseforge.com/members/vectorwing"
