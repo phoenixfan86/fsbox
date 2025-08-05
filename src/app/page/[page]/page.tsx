@@ -69,15 +69,16 @@ export default async function Page({ params }: { params: Promise<{ page: string 
                         </span>
                       ))}
                     </div>
-                    <div className="flex justify-between mt-4">
-                      <span className="text-xs text-gray-500 block">Автор: {mod.author}</span>
-                      <span className="text-xs text-gray-500 block">
-                        для: {mod.game}</span>
-                    </div>
                   </div>
                 </div>
               </div>
             </Link>
+            <div className="flex justify-between mt-4">
+              <span className="text-xs text-gray-500 block">Автор: {mod.author}</span>
+              <span className="text-xs text-gray-500 block">
+                <a href={mod.game_collection}>для: {mod.game}</a>
+              </span>
+            </div>
           </li>
         ))}
       </ul>
