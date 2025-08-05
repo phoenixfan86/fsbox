@@ -3,7 +3,7 @@ import type { ModData } from "@/types/ModsData";
 import { NextResponse } from "next/server";
 
 function formatDate(date: Date): string {
-  return date.toISOString().split("T")[0]; // YYYY-MM-DD
+  return date.toISOString().split("T")[0];
 }
 
 function resolveLastModified(mod: ModData): string {
