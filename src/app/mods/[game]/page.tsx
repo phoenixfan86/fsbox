@@ -23,6 +23,13 @@ export async function generateMetadata({
     alternates: { canonical },
     title,
     description,
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      type: "article",
+      siteName: "FSBox",
+    }
   };
 }
 

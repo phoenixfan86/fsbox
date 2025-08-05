@@ -7,7 +7,26 @@ import { ModData } from "@/types/ModsData";
 const MODS_PER_PAGE = 5;
 
 export const metadata: Metadata = {
-  alternates: { canonical: "https://fsbox.pp.ua/" },
+  title: "FSbox - скачати безкоштовно кращі моди для ігор",
+  description: "Cкачати моди для Minecraft, скачати моди для Stardew Valley, скачати моди для Terraria та інших ігор. Безплатно, швидко, без реєстрації.",
+  alternates: {
+    canonical: "https://fsbox.pp.ua/"
+  },
+  openGraph: {
+    title: "FSbox - скачати безкоштовно кращі моди для ігор",
+    description: "Cкачати моди для Minecraft, скачати моди для Stardew Valley, скачати моди для Terraria та інших ігор. Безплатно, швидко, без реєстрації.",
+    url: "https://fsbox.pp.ua/",
+    siteName: "FSBox",
+    type: "website",
+    images: [
+      {
+        url: "/img/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "FSBox — кращі моди для ігор",
+      },
+    ],
+  }
 };
 
 export default function Home() {

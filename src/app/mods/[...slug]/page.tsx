@@ -14,10 +14,28 @@ export async function generateMetadata({ params }: { params: SlugParams }): Prom
   const canonical = `https://fsbox.pp.ua/mods/${slugPatch}`
   const mod: ModData = getModData(slugPatch);
   if (!mod) return {};
+
+  const title = mod.title;
+  const description = `${mod.title} — ${stripMarkdown(mod.content).slice(0, 100)}...`
+
   return {
     alternates: { canonical },
     title: mod.title,
-    description: `${mod.title} — ${stripMarkdown(mod.content).slice(0, 100)}...`,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      siteName: "FSBox",
+      type: "article",
+      images: mod.image_first ? [
+        {
+          url: mod.image_first,
+          width: 300,
+          alt: mod.title,
+        },
+      ] : [],
+    }
   };
 }
 
