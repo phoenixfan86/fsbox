@@ -16,8 +16,8 @@ export async function generateMetadata({
   const canonical = `https://fsbox.pp.ua/mods/${game}`;
 
   const gameTitle = game.charAt(0).toUpperCase() + game.slice(1);
-  const title = `Моди для ${gameTitle}`;
-  const description = `Моди для ${game}`;
+  const title = `Моди для ігри ${gameTitle}`;
+  const description = `Моди, карти, шейдерпаки для ${game}`;
 
   return {
     alternates: { canonical },
