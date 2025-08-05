@@ -12,8 +12,8 @@ const Header = () => {
       <div className="h-35 flex gap-10 md:gap-30 items-center justify-between py-[25px] px-[25px] md:px-[30px] bg-(--bg-2)">
         <div className="md:w-[40%]">
           <a href="/" className="group text-3xl uppercase font-bold">
-            <h1 className="text-(--primary-color-1) group-hover:text-white transition-colors duration-600">FS<span className="text-white group-hover:text-(--primary-color-1) transition-colors duration-600">box</span>
-            </h1>
+            <span className="text-(--primary-color-1) group-hover:text-white transition-colors duration-600">FS<span className="text-white group-hover:text-(--primary-color-1) transition-colors duration-600">box</span>
+            </span>
           </a>
           <span className="text-xs md:text-sm" >Кращі моди для ігор</span>
         </div>
