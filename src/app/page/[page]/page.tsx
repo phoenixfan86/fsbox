@@ -71,7 +71,8 @@ export default async function Page({ params }: { params: Promise<{ page: string 
                     </div>
                     <div className="flex justify-between mt-4">
                       <span className="text-xs text-gray-500 block">Автор: {mod.author}</span>
-                      <span className="text-xs text-gray-500 block">для: {mod.game}</span>
+                      <span className="text-xs text-gray-500 block">
+                        для: {mod.game}</span>
                     </div>
                   </div>
                 </div>

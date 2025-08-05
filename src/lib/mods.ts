@@ -29,6 +29,7 @@ export function getSortedModsData(): ModData[] {
         title: data.title,
         mod_name: data.mod_name,
         game: data.game,
+        game_collection: data.game_collection,
         gameSlug: game,
         date: data.date,
         tags: data.tags || [],
@@ -66,6 +67,7 @@ export function getModData(slug: string | string[]): ModData {
   return {
     slug: file,
     game: data.game,
+    game_collection: data.game_collection,
     title: data.title,
     mod_name: data.mod_name,
     date: data.date,

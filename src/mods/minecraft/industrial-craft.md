@@ -2,6 +2,7 @@
 title: "Скачати мод Industrial Craft"
 mod_name: "Industrial Craft"
 game: "Minecraft"
+game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "1.7.10", "1.12.1", "1.12.2"]
 author: "sfplayer1"
 author_link: "https://www.curseforge.com/members/sfplayer1"

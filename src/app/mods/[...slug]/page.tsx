@@ -1,5 +1,6 @@
 import { getModData } from "@/lib/mods";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { Metadata } from "next";
 import Markdown from "react-markdown";
 import { ModData } from "@/types/ModsData";
@@ -107,7 +108,14 @@ export default async function ModPage({ params }: { params: SlugParams }) {
             <span className="text-extra">: {mod.mod_name}</span>
           </a>
         </div>
+
       )}
+      {mod.game_collection && (
+        <p>
+          Дивись більше модів для <Link href={mod.game_collection}>гри {mod.game}</Link>
+        </p>
+      )}
+
     </div>
   );
 }
