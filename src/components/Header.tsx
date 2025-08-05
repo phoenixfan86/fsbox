@@ -10,7 +10,7 @@ const Header = () => {
         <TopNav games={games} variant="text" className="mx-6" />
       </div>
       <div className="h-35 flex gap-10 md:gap-30 items-center justify-between py-[25px] px-[25px] md:px-[30px] bg-(--bg-2)">
-        <div className="md:w-[40%]">
+        <div className="md:w-[40%] flex flex-col">
           <a href="/" className="group text-3xl uppercase font-bold">
             <span className="text-(--primary-color-1) group-hover:text-white transition-colors duration-600">FS<span className="text-white group-hover:text-(--primary-color-1) transition-colors duration-600">box</span>
             </span>
