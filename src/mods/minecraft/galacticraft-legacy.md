@@ -1,6 +1,6 @@
 ---
-title: "Скачати мод TerraForged"
-mod_name: "TerraForged"
+title: "Скачати мод Galacticraft"
+mod_name: "Galacticraft"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "Forge", "1.7.10", "1.12.2"]
