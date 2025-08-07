@@ -10,7 +10,7 @@ image_first: "https://media.forgecdn.net/attachments/334/226/2021-01-14_02.png"
 image_second: "https://media.forgecdn.net/attachments/395/796/2021-09-19_12.png"
 download_link: "https://www.curseforge.com/minecraft/mc-mods/supplementaries/files/all?page=1&amp;pageSize=20"
 mod_dependencies: "Для роботи модифікації необхідна бібліотека Moonlight Library."
-dependencies_link: ""
+dependencies_link: "/mods/minecraft/moonlight-lib"
 date: "2024-08-7"
 ---
 
