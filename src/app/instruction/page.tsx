@@ -1,4 +1,28 @@
 import Instruсtion from "@/components/Instruction";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Інструкція як встановити моди скачані на FSbox",
+  description: "Встановлення модів — це найпростіший спосіб додати улюбленій грі нові можливості, предмети, локації та покращення графіки.",
+  alternates: {
+    canonical: "https://fsbox.pp.ua/instruction"
+  },
+  openGraph: {
+    title: "FSbox - скачати безкоштовно кращі моди для ігор",
+    description: "Встановлення модів — це найпростіший спосіб додати улюбленій грі нові можливості, предмети, локації та покращення графіки.",
+    url: "https://fsbox.pp.ua/instruction",
+    siteName: "FSBox",
+    type: "website",
+    images: [
+      {
+        url: "/img/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "FSBox — скачати кращі моди для ігор",
+      },
+    ],
+  }
+};
 
 const instruction = () => {
   return (
