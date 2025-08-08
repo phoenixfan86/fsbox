@@ -1,5 +1,5 @@
 ---
-title: "Just Enough Items (JEI) - скачати мод 1.21.5"
+title: "Just Enough Items (JEI) - скачати мод "
 mod_name: "Just Enough Items (JEI)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
