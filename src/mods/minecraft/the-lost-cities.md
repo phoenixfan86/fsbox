@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод The Lost Cities"
+title: "The Lost Cities - скачати мод"
 mod_name: "The Lost Cities"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

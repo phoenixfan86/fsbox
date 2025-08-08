@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод  Waystones"
+title: "Waystones - скачати мод"
 mod_name: "Waystones"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

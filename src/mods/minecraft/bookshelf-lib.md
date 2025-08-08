@@ -1,5 +1,5 @@
 ---
-title: "Скачати бібліотеку Bookshelf"
+title: "Bookshelf - скачати мод (бібліотеку)"
 mod_name: "Bookshelf"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

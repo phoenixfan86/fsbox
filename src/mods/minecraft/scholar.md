@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Scholar"
+title: "Scholar - скачати мод"
 mod_name: "Scholar"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

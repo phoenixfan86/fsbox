@@ -1,5 +1,5 @@
 ---
-title: "Moonlight Lib — скачати мод для Minecraft 1.21.5"
+title: "Moonlight Lib — скачати мод"
 mod_name: "Moonlight Lib"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

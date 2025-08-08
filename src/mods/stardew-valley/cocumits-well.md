@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод CocumiT's Well"
+title: "CocumiT's Well - скачати мод"
 mod_name: "CocumiT's Well"
 game: "Stardew Valley"
 game_collection: "/mods/stardew-valley"

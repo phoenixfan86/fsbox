@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Earth map (World)"
+title: "Earth map (World) - скачати мод"
 mod_name: "Earth map (World)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

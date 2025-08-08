@@ -34,6 +34,7 @@ export default function Home() {
   const pageMods = mods.slice(0, MODS_PER_PAGE);
   const totalPages = Math.ceil(mods.length / MODS_PER_PAGE);
 
+
   return (
     <main className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
       <h1 className="text-xl font-bold mb-6">Нові моди</h1>
@@ -49,7 +50,7 @@ export default function Home() {
                 />
                 <div className="flex gap-5 flex-col justify-between">
                   <div>
-                    <h2 className="text-xl font-semibold">{mod.title} для {mod.game}</h2>
+                    <h2 className="text-xl font-semibold">{mod.title} для {mod.game} {mod.tags?.[mod.tags.length - 1]}</h2>
                     <div className="flex items-center text-xs text-gray-500 gap-1">
                       <span className="material-symbols-outlined text-gray-400" style={{ fontSize: 16 }}>
                         calendar_month

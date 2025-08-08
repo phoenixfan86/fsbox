@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Fabric API"
+title: "Fabric API - скачати мод"
 mod_name: "Fabric API"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

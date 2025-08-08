@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Security Craft"
+title: "Security Craft - скачати мод"
 mod_name: "Security Craft"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

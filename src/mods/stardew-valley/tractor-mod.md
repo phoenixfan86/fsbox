@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Tractor Mod"
+title: "Tractor Mod - скачати мод"
 mod_name: "Tractor Mod"
 game: "Stardew Valley"
 game_collection: "/mods/stardew-valley"

@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Gravel Ores (Fabric)"
+title: "Gravel Ores (Fabric) - скачати мод"
 mod_name: "Gravel Ores (Fabric)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

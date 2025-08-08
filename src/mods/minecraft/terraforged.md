@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод TerraForged"
+title: "TerraForged - скачати мод"
 mod_name: "TerraForged"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

@@ -1,5 +1,5 @@
 ---
-title: "Скачати карту Builder's Workshop"
+title: "Builder's Workshop - скачати мод (карту)"
 mod_name: "Builder's Workshop"
 game: "Terraria"
 game_collection: "/mods/terraria"

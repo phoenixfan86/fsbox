@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Industrial Craft"
+title: "Industrial Craft - скачати мод"
 mod_name: "Industrial Craft"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

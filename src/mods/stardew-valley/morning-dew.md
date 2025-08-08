@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Morning Dew"
+title: "Morning Dew - скачати мод"
 mod_name: "Morning Dew"
 game: "Stardew Valley"
 game_collection: "/mods/stardew-valley"

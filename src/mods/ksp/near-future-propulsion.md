@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Near Future Propulsion"
+title: "Near Future Propulsion - скачати мод"
 mod_name: "Near Future Propulsion"
 game: "KSP"
 game_collection: "/mods/ksp"

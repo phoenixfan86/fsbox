@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Architectury API"
+title: "Architectury API - скачати мод"
 mod_name: "Architectury API"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

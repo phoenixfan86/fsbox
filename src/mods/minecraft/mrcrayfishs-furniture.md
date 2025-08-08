@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод MrCrayfish's Furniture (Legacy)"
+title: "MrCrayfish's Furniture (Legacy) - скачати мод"
 mod_name: "MrCrayfish's Furniture (Legacy)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

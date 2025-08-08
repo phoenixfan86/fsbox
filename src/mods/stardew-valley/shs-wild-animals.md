@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод SH's Wild Animals"
+title: "SH's Wild Animals - скачати мод"
 mod_name: "SH's Wild Animals"
 game: "Stardew Valley"
 game_collection: "/mods/stardew-valley"

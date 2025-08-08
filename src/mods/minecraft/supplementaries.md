@@ -1,5 +1,5 @@
 ---
-title: "Supplementaries — скачати мод для Minecraft 1.21.5"
+title: "Supplementaries — скачати мод"
 mod_name: "Immersive Railroading"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

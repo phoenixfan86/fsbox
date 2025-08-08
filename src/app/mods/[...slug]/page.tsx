@@ -8,6 +8,10 @@ import { stripMarkdown } from "@/lib/stripMarkDown";
 
 type SlugParams = Promise<{ slug: string[] }>;
 
+function getLastVersion(mod: ModData) {
+  return mod.tags?.[mod.tags.length - 1] ?? ''
+}
+
 export async function generateMetadata({ params }: { params: SlugParams }): Promise<Metadata> {
   const { slug } = await params;
   const slugPatch = slug.join("/");
@@ -16,11 +20,12 @@ export async function generateMetadata({ params }: { params: SlugParams }): Prom
   if (!mod) return {};
 
   const title = mod.title;
+  const lastVersion = getLastVersion(mod)
   const description = `${mod.title} — ${stripMarkdown(mod.content).slice(0, 100)}...`
 
   return {
     alternates: { canonical },
-    title: mod.title,
+    title: `${mod.title} для ${mod.game} ${lastVersion}`,
     description,
     openGraph: {
       title,
@@ -49,12 +54,13 @@ export default async function ModPage({ params }: { params: SlugParams }) {
   const [game, file] = slug;
   const slugPath = `${game}/${file}`;
   const mod = getModData(slugPath);
+  const lastVersion = getLastVersion(mod)
 
   if (!mod) return notFound();
 
   return (
     <div className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
-      <h1 className="text-3xl font-bold mb-2">{mod.title} для {mod.game}</h1>
+      <h1 className="text-3xl font-bold mb-2">{mod.title} для {mod.game} {lastVersion}</h1>
       <p className="text-xs text-(--color-4) mb-4">Додано: {mod.date}</p>
       <div className="mb-5 space-x-2">
         {(mod.tags ?? []).map((tag) => (

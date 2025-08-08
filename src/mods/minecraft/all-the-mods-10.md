@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод All the Mods 10 - ATM10"
+title: "All the Mods 10 (ATM10) - скачати мод "
 mod_name: "All the Mods 10 - ATM10"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод More Biomes"
+title: "More Biomes - скачати мод"
 mod_name: "More Biomes"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

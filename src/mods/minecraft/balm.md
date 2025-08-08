@@ -1,5 +1,5 @@
 ---
-title: "Скачати бібліотеку Balm"
+title: "Balm - скачати мод (бібліотеку)"
 mod_name: "Balm"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

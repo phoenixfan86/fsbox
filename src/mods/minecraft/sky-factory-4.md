@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод SkyFactory 4"
+title: "SkyFactory 4 - скачати мод"
 mod_name: "SkyFactory 4"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

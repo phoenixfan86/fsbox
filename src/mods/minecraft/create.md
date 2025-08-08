@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Create"
+title: "Create - скачати мод"
 mod_name: "Create"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

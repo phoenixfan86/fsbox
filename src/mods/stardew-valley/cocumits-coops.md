@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод CocumiT's Coops"
+title: "CocumiT's Coops - скачати мод"
 mod_name: "CocumiT's Coops"
 game: "Stardew Valley"
 game_collection: "/mods/stardew-valley"

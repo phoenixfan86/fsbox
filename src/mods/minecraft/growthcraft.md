@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Growthcraft"
+title: "Growthcraft - скачати мод"
 mod_name: "Growthcraft"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

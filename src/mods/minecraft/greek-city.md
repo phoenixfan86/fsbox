@@ -1,5 +1,5 @@
 ---
-title: "Скачати карту Greek City"
+title: "Greek City скачати мод (карту)"
 mod_name: "Greek City"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

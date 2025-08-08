@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Galacticraft"
+title: "Galacticraft - скачати мод"
 mod_name: "Galacticraft"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

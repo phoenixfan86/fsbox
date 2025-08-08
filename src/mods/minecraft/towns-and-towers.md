@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Towns and Towers"
+title: "Towns and Towers - скачати мод"
 mod_name: "Towns and Towers"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

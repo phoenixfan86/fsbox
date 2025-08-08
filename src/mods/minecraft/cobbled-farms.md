@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Cobbled Farms"
+title: "Cobbled Farms - скачати мод"
 mod_name: "Cobbled Farms"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

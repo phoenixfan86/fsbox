@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Advanced Loot Info (ALI)"
+title: "Advanced Loot Info (ALI) - скачати мод"
 mod_name: "Advanced Loot Info (ALI)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

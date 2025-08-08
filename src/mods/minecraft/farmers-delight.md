@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Farmer's Delight"
+title: "Farmer's Delight - скачати мод"
 mod_name: "Farmer's Delight"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

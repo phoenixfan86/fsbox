@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Enchantment Descriptions"
+title: "Enchantment Descriptions - скачати мод"
 mod_name: "Enchantment Descriptions"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод  Rare Ice (Forge/Fabric)"
+title: "Rare Ice - скачати мод"
 mod_name: " Rare Ice (Forge/Fabric)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

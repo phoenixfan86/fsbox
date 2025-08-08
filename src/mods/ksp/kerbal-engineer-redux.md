@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Kerbal Engineer Redux"
+title: "Kerbal Engineer Redux - скачати мод"
 mod_name: "Kerbal Engineer Redux"
 game: "KSP"
 game_collection: "/mods/ksp"

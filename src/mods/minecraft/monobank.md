@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Monobank"
+title: "Monobank - скачати мод"
 mod_name: "Monobank"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

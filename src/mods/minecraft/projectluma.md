@@ -1,5 +1,5 @@
 ---
-title: "Скачати шейдерпак projectLUMA Shaderpack"
+title: "projectLUMA - скачати мод (шейдерпак)"
 mod_name: "projectLUMA"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

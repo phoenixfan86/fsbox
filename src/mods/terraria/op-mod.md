@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод OP Mod"
+title: "OP Mod - скачати мод"
 mod_name: "OP Mod"
 game: "Terraria"
 game_collection: "/mods/terraria"

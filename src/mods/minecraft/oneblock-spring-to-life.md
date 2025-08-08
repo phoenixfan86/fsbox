@@ -1,5 +1,5 @@
 ---
-title: "Скачати карту Oneblock (Spring to Life!)"
+title: "Oneblock (Spring to Life!) скачати мод (карту)"
 mod_name: "Oneblock (Spring to Life!)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

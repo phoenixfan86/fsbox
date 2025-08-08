@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Xaero's Minimap"
+title: "Xaero's Minimap - скачати мод"
 mod_name: "Xaero's Minimap"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

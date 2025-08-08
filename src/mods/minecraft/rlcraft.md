@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод RLCraft"
+title: "RLCraft - скачати мод"
 mod_name: "RLCraft"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

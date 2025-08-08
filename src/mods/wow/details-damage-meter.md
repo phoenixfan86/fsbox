@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Details! Damage Meter"
+title: "Details! Damage Meter - скачати мод"
 mod_name: "Details! Damage Meter"
 game: "WoW"
 game_collection: "/mods/wow"

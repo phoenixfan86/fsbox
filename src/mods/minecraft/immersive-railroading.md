@@ -1,5 +1,5 @@
 ---
-title: "Immersive Railroading — мод на поїзди для Minecraft 1.16.5"
+title: "Immersive Railroading — скачати мод на поїзди"
 mod_name: "Immersive Railroading"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

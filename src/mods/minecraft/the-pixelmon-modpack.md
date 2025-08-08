@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод The Pixelmon Modpack"
+title: "The Pixelmon Modpack - скачати мод"
 mod_name: "The Pixelmon Modpack"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Kerbal Planetary Base Systems"
+title: "Kerbal Planetary Base Systems - скачати мод"
 mod_name: "Kerbal Planetary Base Systems"
 game: "KSP"
 game_collection: "/mods/ksp"

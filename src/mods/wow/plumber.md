@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Plumber"
+title: "Plumber - скачати мод"
 mod_name: "Plumber"
 game: "WoW"
 game_collection: "/mods/wow"

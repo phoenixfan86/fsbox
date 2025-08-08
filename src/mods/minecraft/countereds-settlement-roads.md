@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод Countered's Settlement Roads"
+title: "Countered's Settlement Roads - скачати мод"
 mod_name: "Countered's Settlement Roads"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

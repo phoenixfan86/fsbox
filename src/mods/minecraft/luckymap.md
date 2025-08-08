@@ -1,5 +1,5 @@
 ---
-title: "Скачати карту LuckyMap"
+title: "LuckyMap - скачати мод (карту)"
 mod_name: "LuckyMap"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

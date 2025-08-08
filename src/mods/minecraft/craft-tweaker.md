@@ -1,5 +1,5 @@
 ---
-title: "Скачати мод CraftTweaker"
+title: "CraftTweaker - скачати мод"
 mod_name: "CraftTweaker"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
