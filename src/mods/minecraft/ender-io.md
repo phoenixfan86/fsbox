@@ -10,7 +10,7 @@ image_first: "https://media.forgecdn.net/attachments/11/496/enderface.png"
 image_second: ""
 download_link: "https://www.curseforge.com/minecraft/mc-mods/ender-io/files/all?page=1&pageSize=20"
 mod_dependencies: "EnderCore"
-dependencies_link: "mods/minecraft/endercore"
+dependencies_link: "/mods/minecraft/endercore"
 date: "2024-08-8"
 ---
 
