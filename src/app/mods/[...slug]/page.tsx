@@ -73,7 +73,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
         ))}
       </div>
 
-      <div className="flex gap-4 items-center justify-center pt-5">
+      <div className="flex flex-col md:flex-row gap-4 items-center justify-center pt-5">
         <img
           src={mod.image_first}
           alt={mod.title}

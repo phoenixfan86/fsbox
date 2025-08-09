@@ -17,6 +17,7 @@ const LOGO_MAP: Record<string, { src: string; alt: string }> = {
   "minecraft": { src: "/img/logos/minecraft-logo.jpg", alt: "Minecraft" },
   "stardew-valley": { src: "/img/logos/stardew-valley-logo.jpg", alt: "Stardew Valley" },
   "terraria": { src: "/img/logos/terraria-logo.jpg", alt: "Terraria" },
+  "teardown": { src: "/img/logos/teardown-logo.png", alt: "Teardown" },
   "ksp": { src: "/img/logos/ksp-logo.png", alt: "KSP" },
   "wow": { src: "/img/logos/wow-logo.png", alt: "WoW" },
 };
