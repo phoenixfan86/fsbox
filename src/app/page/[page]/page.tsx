@@ -59,7 +59,7 @@ export default async function Page({ params }: { params: Promise<{ page: string 
                     </div>
                   </div>
                   <p className="text-sm text-gray-700 mr-10">
-                    {stripMarkdown(mod.content).slice(0, 100)}...
+                    {stripMarkdown(mod.content).slice(0, 150)}...
                   </p>
                   <div>
                     <div className="flex gap-1.5 flex-wrap mt-1 md:mt-2 space-x-0  md:space-x-2">
