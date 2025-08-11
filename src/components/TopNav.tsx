@@ -28,7 +28,7 @@ const TopNav = ({ games, variant = "text", className = "" }: Props) => {
   return (
     <nav className={`w-full flex gap-2 items-center ${className}`}>
       {variant === "text" && (
-        <Link href="/" className="text-[11px] uppercase">
+        <Link href="/" className="text-[9px] md:text-[11px] uppercase">
           Головна
         </Link>
       )}
@@ -49,14 +49,14 @@ const TopNav = ({ games, variant = "text", className = "" }: Props) => {
                 loading="lazy"
               />
             ) : (
-              <span className="text-[11px] uppercase">{game.name}</span>
+              <span className="text-[9px] md:text-[11px] uppercase">{game.name}</span>
             )}
           </Link>
 
         );
       })}
       {variant === "text" && (
-        <Link href="/instruction" className="text-[11px] uppercase">
+        <Link href="/instruction" className="text-[9px] md:text-[11px] uppercase">
           Інструкції
         </Link>
       )}

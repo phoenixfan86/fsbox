@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Nunito, Oswald } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
+import HeaderWrapper from "@/components/HeaderWrapper";
 import Footer from "@/components/Footer";
 import Sidebar from "@/components/Sidebar";
 import About from "@/components/About";
@@ -47,7 +47,7 @@ export default function RootLayout({
     <html lang="uk">
       <head>
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=calendar_month" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=all" />
         <link rel="stylesheet" href="https://fsbox.pp.ua/page/2" />
 
       </head>
@@ -55,7 +55,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} ${oswald.variable} antialiased`}
       >
         <div className="wrapper">
-          <Header />
+          <HeaderWrapper />
           <div className="md:flex">
             {children}
             <Sidebar />

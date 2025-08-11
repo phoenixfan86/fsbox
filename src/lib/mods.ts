@@ -127,6 +127,16 @@ export function getModsByGame(game: string): ModData[] {
   });
 }
 
+export function searchMods(query: string): ModData[] {
+  const allMods = getSortedModsData();
+  const lowerQuery = query.toLowerCase().trim();
 
+  if (!lowerQuery) return allMods;
 
-
+  return allMods.filter((mod) =>
+    mod.mod_name?.toLowerCase().includes(lowerQuery) ||
+    mod.title?.toLowerCase().includes(lowerQuery) ||
+    mod.tags?.some((tag) => tag.toLowerCase().includes(lowerQuery)) ||
+    mod.content?.toLowerCase().includes(lowerQuery)
+  );
+}
