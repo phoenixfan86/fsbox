@@ -52,7 +52,7 @@ const Header = ({ allMods, games }: Props) => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             autoComplete="off"
-            className="w-40 focus:w-1/2 text-white py-[5px] px-[10px] ring-1 ring-(--color-1) focus:ring-(--primary-color-1) rounded-[5px] outline-0 placeholder:text-sm duration-500" />
+            className="w-40 md:focus:w-1/2 text-white py-[5px] px-[10px] ring-1 ring-(--color-1) focus:ring-(--primary-color-1) rounded-[5px] outline-0 placeholder:text-sm duration-500" />
           <button className="py-[3px] px-[10px] text-white bg-(--primary-color-1) rounded-[5px] hover:scale-95 duration-300" onClick={handleSearch}>Пошук</button>
         </div>
         {results.length > 0 && (
