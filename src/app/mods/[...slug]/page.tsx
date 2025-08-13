@@ -1,10 +1,11 @@
-import { getModData } from "@/lib/mods";
+import { getModData, getSortedModsData } from "@/lib/mods";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Metadata } from "next";
 import Markdown from "react-markdown";
 import { ModData } from "@/types/ModsData";
 import { stripMarkdown } from "@/lib/stripMarkDown";
+import { pickStableMods } from "@/lib/randomGameMod";
 
 type SlugParams = Promise<{ slug: string[] }>;
 
@@ -54,9 +55,12 @@ export default async function ModPage({ params }: { params: SlugParams }) {
   const [game, file] = slug;
   const slugPath = `${game}/${file}`;
   const mod = getModData(slugPath);
-  const lastVersion = getLastVersion(mod)
+  const lastVersion = getLastVersion(mod);
 
   if (!mod) return notFound();
+
+  const allMods = getSortedModsData();
+  const similarMods = pickStableMods(allMods, mod, 3);
 
   return (
     <div className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
@@ -133,6 +137,20 @@ export default async function ModPage({ params }: { params: SlugParams }) {
           </a>
         </div>
 
+      )}
+
+      {similarMods.length > 0 && (
+        <div className="my-10">
+          <h3 className="text-xl font-bold mb-4">Добірка модів на {mod.game}</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {similarMods.map(simMod => (
+              <Link key={simMod.slug} href={`https://fsbox.pp.ua${mod.game_collection}/${simMod.slug}`} className="flex flex-col items-center justify-between p-3 rounded hover:shadow-lg transition !text-(--primary-color-1)">
+                <img src={simMod.image_first} alt={simMod.title} className="md:w-40 mb-2 rounded" />
+                <h4 className="font-semibold">{simMod.title}</h4>
+              </Link>
+            ))}
+          </div>
+        </div>
       )}
       {mod.game_collection && (
         <p>
