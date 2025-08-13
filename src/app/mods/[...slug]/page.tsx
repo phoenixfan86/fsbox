@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: SlugParams }): Prom
 
   const title = mod.title;
   const lastVersion = getLastVersion(mod)
-  const description = `${mod.title} — ${stripMarkdown(mod.content).slice(0, 160)}...`
+  const description = `${stripMarkdown(mod.content).slice(0, 160)}...`
 
   return {
     alternates: { canonical },
