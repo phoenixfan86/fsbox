@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: SlugParams }): Prom
 
   const title = mod.title;
   const lastVersion = getLastVersion(mod)
-  const description = `${mod.title} — ${stripMarkdown(mod.content).slice(0, 100)}...`
+  const description = `${mod.title} — ${stripMarkdown(mod.content).slice(0, 160)}...`
 
   return {
     alternates: { canonical },
@@ -139,7 +139,6 @@ export default async function ModPage({ params }: { params: SlugParams }) {
           Дивись більше модів для <Link href={mod.game_collection} className="!text-(--primary-color-1)"> {mod.game}</Link>
         </p>
       )}
-
     </div>
   );
 }
