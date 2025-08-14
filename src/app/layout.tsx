@@ -64,14 +64,15 @@ export default function RootLayout({
           <About />
           <Footer />
         </div>
-        <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-NP9SJ9M1Y9"></script>
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){
+            dataLayer.push(arguments)
+          }
           gtag('js', new Date());
 
-          gtag('config', 'G-NP9SJ9M1Y9');
+          gtag('config', 'G-NP9SJ9M1Y9');`}
         </script>
       </body>
     </html>
