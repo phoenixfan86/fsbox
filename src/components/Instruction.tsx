@@ -29,7 +29,7 @@ const Instruсtion = () => {
         <summary>Як встановити моди для Stardew Valley — інструкція для початківців</summary>
         <ul>
           <li>Скачайте мод для Stardew Valley з Nexus Mods або іншого перевіреного сайту.</li>
-          <li>Встановіть SMAPI — спеціальний мод-менеджер для Stardew Valley (обов’язковий для більшості модів).</li>
+          <li>Встановіть <a href="https://smapi.io/" target="_blank" className="!text-(--primary-color-1)">SMAPI</a> — спеціальний мод-менеджер для Stardew Valley (обов’язковий для більшості модів).</li>
           <li>Розархівуйте завантажений мод.</li>
           <li>Відкрийте папку з грою Stardew Valley.</li>
           <li>Перейдіть у директорію <code>/Mods/</code> (створіть її, якщо відсутня).</li>
@@ -41,7 +41,7 @@ const Instruсtion = () => {
       <details>
         <summary>Як встановити моди для Terraria — покрокова інструкція</summary>
         <ul>
-          <li>Встановіть TModLoader — офіційний інструмент для встановлення модів Terraria.</li>
+          <li>Встановіть <a href="https://store.steampowered.com/app/1281930/tModLoader/?l=ukrainian" target="_blank" className="!text-(--primary-color-1)">TModLoader</a> — офіційний інструмент для встановлення модів Terraria.</li>
           <li>Запустіть Terraria через TModLoader.</li>
           <li>Відкрийте вбудоване меню "Mods".</li>
           <li>Завантажте потрібний мод безпосередньо через TModLoader або з офіційного форуму Terraria.</li>
