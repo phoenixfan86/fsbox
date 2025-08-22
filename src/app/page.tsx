@@ -7,14 +7,14 @@ import { ModData } from "@/types/ModsData";
 const MODS_PER_PAGE = 5;
 
 export const metadata: Metadata = {
-  title: "FSbox - скачати безкоштовно кращі моди для ігор",
-  description: "Cкачати моди для Minecraft, скачати моди для Stardew Valley, скачати моди для Terraria та інших ігор. Безплатно, швидко, без реєстрації.",
+  title: "FSbox - скачати безкоштовно моди для Майнкрафт та для інших ігор",
+  description: "Cкачати моди на Майнкрафт, скачати моди для Stardew Valley, скачати моди для Terraria та інших ігор. Безплатно, швидко, без реєстрації.",
   alternates: {
     canonical: "https://fsbox.pp.ua/"
   },
   openGraph: {
-    title: "FSbox - скачати безкоштовно кращі моди для ігор",
-    description: "Cкачати моди для Minecraft, скачати моди для Stardew Valley, скачати моди для Terraria та інших ігор. Безплатно, швидко, без реєстрації.",
+    title: "FSbox - скачати безкоштовно моди для Майнкрафт та для інших ігор",
+    description: "Cкачати моди для Майнкрафт, скачати моди для Stardew Valley, скачати моди для Terraria та інших ігор. Безплатно, швидко, без реєстрації.",
     url: "https://fsbox.pp.ua/",
     siteName: "FSBox",
     type: "website",
@@ -77,7 +77,7 @@ export default function Home() {
             <div className="flex justify-between mt-4">
               <span className="text-xs text-gray-500 block">Автор: {mod.author}</span>
               <span className="text-xs text-gray-500 block">
-                <a href={mod.game_collection}>для: {mod.game}</a>
+                <a href={mod.game_collection}>мод для: {mod.game}</a>
               </span>
             </div>
           </li>
