@@ -4,14 +4,14 @@ const About = () => {
   return (
     <section className="about flex gap-2 flex-col text-(--color-3) py-[15px] px-[10px] md:py-[25px] md:px-[30px] my-5 mx-5">
       <h2 className="text-lg text-(--bg-2) font-bold">Завантажуйте моди для улюблених ігор</h2>
-      <p>Шукаєте нові враження від знайомих ігор? На нашому сайті зібрані найкращі моди для <Link href={`/mods/ksp`}>Kerbal Space Program (KSP)</Link>, <Link href={`/mods/minecraft`}>Minecraft</Link>, <Link href={`/mods/stardew-valley`}>Stardew Valley</Link>, <Link href={`/mods/terraria`}>Terraria</Link> та <Link href={`/mods/wow`}>World of Warcraft (WoW)</Link>. Тут ви знайдете як глобальні доповнення, що змінюють гру з нуля, так і невеликі, але корисні модифікації для щоденного використання. Кожен мод має детальний опис, скріншоти та інструкцію з встановлення.</p>
+      <p>Шукаєте нові враження від знайомих ігор? На нашому сайті зібрані найкращі моди для <Link href={`/mods/ksp`}>Kerbal Space Program (KSP)</Link>, <Link href={`/mods/minecraft`}>Майнкрафт</Link>, <Link href={`/mods/stardew-valley`}>Stardew Valley</Link>, <Link href={`/mods/terraria`}>Terraria</Link> та <Link href={`/mods/wow`}>World of Warcraft (WoW)</Link>. Тут ви знайдете як глобальні доповнення, що змінюють гру з нуля, так і невеликі, але корисні модифікації для щоденного використання. Кожен мод має детальний опис, скріншоти та інструкцію з встановлення.</p>
 
       <h3>Найпопулярніші моди та доповнення</h3>
       <p>Ми постійно оновлюємо каталог, додаючи свіжі розробки модмейкерів з усього світу.</p>
 
       <ul>
         <li><Link href={`/mods/ksp`}>KSP (Kerbal Space Program)</Link> — нові ракети, планети, двигуни, реалістична фізика та місії.</li>
-        <li><Link href={`/mods/minecraft`}>Minecraft</Link> — карти, шейдери, скіни, моби, біоми, нові механіки виживання.</li>
+        <li><Link href={`/mods/minecraft`}>Майнкрафт</Link> — карти, шейдери, скіни, моби, біоми, нові механіки виживання.</li>
         <li><Link href={`/mods/stardew-valley`}>Stardew Valley</Link> — нові культури, тварини, фестивалі, предмети інтер’єру та покращення ферми.</li>
         <li><Link href={`/mods/terraria`}>Terraria</Link> — нові боси, зброя, броня, матеріали та унікальні біоми.</li>
         <li><Link href={`/mods/wow`}>WoW (World of Warcraft)</Link> — аддони, інтерфейси, покращення PvP та PvE, нові квести.</li>
@@ -30,7 +30,7 @@ const About = () => {
       <p>Наш сайт повністю адаптований для смартфонів і планшетів, тому ви можете завантажувати моди де завгодно — у транспорті, на роботі чи вдома. Просто відкрийте потрібну сторінку, виберіть мод і почніть установку. Ми зробили все, щоб процес був швидким і зрозумілим.</p>
 
       <h3>Почніть грати по-новому</h3>
-      <p>Модифікації — це новий рівень гри. Вони додають улюбленим світам нові можливості, роблять геймплей цікавішим та дозволяють створювати власні історії. Завантажуйте моди для <Link href={`/mods/ksp`}>Kerbal Space Program (KSP)</Link>, <Link href={`/mods/minecraft`}>Minecraft</Link>, <Link href={`/mods/stardew-valley`}>Stardew Valley</Link>, <Link href={`/mods/terraria`}>Terraria</Link> та <Link href={`/mods/wow`}>World of Warcraft (WoW)</Link> прямо зараз і відкрийте для себе нові горизонти у знайомих іграх.</p>
+      <p>Модифікації — це новий рівень гри. Вони додають улюбленим світам нові можливості, роблять геймплей цікавішим та дозволяють створювати власні історії. Завантажуйте моди для <Link href={`/mods/ksp`}>Kerbal Space Program (KSP)</Link>, <Link href={`/mods/minecraft`}>Майнкрафт</Link>, <Link href={`/mods/stardew-valley`}>Stardew Valley</Link>, <Link href={`/mods/terraria`}>Terraria</Link> та <Link href={`/mods/wow`}>World of Warcraft (WoW)</Link> прямо зараз і відкрийте для себе нові горизонти у знайомих іграх.</p>
     </section >
   );
 }
