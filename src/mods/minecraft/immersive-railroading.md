@@ -1,5 +1,7 @@
 ---
-title: "Immersive Railroading — скачати мод на поїзди"
+title: "Immersive Railroading — download mod for"
+title_ua: "Immersive Railroading — скачати мод на поїзди"
+description: "The Immersive Railroading mod adds a new transportation system (items and players) to the game. It is based on real-world physics (where possible) and uses life-size models to convey the true scale and grandeur of railroading."
 mod_name: "Immersive Railroading"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhumQ7n
 download_link: "https://www.curseforge.com/minecraft/mc-mods/immersive-railroading/files/all?page=1&amp;pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-7"
+date: "2025-08-7"
 ---
 
 Мод Immersive Railroading додає до гри нову транспортну систему (предмети та гравці). Вона базується на фізиці реального світу (де це можливо) та використовує моделі в натуральну величину, щоб передати справжній масштаб та велич Railroading. Для повної функціональності рекомендується використовувати Immersive Engineering та Open Computers.

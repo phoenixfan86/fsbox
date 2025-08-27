@@ -1,5 +1,7 @@
 ---
-title: "Thaumcraft - скачати мод"
+title: "Thaumcraft - download mod for"
+title_ua: "Thaumcraft - скачати мод"
+description: "“Thaumaturgy... which provides a certain order for creating amazing creations that are perceived by the senses and cause great amazement in people.”Thaumaturgy is the ability of a magician to perform miracles."
 mod_name: "Thaumcraft"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

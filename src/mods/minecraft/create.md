@@ -1,5 +1,7 @@
 ---
-title: "Create - скачати мод"
+title: "Create - download mod for"
+title_ua: "Create - скачати мод"
+description: "Welcome to Create, a mod that offers a variety of tools and blocks for building, decorating, and aesthetic automation."
 mod_name: "Create"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

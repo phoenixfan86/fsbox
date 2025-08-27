@@ -1,5 +1,7 @@
 ---
-title: "Daldongri Days - скачати мод"
+title: "Daldongri Days - download mod for"
+title_ua: "Daldongri Days - скачати мод"
+description: "Daldongri: Seasons of the Heart is a story mod for Stardew Valley inspired by the heartfelt, relatable stories of Korean dramas such as Reply 1988."
 mod_name: "Daldongri Days"
 game: "Stardew Valley"
 game_collection: "/mods/stardewvalley"

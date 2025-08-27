@@ -1,5 +1,7 @@
 ---
-title: "The Lost Cities - скачати мод"
+title: "The Lost Cities - download mod (map) for"
+title_ua: "The Lost Cities - скачати мод"
+description: "The Lost Cities is a mod that allows the player to play in an old abandoned city instead of the usual overworld. When creating a world, you can select “Lost Cities” as the world type. You spawn in an old and partially destroyed city that occupies the entire overworld."
 mod_name: "The Lost Cities"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: "https://media.forgecdn.net/attachments/210/511/2017-06-03_19.png"
 download_link: "https://www.curseforge.com/minecraft/mc-mods/the-lost-cities/files/all?page=1&amp;pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-6"
+date: "2025-08-6"
 ---
 
 The Lost Cities — це мод, який дозволяє гравцеві грати в старому занедбаному місті замість звичайного надземного світу. Під час створення світу ви можете вибрати «Lost Cities» як тип світу. Ви з'являєтеся в старому і частково зруйнованому місті, яке займає весь надземний світ. Тут є шосе, мости, тунелі, система метро, безліч підземель зі спаунерами та трофеями тощо. Існують також різні попередні налаштування конфігурації (так звані профілі), які дозволяють змінювати спосіб генерації світу.

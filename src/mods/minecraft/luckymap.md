@@ -1,5 +1,7 @@
 ---
-title: "LuckyMap - скачати мод (карту)"
+title: "LuckyMap - download mod (map) for"
+title_ua: "LuckyMap - скачати мод (карту)"
+description: "LuckyMap is a Lucky Block map that can be played by up to 4 players."
 mod_name: "LuckyMap"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: "https://media.forgecdn.net/attachments/850/344/map.png"
 download_link: "https://www.curseforge.com/minecraft/worlds/luckymap/files/all?page=1&amp;pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-7"
+date: "2025-08-7"
 ---
 
-Карта є картою Lucky Block, на ній можуть грати до 4 гравців.
+LuckyMap є картою Lucky Block, на ній можуть грати до 4 гравців.

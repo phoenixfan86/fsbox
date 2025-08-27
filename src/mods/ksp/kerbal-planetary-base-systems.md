@@ -1,5 +1,7 @@
 ---
-title: "Kerbal Planetary Base Systems - скачати мод"
+title: "Kerbal Planetary Base Systems - download mod for"
+title_ua: "Kerbal Planetary Base Systems - скачати мод"
+description: "Have you ever said, “I don't want to live on this planet anymore”? Now you can! We at Kerman Kerman Orbit and Surface Structures are proud to present a brand new line of products for Kerbals who want nothing more than to live on another planet!"
 mod_name: "Kerbal Planetary Base Systems"
 game: "KSP"
 game_collection: "/mods/ksp"
@@ -16,7 +18,7 @@ download_link: "https://www.curseforge.com/kerbal/ksp-mods/kerbal-planetary-base
 mod_dependencies: ""
 dependencies_link: ""
 
-date: "2024-07-30"
+date: "2025-07-30"
 ---
 
 Ви коли-небудь говорили: «Я більше не хочу жити на цій планеті»? Тепер ви можете! Ми в Kerman Kerman Orbit and Surface Structures з гордістю представляємо вам абсолютно нову лінійку продуктів для кербалів, які не хочуть нічого більше, ніж жити на іншій планеті!

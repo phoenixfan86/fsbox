@@ -1,5 +1,7 @@
 ---
-title: "Myslot - скачати аддон"
+title: "Myslot - download addon for"
+title_ua: "Myslot - скачати аддон"
+description: "Myslot is an add-on for World of Warcraft that allows you to transfer settings between accounts. Myslot can export your action bar layout, hotkeys, and keybindings as easy-to-transfer text that you can copy and paste into Notepad."
 mod_name: "Myslot"
 game: "WoW"
 game_collection: "/mods/wow"

@@ -1,5 +1,7 @@
 ---
-title: "CocumiT's Well - скачати мод"
+title: "CocumiT's Well - download mod for"
+title_ua: "CocumiT's Well - скачати мод"
+description: "The CocumiT's Well mod adds new seasonal wells to your farm in Stardew Valley."
 mod_name: "CocumiT's Well"
 game: "Stardew Valley"
 game_collection: "/mods/stardew-valley"

@@ -1,5 +1,7 @@
 ---
-title: "TomCat's Tours - скачати мод"
+title: "TomCat's Tours - download addon for"
+title_ua: "TomCat's Tours - скачати мод"
+description: "The TomCat's Tours add-on features maps, quests, rare trackers, and guides for holiday tours."
 mod_name: "TomCat's Tours"
 game: "WoW"
 game_collection: "/mods/wow"

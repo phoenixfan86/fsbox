@@ -1,5 +1,7 @@
 ---
-title: "Oneblock (Spring to Life!) скачати мод (карту)"
+title: "Oneblock (Spring to Life!) download mod (map)"
+title_ua: "Oneblock (Spring to Life!) скачати мод (карту)"
+description: "Explore Oneblock in a new style. Redesigned villagers, trials, progress changes, indicators, and much more."
 mod_name: "Oneblock (Spring to Life!)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: "https://media.forgecdn.net/attachments/1236/719/sc3-png.png"
 download_link: "https://www.curseforge.com/minecraft/worlds/oneblock/files/all?page=1&amp;pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-07-31"
+date: "2025-07-31"
 ---
 
 Досліджуйте Oneblock у новому стилі. Перероблені селяни, випробування, зміни прогресу, індикатори і багато іншого

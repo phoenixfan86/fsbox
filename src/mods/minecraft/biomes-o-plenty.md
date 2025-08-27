@@ -1,5 +1,7 @@
 ---
-title: "Biomes O' Plenty - скачати мод"
+title: "Biomes O' Plenty - download mod for"
+title_ua: "Biomes O' Plenty - скачати мод"
+description: "Biomes O' Plenty is a large biome mod for Minecraft that adds a multitude of new unique biomes to the Overworld, Nether, and End! Along with the new biomes, it adds new plants, flowers, trees, building blocks, and much more!"
 mod_name: "Biomes O' Plenty"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

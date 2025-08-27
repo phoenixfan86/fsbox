@@ -1,5 +1,7 @@
 ---
-title: "The Pixelmon Modpack - скачати мод"
+title: "The Pixelmon Modpack - download mod"
+title_ua: "The Pixelmon Modpack - скачати мод"
+description: "The Pixelmon Modpack includes:The Pixelmon Mod - an amazing mod for Minecraft that adds exploration, capture, battles, and much more!The Pixelmon OST, by Chris Geddes - a professionally made custom soundtrack that adds immersion to this mod."
 mod_name: "The Pixelmon Modpack"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: ""
 download_link: "https://www.curseforge.com/minecraft/modpacks/the-pixelmon-modpack/files/all?page=1&amp;pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-2"
+date: "2025-08-2"
 ---
 
 У The Pixelmon Modpack входить:

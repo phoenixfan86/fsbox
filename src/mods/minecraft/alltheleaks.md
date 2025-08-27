@@ -1,5 +1,7 @@
 ---
-title: "AllTheLeaks (Memory Leak Fix) - скачати мод"
+title: "AllTheLeaks (Memory Leak Fix) - download mod for"
+title_ua: "AllTheLeaks (Memory Leak Fix) - скачати мод"
+description: "This mod is designed to fix various memory leaks from mods, Minecraft, and (Neo)Forge."
 mod_name: "AllTheLeaks (Memory Leak Fix)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

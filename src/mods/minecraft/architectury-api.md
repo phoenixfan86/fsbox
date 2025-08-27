@@ -1,5 +1,7 @@
 ---
-title: "Architectury API - скачати мод"
+title: "Architectury API - download mod for"
+title_ua: "Architectury API - скачати мод"
+description: "Architectury API is an API for developers that facilitates the development of mods with multiple loaders. We provide complete build systems and much more."
 mod_name: "Architectury API"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: ""
 download_link: "https://www.curseforge.com/minecraft/mc-mods/architectury-api/files/all?page=1&amp;pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-5"
+date: "2025-08-5"
 ---
 
 Architectury API - це Api для розробників, що полегшує розробку модів з декількома завантажувачами, ми надаємо цілі системи збірки та багато іншого

@@ -1,5 +1,7 @@
 ---
-title: "Morning Dew - скачати мод"
+title: "Morning Dew - download mod for"
+title_ua: "Morning Dew - скачати мод"
+description: "Morning Dew is a new modpack for Stardew Valley, created by Kehaan (creator of the Minecraft modpacks “Farming Valley” and “Pokehaan Craft” and many others)."
 mod_name: "Morning Dew"
 game: "Stardew Valley"
 game_collection: "/mods/stardew-valley"

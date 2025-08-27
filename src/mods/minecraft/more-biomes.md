@@ -1,5 +1,7 @@
 ---
-title: "More Biomes - скачати мод"
+title: "More Biomes - download mod for"
+title_ua: "More Biomes - скачати мод"
+description: "More Biomes doesn't just add biomes, it adds much more content that will definitely not leave you indifferent. The modpack is ready for you to play and enjoy from the very first minute!"
 mod_name: "More Biomes"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: "https://media.forgecdn.net/attachments/800/733/more-biomes-2.jpg"
 download_link: "https://www.curseforge.com/minecraft/modpacks/biomes-modpack-forge/files/all?page=1&amp;pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-3"
+date: "2025-08-3"
 ---
 
 More Biomes не просто додає біоми, він додає набагато більше контенту, який точно не залишить вас байдужими. Модпак готовий до того, щоб ви могли грати і насолоджуватися ним з першої хвилини! Хоча при бажанні, звісно, ви можете додати і свої улюблені модифікації.

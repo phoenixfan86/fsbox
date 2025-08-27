@@ -1,5 +1,8 @@
 ---
-title: "TerraForged - скачати мод"
+title: "TerraForged - download mod for"
+title_ua: "TerraForged - скачати мод"
+description: "TerraForged is a world generation mod for Minecraft (Java Edition) that creates more exciting, inspiring worlds
+to explore."
 mod_name: "TerraForged"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +14,7 @@ image_second: "https://media.forgecdn.net/attachments/279/954/mountains-3.jpg"
 download_link: "https://www.curseforge.com/minecraft/mc-mods/terraforged/files/all?page=1&pageSize=20"
 mod_dependencies: "мод тільки для Forge"
 dependencies_link: ""
-date: "2024-08-5"
+date: "2025-08-5"
 ---
 
 TerraForged - це мод генерації світів для Minecraft (Java Edition), який створює більш захоплюючі, надихаючі світи

@@ -1,5 +1,7 @@
 ---
-title: "Cobbled Farms - скачати мод"
+title: "Cobbled Farms - download mod for"
+title_ua: "Cobbled Farms - скачати мод"
+description: "Welcome to Cobbled Farms, a single-player world that explains the ins and outs of Cobblemon to both newbies and experienced trainers! Your job is to help the locals of this small farming community maintain their beautiful home while they're away."
 mod_name: "Cobbled Farms"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

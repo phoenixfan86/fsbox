@@ -1,5 +1,7 @@
 ---
-title: "Rare Ice - скачати мод"
+title: "Rare Ice - download mod for"
+title_ua: "Rare Ice - скачати мод"
+description: "The Rare Ice mod adds rare ice to the world."
 mod_name: " Rare Ice (Forge/Fabric)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: "https://imgur.com/bXFetOj.png"
 download_link: "https://www.curseforge.com/minecraft/mc-mods/rare-ice/files/all?page=1&amp;pageSize=20"
 mod_dependencies: "Для установки мода на Fabric потрібно установити Fabric API"
 dependencies_link: "/mods/minecraft/fabric-api"
-date: "2024-07-31"
+date: "2025-07-31"
 ---
 
-Додає у світ рідкісний лід
+Мод Rare Ice додає у світ рідкісний лід

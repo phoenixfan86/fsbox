@@ -1,5 +1,7 @@
 ---
-title: "Just Enough Items (JEI) - скачати мод "
+title: "Just Enough Items (JEI) - download mod for"
+title_ua: "Just Enough Items (JEI) - скачати мод "
+description: "Just Enough Items (JEI) is a mod for viewing items and recipes for Minecraft."
 mod_name: "Just Enough Items (JEI)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: "https://media.forgecdn.net/attachments/31/419/t7f7jh6.png"
 download_link: "https://www.curseforge.com/minecraft/mc-mods/jei/files/all?page=1&pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-07-30"
+date: "2025-07-30"
 ---
 
 Just Enough Items (JEI) це мод для перегляду предметів та рецептів для Minecraft

@@ -1,5 +1,7 @@
 ---
-title: "Sodium - скачати мод"
+title: "Sodium - download mod for"
+title_ua: "Sodium - скачати мод"
+description: "Sodium is a powerful mod for Minecraft that optimizes the game client, significantly improving frame rate and micro-lag, as well as fixing many graphical issues in the game."
 mod_name: "Sodium"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

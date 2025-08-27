@@ -1,5 +1,7 @@
 ---
-title: "Plumber - скачати мод"
+title: "Plumber - download addon for"
+title_ua: "Plumber - скачати мод"
+description: "Backpack item tracker Track items that can be stacked in the bag interface as if they were currency. Vacation tokens are automatically tracked and attached on the left."
 mod_name: "Plumber"
 game: "WoW"
 game_collection: "/mods/wow"
@@ -11,7 +13,7 @@ image_second: "https://media.forgecdn.net/attachments/738/990/preview_backpackit
 download_link: "https://www.curseforge.com/wow/addons/plumber/files/all?page=1&amp;pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-2"
+date: "2025-08-27"
 ---
 
 Відстежувач предметів у рюкзаку

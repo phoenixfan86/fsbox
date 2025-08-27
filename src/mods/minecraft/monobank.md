@@ -1,5 +1,7 @@
 ---
-title: "Monobank - скачати мод"
+title: "Monobank - download mod for"
+title_ua: "Monobank - скачати мод"
+description: "Monobank mod your personal storage is 100% secure. Storage may not be 100% secure. We are not responsible for theft or loss of personal property."
 mod_name: "Monobank"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: "https://media.forgecdn.net/attachments/612/996/lock_replacement.p
 download_link: "https://www.curseforge.com/minecraft/mc-mods/monobank/files/all?page=1&pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-07-30"
+date: "2025-07-30"
 ---
 
-Ваше особисте сховище безпечне на 100%*. Сховище може бути не на 100% безпечним. ми не несем відповідальності за крадіжку або втрату особистого майна
+Мод Monobank це ваше особисте сховище безпечне на 100%*. Сховище може бути не на 100% безпечним. ми не несем відповідальності за крадіжку або втрату особистого майна

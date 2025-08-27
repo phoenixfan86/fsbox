@@ -1,5 +1,7 @@
 ---
-title: "Auctionator - скачати аддон"
+title: "Auctionator - download addon for"
+title_ua: "Auctionator - скачати аддон"
+description: "Auctionator is designed for regular auction house users: Auction prices in item tooltips (with full AH scan for price updates), Simple user interface, Protection against underbidding, Cost of recipe reagents and profit in crafting modes, Search with multiple filters, search history, and organized shopping lists, One-click scanning and canceling for your own auctions"
 mod_name: "Auctionator"
 game: "WoW"
 game_collection: "/mods/wow"
@@ -11,7 +13,7 @@ image_second: "https://media.forgecdn.net/attachments/548/332/2022-12-screenshot
 download_link: "https://www.curseforge.com/wow/addons/auctionator/files/all?page=1&pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-9"
+date: "2025-08-9"
 ---
 
 Auctionator розроблений для звичайних користувачів аукціонних будинків:

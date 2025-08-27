@@ -67,7 +67,7 @@ export default async function GameModsPage({ params }: { params: Promise<{ game:
                 />
                 <div className="flex gap-5 flex-col justify-between">
                   <div>
-                    <h2 className="text-xl font-semibold">{mod.title} для {mod.game} {mod.tags?.[mod.tags.length - 1] ?? ''}</h2>
+                    <h2 className="text-xl font-semibold">{mod.title_ua} для {mod.game} {mod.tags?.[mod.tags.length - 1] ?? ''}</h2>
                     <div className="flex items-center text-xs text-gray-500 gap-1">
                       <span className="material-symbols-outlined text-gray-400" style={{ fontSize: 16 }}>
                         calendar_month

@@ -1,5 +1,7 @@
 ---
-title: "Kerbal Engineer Redux - скачати мод"
+title: "Kerbal Engineer Redux - download mod for"
+title_ua: "Kerbal Engineer Redux - скачати мод"
+description: "Kerbal Engineer Redux - displays important statistics about your ship and its orbit during construction and flight."
 mod_name: "Kerbal Engineer Redux"
 game: "KSP"
 game_collection: "/mods/ksp"

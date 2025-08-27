@@ -1,5 +1,7 @@
 ---
-title: "projectLUMA - скачати мод (шейдерпак)"
+title: "projectLUMA - download mod (shader pack) for"
+title_ua: "projectLUMA - скачати мод (шейдерпак)"
+description: "projectLUMA is a shader pack created for Minecraft Shaders Mod (OptiFine). It is the official successor to KUDA-Shaders, which has been rewritten from scratch. The goal of projectLUMA is to play Minecraft without effects that distract you from the gameplay."
 mod_name: "projectLUMA"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: ""
 download_link: "https://www.curseforge.com/minecraft/shaders/projectluma/files/all?page=1&amp;pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-5"
+date: "2025-08-5"
 ---
 
 projectLUMA - це шейдерпак, створений для Minecraft Shaders Mod (OptiFine). Це офіційний наступник KUDA-Shaders, який був переписаний з нуля. Метою проектуLUMA є гра в Minecraft без ефектів, що відволікають вас від ігрового процесу, а також, що найважливіше, з низькими витратами на продуктивність при все ще пристойній графіці.

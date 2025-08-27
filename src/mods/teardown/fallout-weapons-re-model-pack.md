@@ -1,5 +1,7 @@
 ---
-title: "Fallout Weapons Re-Model Pack - скачати мод"
+title: "Fallout Weapons Re-Model Pack - download mod for"
+title_ua: "Fallout Weapons Re-Model Pack - скачати мод"
+description: "The Fallout Weapons Re-Model Pack allows you to replace the tools in Teardown with Fallout-themed tools."
 mod_name: "Fallout Weapons Re-Model Pack"
 game: "Teardown"
 game_collection: "/mods/teardown"

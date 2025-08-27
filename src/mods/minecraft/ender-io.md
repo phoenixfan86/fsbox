@@ -1,5 +1,7 @@
 ---
-title: "Ender IO - скачати мод"
+title: "Ender IO - download mod for"
+title_ua: "Ender IO - скачати мод"
+description: "Ender IO is a full-featured technology mod. It includes armor, tools, weapons, machines, channels, inventory management, mobs, and more."
 mod_name: "Ender IO"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: ""
 download_link: "https://www.curseforge.com/minecraft/mc-mods/ender-io/files/all?page=1&pageSize=20"
 mod_dependencies: "EnderCore"
 dependencies_link: "/mods/minecraft/endercore"
-date: "2024-08-8"
+date: "2025-08-8"
 ---
 
 Ender IO — це повнофункціональний технологічний мод. Він містить броню, інструменти, зброю, машини, канали, управління інвентарем, мобів тощо. 

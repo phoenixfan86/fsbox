@@ -1,5 +1,7 @@
 ---
-title: "Bookshelf - скачати мод (бібліотеку)"
+title: "Bookshelf - download mod (lib) for"
+title_ua: "Bookshelf - скачати мод (бібліотеку)"
+description: "Bookshelf is a library mod that aims to improve the experience of creating and maintaining content in Minecraft. Bookshelf contains a collection of code, frameworks, utilities, and other resources that I have collected over many years."
 mod_name: "Bookshelf"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

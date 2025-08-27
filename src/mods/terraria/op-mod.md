@@ -1,5 +1,7 @@
 ---
-title: "OP Mod - скачати мод"
+title: "OP Mod - download mod for"
+title_ua: "OP Mod - скачати мод"
+description: "The OPMod mod for Terraria adds the following to the game: 3 new tools and 2 new types of weapons"
 mod_name: "OP Mod"
 game: "Terraria"
 game_collection: "/mods/terraria"
@@ -11,7 +13,7 @@ image_second: ""
 download_link: "https://www.curseforge.com/terraria/mods/op-weapons-and-tools/files/all?page=1&amp;pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-07-30"
+date: "2025-07-30"
 ---
 
 OPMod для Terraria добавляє в гру:

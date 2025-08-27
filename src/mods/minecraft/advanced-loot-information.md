@@ -1,5 +1,7 @@
 ---
-title: "Advanced Loot Info (ALI) - скачати мод"
+title: "Advanced Loot Info (ALI) - download mod for"
+title_ua: "Advanced Loot Info (ALI) - скачати мод"
+description: "Advanced Loot Info (ALI) provides a new way to display loot table information. All information is displayed in an easy-to-understand format."
 mod_name: "Advanced Loot Info (ALI)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: "https://cdn.modrinth.com/data/PEPVViac/images/14fca00909ecd699b15
 download_link: "https://www.curseforge.com/minecraft/mc-mods/advanced-loot-info/files/all?page=1&amp;pageSize=20"
 mod_dependencies: "Just Enough Items (JEI)"
 dependencies_link: "/mods/minecraft/just-enough-items-jei"
-date: "2024-07-29"
+date: "2025-07-29"
 ---
 
 Advanced Loot Info (ALI) забезпечує новий спосіб відображення інформації про таблиці здобичі. Вся інформація відображається у зрозумілому вигляді.

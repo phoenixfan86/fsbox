@@ -1,5 +1,7 @@
 ---
-title: "Minecraft Small Town - скачати мод"
+title: "Minecraft Small Town - download mod (map) for"
+title_ua: "Minecraft Small Town - скачати мод"
+description: "Small Minecraft Town Map - This is a completely destroyed map inspired by Minecraft! The town has several houses, a blacksmith, a church, and a farm with a few trees."
 mod_name: "Minecraft Small Town"
 game: "Teardown"
 game_collection: "/mods/teardown"
@@ -11,7 +13,7 @@ image_second: "https://staticdelivery.nexusmods.com/mods/3481/images/72/72-16069
 download_link: "https://www.nexusmods.com/teardown/mods/72?tab=files"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-9"
+date: "2025-08-9"
 ---
 
 Small Minecraft Town Map - Це повністю руйнована карта, натхненна Minecraft!

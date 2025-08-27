@@ -27,6 +27,8 @@ export function getSortedModsData(): ModData[] {
       allMods.push({
         slug,
         title: data.title,
+        title_ua: data.title_ua,
+        description: data.description,
         mod_name: data.mod_name,
         game: data.game,
         game_collection: data.game_collection,
@@ -69,6 +71,8 @@ export function getModData(slug: string | string[]): ModData {
     game: data.game,
     game_collection: data.game_collection,
     title: data.title,
+    title_ua: data.title_ua,
+    description: data.description,
     mod_name: data.mod_name,
     date: data.date,
     tags: data.tags || [],

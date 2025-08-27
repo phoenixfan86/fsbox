@@ -1,5 +1,7 @@
 ---
-title: "Balm - скачати мод (бібліотеку)"
+title: "Balm - download mod (lib) for"
+title_ua: "Balm - скачати мод (бібліотеку)"
+description: "Balm is a library for mod developers that simplifies the process of creating multi-loadable mods by providing common interfaces and events and eliminating the need for most loader-specific code."
 mod_name: "Balm"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: ""
 download_link: "https://www.curseforge.com/minecraft/mc-mods/balm/files/all?page=1&amp;pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-1"
+date: "2025-08-1"
 ---
 
 Balm - це бібліотека для розробників модів, який спрощує процес створення багатозавантажувальних модів, надаючи спільні інтерфейси та події і усуваючи необхідність у більшості специфічного для завантажувача коду. Це не чарівне рішення для спільного запуску модів Forge та Fabric. Як користувачеві, вам потрібно встановити цей модуль лише у тому випадку, якщо ви використовуєте мод, який його потребує.

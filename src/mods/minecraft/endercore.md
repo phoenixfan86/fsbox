@@ -1,5 +1,7 @@
 ---
-title: "EnderCore - скачати мод"
+title: "EnderCore - download mod (lib) for"
+title_ua: "EnderCore - скачати мод"
+description: "This library is used by EnderIO, EnderZoo, and many others."
 mod_name: "EnderCore"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: ""
 download_link: "https://www.curseforge.com/minecraft/mc-mods/endercore/files/all?page=1&pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-8"
+date: "2025-08-8"
 ---
 
 Цю бібліотеку використовують EnderIO, EnderZoo та багато інших.

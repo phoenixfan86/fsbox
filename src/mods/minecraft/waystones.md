@@ -1,5 +1,7 @@
 ---
-title: "Waystones - скачати мод"
+title: "Waystones - download mod for"
+title_ua: "Waystones - скачати мод"
+description: "This mod adds blocks that the player can return to after activation using a warp scroll, a rechargeable warp stone, or by using an existing stone to jump from one to another."
 mod_name: "Waystones"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: "https://media.forgecdn.net/attachments/37/127/2016-06-07_10.png"
 download_link: "https://www.curseforge.com/minecraft/mc-mods/waystones/files/all?page=1&pageSize=20"
 mod_dependencies: "Для роботи моду потрібно встановити Balm"
 dependencies_link: "/mods/minecraft/balm"
-date: "2024-08-1"
+date: "2025-08-1"
 ---
 
 Цей мод додає блоки, до яких гравець може повернутися після активації за допомогою сувою викривлення, перезаряджаємого каменю викривлення або використовуючи наявний камінь, щоб перестрибнути з одного на інший.

@@ -1,5 +1,7 @@
 ---
-title: "CocumiT's Coops - скачати мод"
+title: "CocumiT's Coops - download mod for"
+title_ua: "CocumiT's Coops - скачати мод"
+description: "CocumiT's Coops mod adds new chicken coop sets for different seasons in Stardew Valley"
 mod_name: "CocumiT's Coops"
 game: "Stardew Valley"
 game_collection: "/mods/stardew-valley"

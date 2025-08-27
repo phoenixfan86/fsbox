@@ -1,5 +1,7 @@
 ---
-title: "Structory - скачати мод"
+title: "Structory - download mod for"
+title_ua: "Structory - скачати мод"
+description: "Structory is a seasonally updated atmospheric structural mod with light lore for Fabric Forge Quilt. This mod is compatible with Terralith. Ruins, fire towers, cottages and stables, cemeteries, settlements, boats, and future additions."
 mod_name: "Structory"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

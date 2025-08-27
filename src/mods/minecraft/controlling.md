@@ -1,5 +1,7 @@
 ---
-title: "Controlling - скачати мод"
+title: "Controlling - download mod for"
+title_ua: "Controlling - скачати мод"
+description: "The Controlling mod adds the ability to search for key combinations by name in the “Key Bindings” menu, allowing players to easily find the desired key combination in the menu."
 mod_name: "Controlling"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

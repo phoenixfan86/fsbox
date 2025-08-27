@@ -1,5 +1,7 @@
 ---
-title: "Draconic Evolution - скачати мод"
+title: "Draconic Evolution - download mod for"
+title_ua: "Draconic Evolution - скачати мод"
+description: "Draconic Evolution is a modification that adds several extremely expensive high-level items to the game."
 mod_name: "Draconic Evolution"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

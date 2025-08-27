@@ -22,11 +22,11 @@ export async function generateMetadata({ params }: { params: SlugParams }): Prom
 
   const title = mod.title;
   const lastVersion = getLastVersion(mod)
-  const description = `${stripMarkdown(mod.content).slice(0, 150)}...`
+  const description = `${stripMarkdown(mod.description).slice(0, 150)}...`
 
   return {
     alternates: { canonical },
-    title: `${mod.title} для ${mod.game} ${lastVersion}`,
+    title: `${mod.title} ${mod.game} ${lastVersion}`,
     description,
     openGraph: {
       title,
@@ -64,7 +64,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
 
   return (
     <div className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
-      <h1 className="text-3xl font-bold mb-2">{mod.title} для {mod.game} {lastVersion}</h1>
+      <h1 className="text-3xl font-bold mb-2">{mod.title_ua} для {mod.game} {lastVersion}</h1>
       <p className="text-xs text-(--color-4) mb-4">Додано: {mod.date}</p>
       <div className="mb-5 space-x-2">
         {(mod.tags ?? []).map((tag) => (
@@ -124,15 +124,16 @@ export default async function ModPage({ params }: { params: SlugParams }) {
       </div>
 
       {mod.download_link && (
-        <div className="text-center mt-6">
+        <div className="flex flex-col items-center mt-6">
+          <span>Посилання для завантаження: </span>
           <a
             href={mod.download_link}
             target="_blank"
             rel="noopener noreferrer"
             className="downloadBtn"
-            aria-label="Завантажити мод"
+            aria-label={`Завантажити мод ${mod.mod_name}`}
           >
-            <span>Завантажити</span>
+            <span>Download mod</span>
             <span className="text-extra">: {mod.mod_name}</span>
           </a>
         </div>

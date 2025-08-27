@@ -1,5 +1,7 @@
 ---
-title: "All the Mods - скачати мод "
+title: "All the Mods - download mod for"
+title_ua: "All the Mods - скачати мод"
+description: "The All the Mods modpack for Stardew Valley contains a carefully curated collection of mods that expand and improve Stardew Valley in every way:"
 mod_name: "All the Mods"
 game: "Stardew Valley"
 game_collection: "/mods/stardew-valley"

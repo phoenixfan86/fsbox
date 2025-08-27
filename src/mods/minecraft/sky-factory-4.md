@@ -1,5 +1,7 @@
 ---
-title: "SkyFactory 4 - скачати мод"
+title: "SkyFactory 4 - download mod for"
+title_ua: "SkyFactory 4 - скачати мод"
+description: "SkyFactory 4 offers a completely new experience that has never been seen before in the series. Full automation, technology, magic, and bacon resources! This iteration offers over 30 world types so you can play in a stack like never before!"
 mod_name: "SkyFactory 4"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: ""
 download_link: "https://www.curseforge.com/minecraft/modpacks/skyfactory-4/files/all?page=1&amp;pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-3"
+date: "2025-08-3"
 ---
 
 SkyFactory 4 пропонує абсолютно новий досвід, якого раніше не було в серії. Повна автоматизація, технології, магія та ресурси бекону! Ця ітерація пропонує понад 30 типів світів, щоб ви могли грати в пачку, як ніколи раніше! У той час як деякі типи світів засновані на класичному дереві на землі, інші створені з унікальними рецептами та вдосконаленнями.

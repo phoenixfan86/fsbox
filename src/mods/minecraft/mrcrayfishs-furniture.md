@@ -1,5 +1,7 @@
 ---
-title: "MrCrayfish's Furniture (Legacy) - скачати мод"
+title: "MrCrayfish's Furniture (Legacy) - download mod for"
+title_ua: "MrCrayfish's Furniture (Legacy) - скачати мод"
+description: "MrCrayfish's Furniture Mod (Legacy) is a classic furniture mod that was released back in 2011. This mod adds functional and useful furniture and decorations. You can find furniture for every part of your house"
 mod_name: "MrCrayfish's Furniture (Legacy)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: "https://media.forgecdn.net/attachments/393/726/screenshot4.png"
 download_link: "https://www.curseforge.com/minecraft/mc-mods/mrcrayfish-furniture-mod/files/all?page=1&amp;pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-6"
+date: "2025-08-6"
 ---
 
 MrCrayfish's Furniture Mod (Legacy) — це класичний мод для меблів, який з'явився ще в 2011 році. Цей мод додає функціональні та корисні меблі та декорації. Ви зможете знайти меблі для кожної частини вашого будинку, включаючи кухню, спальню, їдальню, відкритий простір та багато іншого! Цей мод додає понад 450 меблів та декоративних блоків.

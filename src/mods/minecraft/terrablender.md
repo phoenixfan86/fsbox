@@ -1,5 +1,7 @@
 ---
-title: "TerraBlender (Forge) - скачати мод"
+title: "TerraBlender (Forge) - download mod for"
+title_ua: "TerraBlender (Forge) - скачати мод"
+description: "TerraBlender is a library mod for adding biomes in a simple and compatible way with Minecraft's new biome/terrain system."
 mod_name: "TerraBlender (Forge)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

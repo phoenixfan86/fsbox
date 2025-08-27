@@ -1,5 +1,7 @@
 ---
-title: "Sophisticated Core - скачати мод"
+title: "Sophisticated Core - download mod (lib) for"
+title_ua: "Sophisticated Core - скачати мод"
+description: "Sophisticated Core Library - a library mod for Sophisticated Backpacks and Sophisticated Storage. It provides general functionality for these mods."
 mod_name: "Sophisticated Core"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

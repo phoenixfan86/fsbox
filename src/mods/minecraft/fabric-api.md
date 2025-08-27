@@ -1,5 +1,7 @@
 ---
-title: "Fabric API - скачати мод"
+title: "Fabric API - download mod (lib) for"
+title_ua: "Fabric API - скачати мод"
+description: "Fabric API is the core library for the most common hooks and interoperability measures used by mods using the Fabric toolkit."
 mod_name: "Fabric API"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: ""
 download_link: "https://www.curseforge.com/minecraft/mc-mods/fabric-api/files/all?page=1&pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-07-31"
+date: "2025-07-31"
 ---
 
 Fabric API — це основна бібліотека для найпоширеніших хуків та заходів взаємосумісності, що використовуються модами за допомогою набору інструментів Fabric.

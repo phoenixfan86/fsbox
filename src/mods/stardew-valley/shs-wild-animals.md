@@ -1,5 +1,7 @@
 ---
-title: "SH's Wild Animals - скачати мод"
+title: "SH's Wild Animals - download mod for"
+title_ua: "SH's Wild Animals - скачати мод"
+description: "This mod adds numerous animals to various locations in the game, depending on the time, weather, and season. You are almost guaranteed to see at least some animals if you have access to the places where they spawn."
 mod_name: "SH's Wild Animals"
 game: "Stardew Valley"
 game_collection: "/mods/stardew-valley"
@@ -11,7 +13,7 @@ image_second: "https://media.forgecdn.net/attachments/856/398/test_4-8-2024_1486
 download_link: "https://www.curseforge.com/stardewvalley/mods/shs-wild-animals/files/all?page=1&amp;pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-07-30"
+date: "2025-07-30"
 ---
 
 Цей мод додає численних тварин у різні місця гри, залежно від часу, погоди та пори року. Ви майже гарантовано побачите принаймні деяких тварин, якщо у вас є доступ до місць, де вони нерестяться. Вони мають тенденцію блукати, тому ви можете втратити з поля зору деяких з них, особливо якщо вони блукають за деревами або в траві.

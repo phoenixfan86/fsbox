@@ -1,5 +1,7 @@
 ---
-title: "Scholar - скачати мод"
+title: "Scholar - download mod for"
+title_ua: "Scholar - скачати мод"
+description: "With the Scholar mod, you can read books in Minecraft two pages at a time."
 mod_name: "Scholar"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: "https://raw.githubusercontent.com/mortuusars/resources/main/media
 download_link: "https://www.curseforge.com/minecraft/mc-mods/scholar/files/all?page=1&pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-07-30"
+date: "2025-07-30"
 ---
 
 З модом Scholar можна читати книг у Minecraft по дві сторінки за раз.

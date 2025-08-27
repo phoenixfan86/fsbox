@@ -1,5 +1,7 @@
 ---
-title: "Automate - скачати мод "
+title: "Automate - download mod for"
+title_ua: "Automate - скачати мод "
+description: "The Automate modpack adds automation to Stardew Valley. Automated machines will give you the same experience, achievements, and items as using them directly."
 mod_name: "Automate"
 game: "Stardew Valley"
 game_collection: "/mods/stardew-valley"

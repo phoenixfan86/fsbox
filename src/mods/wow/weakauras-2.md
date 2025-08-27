@@ -1,5 +1,7 @@
 ---
-title: "WeakAuras - скачати мод"
+title: "WeakAuras - download addon for"
+title_ua: "WeakAuras - скачати мод"
+description: "WeakAuras is a powerful and flexible framework that allows you to display highly customizable graphics in the World of Warcraft user interface to indicate buffs, debuffs, and other important information."
 mod_name: "WeakAuras"
 game: "WoW"
 game_collection: "/mods/wow"

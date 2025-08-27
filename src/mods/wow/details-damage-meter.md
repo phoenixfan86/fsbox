@@ -1,5 +1,7 @@
 ---
-title: "Details! Damage Meter - скачати мод"
+title: "Details! Damage Meter - download addon for"
+title_ua: "Details! Damage Meter - скачати аддон"
+description: "Details! Damage Meter is the most powerful, reliable, and beautiful damage meter for World of Warcraft."
 mod_name: "Details! Damage Meter"
 game: "WoW"
 game_collection: "/mods/wow"
@@ -11,7 +13,7 @@ image_second: ""
 download_link: "https://www.curseforge.com/wow/addons/details/files/all?page=1&amp;pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-2"
+date: "2025-08-2"
 ---
 
 Details! Damage Meter - це найпотужніший, найнадійніший, найгарніший лічильник пошкоджень для World of Warcraft.

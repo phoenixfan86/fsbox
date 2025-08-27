@@ -1,5 +1,7 @@
 ---
-title: "Sophisticated Backpacks - скачати мод"
+title: "Sophisticated Backpacks - download mod for"
+title_ua: "Sophisticated Backpacks - скачати мод"
+description: "The Sophisticated Backpacks mod features upgraded and highly customizable backpacks designed for convenient carrying of items. Backpacks are available in several tiers, each offering increased capacity and support for additional upgrades that improve functionality."
 mod_name: "Sophisticated Backpacks"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

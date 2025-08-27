@@ -1,5 +1,7 @@
 ---
-title: "RLCraft - скачати мод"
+title: "RLCraft - download mod for"
+title_ua: "RLCraft - скачати мод"
+description: "RLCraft, where RL stands for Real Life or Realism, is a variation of another mod I created for Unreal called RLCoop, which has a similar goal overall."
 mod_name: "RLCraft"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: ""
 download_link: "https://www.curseforge.com/minecraft/modpacks/rlcraft/files/all?page=1&amp;pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-6"
+date: "2025-08-6"
 ---
 
 RLCraft, де RL означає Real Life (реальне життя) або Realism (реалізм), є варіацією іншого мода, який я створив для Unreal під назвою RLCoop і який загалом має подібну мету. Це моя інтерпретація того, чого я завжди хотів від Minecraft, коли йдеться про чисте виживання, пригоди, RPG та занурення.  Я вручну відібрав багато модів і індивідуально налаштував кожен з них, щоб вони відповідали саме тому стилю гри, який я шукав, переконавшись, що всі вони плавно взаємодіють між собою, додавши свої власні скрипти для різних змін у стандартній поведінці тощо.

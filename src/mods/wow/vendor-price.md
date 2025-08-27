@@ -1,5 +1,7 @@
 ---
-title: "Vendor Price - скачати мод"
+title: "Vendor Price - download addon for"
+title_ua: "Vendor Price - скачати мод"
+description: "The Vendor Price add-on displays the sale price of a product when it is not available from the seller."
 mod_name: "Vendor Price"
 game: "WoW"
 game_collection: "/mods/wow"

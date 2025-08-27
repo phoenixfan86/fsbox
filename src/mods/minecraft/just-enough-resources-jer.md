@@ -1,5 +1,7 @@
 ---
-title: "Just Enough Resources (JER) - скачати мод"
+title: "Just Enough Resources (JER) - download mod for"
+title_ua: "Just Enough Resources (JER) - скачати мод"
+description: "This add-on for Just Enough Items (JEI) will provide you with useful information about mobs and plants that spawn, ore generation, and possible loot in dungeons."
 mod_name: "Just Enough Resources (JER)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

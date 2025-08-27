@@ -1,5 +1,7 @@
 ---
-title: "Moonlight Lib — скачати мод"
+title: "Moonlight Lib — download mod (lib) for"
+title_ua: "Moonlight Lib — скачати мод"
+description: "Moonlight Lib, formerly known as Selene Library, is a set of specialized utilities and shared code that I use for my modifications. The library includes such highly specialized functions as dynamic resource generation,"
 mod_name: "Moonlight Lib"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: "https://media.forgecdn.net/attachments/377/534/o490kkfkyb371.png"
 download_link: "https://www.curseforge.com/minecraft/mc-mods/selene/files/all?page=1&pageSize=20"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2024-08-7"
+date: "2025-08-7"
 ---
 
 Moonlight Lib, раніше відома як Selene Library — це набір спеціалізованих утиліт та спільного коду, який я використовую для своїх модифікацій. До бібліотеки входять такі високоспеціалізовані функції, як динамічне генерування ресурсів, 2 нові реєстри даних, динамічна система реєстрації, а також звичні помічники та обгортки для розробки як для Fabric, так і для Forge.

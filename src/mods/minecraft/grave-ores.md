@@ -1,5 +1,7 @@
 ---
-title: "Gravel Ores (Fabric) - скачати мод"
+title: "Gravel Ores (Fabric) - download mod for"
+title_ua: "Gravel Ores (Fabric) - скачати мод"
+description: "Adds gravel ores that can be destroyed upon contact with water."
 mod_name: "Gravel Ores (Fabric)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -11,7 +13,7 @@ image_second: ""
 download_link: "https://www.curseforge.com/minecraft/mc-mods/gravel-ores-fabric/files/all?page=1&amp;pageSize=20"
 mod_dependencies: "Для моду потрібне Fabric API"
 dependencies_link: "/mods/minecraft/fabric-api"
-date: "2024-07-31"
+date: "2025-07-31"
 ---
 
 Додає гравійні руди, які можуть руйнуватися при контакті з водою.

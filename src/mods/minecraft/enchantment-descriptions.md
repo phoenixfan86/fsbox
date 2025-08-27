@@ -1,5 +1,7 @@
 ---
-title: "Enchantment Descriptions - скачати мод"
+title: "Enchantment Descriptions - download mod for"
+title_ua: "Enchantment Descriptions - скачати мод"
+description: "The spell descriptions aim to explain the spells by adding descriptions of their effects to the tooltips for enchanted items. Most modified spells are also supported!"
 mod_name: "Enchantment Descriptions"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
