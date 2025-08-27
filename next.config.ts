@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/mods/stardewvalley/:slug*",
+        destination: "/mods/stardew-valley/:slug*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
