@@ -6,7 +6,6 @@ module.exports = {
   generateRobotsTxt: true,
   sitemapSize: 5000,
 
-  // Додаємо кастомні сторінки / моди
   async additionalPaths(config) {
     const mods = await getSortedModsData();
 
