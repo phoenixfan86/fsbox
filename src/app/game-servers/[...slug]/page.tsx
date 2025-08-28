@@ -119,18 +119,20 @@ export default async function serverPage({ params }: { params: SlugParams }) {
                   {server.server_ip}
                 </a>
               </li>
-              <li className="flex gap-3 justify-between shadow">
-                <span >PORT: </span>
-                <a
-                  href={server.server_ip}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="!text-(--color-1)"
-                  aria-label={`IP${server.title}`}
-                >
-                  {server.server_port}
-                </a>
-              </li>
+              {server.server_port && (
+                <li className="flex gap-3 justify-between shadow">
+                  <span >PORT: </span>
+                  <a
+                    href={server.server_ip}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="!text-(--color-1)"
+                    aria-label={`IP${server.title}`}
+                  >
+                    {server.server_port}
+                  </a>
+                </li>
+              )}
               <li className="flex gap-3 justify-between mt-3">
                 <span >Discord: </span>
                 <a
