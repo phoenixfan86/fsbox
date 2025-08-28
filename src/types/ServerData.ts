@@ -1,0 +1,20 @@
+export type ServerData = {
+  title: string;
+  title_ua: string;
+  description: string;
+  game: string;
+  game_collection?:string;
+  gameSlug?: string;
+  game_version: string;
+  date: string;
+  updated?: string;
+  tags?: string[];
+  server_online?: string;
+  server_image: string;
+  server_link: string;
+  server_ip?: string;
+  server_port?: string;
+  server_discord?: string;
+  slug: string;
+  content: string;
+};

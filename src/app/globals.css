@@ -60,7 +60,8 @@ a:hover {
 	box-shadow: 0 0 5px RGBA(0, 0, 0, 0);
 }
 
-main a {
+main a,
+section a {
 	color: var(--primary-color-1);
 }
 
@@ -109,6 +110,22 @@ main a {
 	transition: opacity 0.3s ease;
 }
 
+.serverLink {
+	display: block;
+	overflow: hidden;
+	height: auto;
+	font-size: 20px;
+	letter-spacing: 1.5px;
+	color: #fff;
+	background-color: var(--primary-color-1);
+	border: none;
+	border-radius: 8px;
+	margin: 15px 0;
+	padding: 6px 12px;
+	filter: drop-shadow(1px 1px 10px #000);
+	transition: all 0.7s ease;
+}
+
 .inform {
 	background-color: var(--bg-3);
 }
@@ -126,10 +143,6 @@ main a {
 
 .about ul li {
 	list-style-type: square;
-}
-
-.about a {
-	color: var(--primary-color-1);
 }
 
 .about a:hover {

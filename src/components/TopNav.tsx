@@ -60,6 +60,11 @@ const TopNav = ({ games, variant = "text", className = "" }: Props) => {
           Інструкції
         </Link>
       )}
+      {variant === "text" && (
+        <Link href="/game-servers" className="text-[9px] md:text-[11px] uppercase">
+          Сервери
+        </Link>
+      )}
     </nav>
   );
 }
