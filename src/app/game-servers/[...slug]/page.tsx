@@ -16,7 +16,7 @@ function getLastVersion(server: ServerData) {
 export async function generateMetadata({ params }: { params: SlugParams }): Promise<Metadata> {
   const { slug } = await params;
   const slugPatch = slug.join("/");
-  const canonical = `https://fsbox.pp.ua/servers/${slugPatch}`
+  const canonical = `https://fsbox.pp.ua/game-servers/${slugPatch}`
   const server: ServerData = getServerData(slugPatch);
   if (!server) return {};
 
