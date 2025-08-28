@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: SlugParams }): Prom
 
   return {
     alternates: { canonical },
-    title: `${server.title} ${server.game} ${lastVersion}`,
+    title: `${server.title} for ${server.game} ${lastVersion}`,
     description,
     openGraph: {
       title,
