@@ -38,6 +38,11 @@ const GameServers = () => {
   return (
     <section className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
       <h1 className="text-xl font-bold mb-6">Нові сервери</h1>
+      <p>
+        Вибирайте з нашого списку найпопулярніших серверів для улюблених ігор — Minecraft, CS:GO, Rust, GTA та інших.
+        Тут ви знайдете активні спільноти, стабільний онлайн і кращі місця для гри з друзями.
+      </p>
+
       <ul className="space-y-4 md:space-y-8">
         {pageServers.map((server) => (
           <li key={server.slug} className="p-0 md:p-4 rounded shadow">
