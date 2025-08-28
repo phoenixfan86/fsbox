@@ -81,7 +81,7 @@ const GameServers = () => {
             </Link>
             <div className="flex justify-between mt-4">
               <span className="text-xs text-gray-500 block">
-                <a href={server.game_collection}>сервер для: {server.game}</a>
+                <a href={`/game-servers/${server.gameSlug}`}>сервер для: {server.game}</a>
               </span>
             </div>
           </li>
