@@ -1,7 +1,7 @@
 ---
 title: "CraftTweaker - download mod for"
 title_ua: "CraftTweaker - скачати мод"
-desription: "CraftTweaker is a mod for Minecraft that allows modpacks and servers to customize the game. With CraftTweaker, you can change recipes, event scripts, add new commands, and even change item properties!"
+description: "CraftTweaker is a mod for Minecraft that allows modpacks and servers to customize the game. With CraftTweaker, you can change recipes, event scripts, add new commands, and even change item properties!"
 mod_name: "CraftTweaker"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
