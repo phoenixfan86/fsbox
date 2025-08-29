@@ -3,7 +3,7 @@ title: "Server Minecrafter in UA"
 title_ua: "Сервер Майнкрафтер in UA"
 description: "TServer version 1.21.7! IPs from Russia blocked! Server without Russians!"
 game: "Minecraft"
-game_collection: "/servers/minecraft"
+game_collection: "/game-servers/minecraft"
 game_version: "1.21.7"
 tags: ["Server", "Minecraft", "UA", "1.21.7"]
 server_online: "777"

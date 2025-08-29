@@ -3,7 +3,7 @@ title: "Server CrystalSpace"
 title_ua: "Сервер CrystalSpace"
 description: "Cool Ukrainian Minecraft server. This server features: A beautiful huge spawn. A diverse shop where you can find everything from levitation items to orbits! Reliable anti-cheat that prevents cheaters from gaining an advantage. Cool air drops, as many as 7 types!"
 game: "Minecraft"
-game_collection: "/servers/minecraft"
+game_collection: "/game-servers/minecraft"
 game_version: "1.20"
 tags: ["Server", "Minecraft", "UA", "1.20"]
 server_online: "700"

@@ -11,7 +11,7 @@ export type ServerData = {
   tags?: string[];
   server_online?: string;
   server_image: string;
-  server_link: string;
+  server_link?: string;
   server_ip?: string;
   server_port?: string;
   server_discord?: string;

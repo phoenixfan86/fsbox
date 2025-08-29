@@ -63,7 +63,10 @@ export default async function serverPage({ params }: { params: SlugParams }) {
   return (
     <div className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
       <h1 className="text-3xl font-bold mb-2">{server.title_ua} для {server.game} {lastVersion}</h1>
-      <p className="text-xs text-(--color-4) mb-4">Додано: {server.date}</p>
+      <div className="flex justify-between">
+        <p className="text-xs text-(--color-4) mb-4">Додано: {server.date}</p>
+        <span className="text-xs text-(--color-4) mb-4">Максимально онлайн: <span className="text-(--primary-color-1)">{server.server_online}</span></span>
+      </div>
       <div className="mb-5 space-x-2">
         {(server.tags ?? []).map((tag) => (
           <span

@@ -3,7 +3,7 @@ title: "Server WonderLand"
 title_ua: "Сервер WonderLand"
 description: "Minecraft Server griefing Survival/Anarchy"
 game: "Minecraft"
-game_collection: "/servers/minecraft"
+game_collection: "/game-servers/minecraft"
 game_version: "1.20"
 tags: ["Server", "Minecraft", "UA", "1.20"]
 server_online: "100"
