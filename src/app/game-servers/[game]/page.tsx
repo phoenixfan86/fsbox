@@ -57,13 +57,13 @@ export default async function GameServersPage({ params }: { params: Promise<{ ga
       </h1>
       <ul className="space-y-8">
         {gameServers.map((server) => (
-          <li key={server.slug} className="p-4 rounded shadow">
+          <li key={server.slug} className="py-5 px-3 rounded shadow">
             <Link href={`/game-servers/${server.gameSlug}/${server.slug}`}>
               <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 cursor-pointer hover:opacity-90 transition">
                 <img
                   src={server.server_image}
                   alt={server.title}
-                  className="postImg hover:!scale-none object-cover rounded"
+                  className="postImg mb-3 hover:!scale-none object-cover rounded"
                 />
                 <div className="flex gap-5 flex-col justify-between">
                   <div>
@@ -90,11 +90,6 @@ export default async function GameServersPage({ params }: { params: Promise<{ ga
                 </div>
               </div>
             </Link>
-            <div className="flex justify-between mt-4">
-              <span className="text-xs text-gray-500 block">
-                <a href={server.game_collection}>сервер для: {server.game}</a>
-              </span>
-            </div>
           </li>
         ))}
       </ul>
