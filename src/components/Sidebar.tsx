@@ -52,7 +52,7 @@ const Sidebar = ({ exclude }: Props) => {
           ))}
         </ul>
       </div>
-      <div className="shadow">
+      <div>
         <h4>Сервери для:</h4>
         <ul>
           {uniqueGames.map((server) => (
