@@ -16,8 +16,8 @@ export async function generateMetadata({
   const canonical = `https://fsbox.pp.ua/mods/${game}`;
 
   const gameTitle = game.charAt(0).toUpperCase() + game.slice(1);
-  const title = `Моди для ігри ${gameTitle}`;
-  const description = `Моди, карти, шейдерпаки для ${game}`;
+  const title = `Збірка модів на ${gameTitle}`;
+  const description = `Добірка модів для ${gameTitle}: моди на зброю та броню, моди на техніку і транспорт, моди на біоми, меблі та прикраси. Завантажуйте доповнення для різних версій гри та робіть світ в ${gameTitle} ще цікавішим`;
 
   return {
     alternates: { canonical },
@@ -51,45 +51,49 @@ export default async function GameModsPage({ params }: { params: Promise<{ game:
   const gameName = gameMods[0].game;
 
   return (
-    <main className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px]">
+    <section className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px]">
       <h1 className="text-xl font-bold mb-6">
-        Моди для {gameName}
+        Збірка модів на {gameName}
       </h1>
+      <p className="mb-5">Популярні моди для {gameName}: моди на зброю та броню, моди на техніку і транспорт, моди на біоми, меблі та прикраси. Завантажуйте доповнення для різних версій гри та робіть світ в {gameName} ще цікавішим.</p>
       <ul className="space-y-8">
         {gameMods.map((mod) => (
           <li key={mod.slug} className="p-4 rounded shadow">
-            <Link href={`/mods/${mod.gameSlug}/${mod.slug}`}>
-              <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 cursor-pointer hover:opacity-90 transition">
-                <img
-                  src={mod.image_first}
-                  alt={mod.title}
-                  className="postImg hover:!scale-none object-cover rounded"
-                />
-                <div className="flex gap-5 flex-col justify-between">
-                  <div>
-                    <h2 className="text-xl font-semibold">{mod.title_ua} для {mod.game} {mod.tags?.[mod.tags.length - 1] ?? ''}</h2>
-                    <div className="flex items-center text-xs text-gray-500 gap-1">
-                      <span className="material-symbols-outlined text-gray-400" style={{ fontSize: 16 }}>
-                        calendar_month
-                      </span>
-                      <span>{mod.date}</span>
-                    </div>
+            <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 hover:opacity-90 transition">
+              <img
+                src={mod.image_first}
+                alt={mod.title}
+                className="postImg hover:!scale-none object-cover rounded"
+              />
+              <div className="flex gap-5 flex-col justify-between">
+                <div>
+                  <h2 className="text-xl font-semibold">
+                    <Link href={`/mods/${mod.gameSlug}/${mod.slug}`}>
+                      {mod.title_ua} для {mod.game} {mod.tags?.[mod.tags.length - 1] ?? ''}
+                    </Link>
+                  </h2>
+                  <div className="flex items-center text-xs text-gray-500 gap-1">
+                    <span className="material-symbols-outlined text-gray-400" style={{ fontSize: 16 }}>
+                      calendar_month
+                    </span>
+                    <span>{mod.date}</span>
                   </div>
-                  <p className="text-sm text-gray-700 mr-10">
-                    {stripMarkdown(mod.content).slice(0, 100)}...
-                  </p>
-                  <div>
-                    <div className="flex gap-1.5 flex-wrap mt-1 md:mt-2 space-x-0  md:space-x-2">
-                      {mod.tags?.map((tag) => (
-                        <span key={tag} className="text-xs bg-gray-200 hover:bg-blue-500 hover:text-white duration-300 px-2 py-1 rounded-full">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                </div>
+                <p className="text-sm text-gray-700 mr-10">
+                  {stripMarkdown(mod.content).slice(0, 100)}...
+                </p>
+                <div>
+                  <div className="flex gap-1.5 flex-wrap mt-1 md:mt-2 space-x-0  md:space-x-2">
+                    {mod.tags?.map((tag) => (
+                      <span key={tag} className="text-xs bg-gray-200 hover:bg-blue-500 hover:text-white duration-300 px-2 py-1 rounded-full">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
-            </Link>
+            </div>
+
             <div className="flex justify-between mt-4">
               <span className="text-xs text-gray-500 block">Автор: {mod.author}</span>
               <span className="text-xs text-gray-500 block">
@@ -99,6 +103,6 @@ export default async function GameModsPage({ params }: { params: Promise<{ game:
           </li>
         ))}
       </ul>
-    </main>
+    </section>
   );
 }

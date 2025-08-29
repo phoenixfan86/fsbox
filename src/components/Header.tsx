@@ -35,7 +35,7 @@ const Header = ({ allMods, games }: Props) => {
   return (
     <header>
       <div className="h-10 flex items-center bg-(--bg-1) ">
-        <TopNav games={games} variant="text" className="mx-6" />
+        <TopNav games={games} variant="text" className="mx-4 md:mx-6" />
       </div>
       <div className="h-35 flex gap-10 md:gap-30 items-center justify-between py-[25px] px-[25px] md:px-[30px] bg-(--bg-2)">
         <div className="md:w-[40%] flex flex-col">

@@ -45,39 +45,43 @@ const GameServers = () => {
       <ul className="space-y-4 md:space-y-8">
         {pageServers.map((server) => (
           <li key={server.slug} className="p-0 md:p-4 rounded shadow">
-            <Link href={`/game-servers/${server.gameSlug}/${server.slug}`}>
-              <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 md:py-4 cursor-pointer hover:opacity-90 transition">
-                <img
-                  src={server.server_image}
-                  alt={server.title}
-                  className="postImg hover:!scale-none object-cover rounded"
-                />
-                <div className="flex gap-5 flex-col justify-between">
-                  <div>
-                    <h2 className="text-xl font-semibold">{server.title_ua} для {server.game} {server.game_version}</h2>
-                    <div className="flex items-center text-xs text-gray-500 gap-1">
-                      <span className="material-symbols-outlined text-gray-400" style={{ fontSize: 16 }}>
-                        calendar_month
-                      </span>
-                      <span>{server.date}</span>
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-700 mr-10">
-                    {stripMarkdown(server.content).slice(0, 150)}...
-                  </p>
-                  <div>
-                    <div className="flex gap-1.5 flex-wrap mt-1 md:mt-2 space-x-0  md:space-x-2">
-                      {server.tags?.map((tag) => (
-                        <span key={tag} className="text-xs bg-gray-200 hover:bg-blue-500 hover:text-white duration-300 px-2 py-1 rounded-full">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
 
+            <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 md:py-4 cursor-pointer hover:opacity-90 transition">
+              <img
+                src={server.server_image}
+                alt={server.title}
+                className="postImg hover:!scale-none object-cover rounded"
+              />
+              <div className="flex gap-5 flex-col justify-between">
+                <div>
+                  <h2 className="text-xl font-semibold">
+                    <Link href={`/game-servers/${server.gameSlug}/${server.slug}`}>
+                      {server.title_ua} для {server.game} {server.game_version}
+                    </Link>
+                  </h2>
+                  <div className="flex items-center text-xs text-gray-500 gap-1">
+                    <span className="material-symbols-outlined text-gray-400" style={{ fontSize: 16 }}>
+                      calendar_month
+                    </span>
+                    <span>{server.date}</span>
                   </div>
                 </div>
+                <p className="text-sm text-gray-700 mr-10">
+                  {stripMarkdown(server.content).slice(0, 150)}...
+                </p>
+                <div>
+                  <div className="flex gap-1.5 flex-wrap mt-1 md:mt-2 space-x-0  md:space-x-2">
+                    {server.tags?.map((tag) => (
+                      <span key={tag} className="text-xs bg-gray-200 hover:bg-blue-500 hover:text-white duration-300 px-2 py-1 rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                </div>
               </div>
-            </Link>
+            </div>
+
             <div className="flex justify-between mt-4">
               <span className="text-xs text-gray-500 block">
                 <a href={`/game-servers/${server.gameSlug}`}>сервер для: {server.game}</a>
