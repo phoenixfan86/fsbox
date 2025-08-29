@@ -83,7 +83,7 @@ export function getServerData(slug: string | string[]): ServerData {
   };
 }
 
-{/*export function getAllGames(): { slug: string; name: string }[] {
+export function getAllServers(): { slug: string; name: string }[] {
   return fs
     .readdirSync(serversDirectory)
     .filter((folder) => {
@@ -106,7 +106,7 @@ export function getServerData(slug: string | string[]): ServerData {
         name: data.game || folder,
       };
     });
-}*/}
+}
 
 
 {/*export function getModsByGame(game: string): ServerData[] {

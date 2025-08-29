@@ -74,7 +74,6 @@ export default async function serverPage({ params }: { params: SlugParams }) {
           </span>
         ))}
       </div>
-
       <div className="flex flex-col md:flex-row gap-4 items-center justify-center pt-5">
         <img
           src={server.server_image}
@@ -82,14 +81,12 @@ export default async function serverPage({ params }: { params: SlugParams }) {
           className="postImg h-auto rounded mb-6"
         />
       </div>
-
       <div className="flex gap-5 flex-col mt-5">
         <h3 className="text-xl text-center">Опис моду</h3>
         <div className="text-sm text-(--color-3)">
           <Markdown>{server.content}</Markdown>
         </div>
       </div>
-
       {server.server_link && (
         <div className="flex flex-col items-start mt-6">
           <span>Посилання: </span>
@@ -140,10 +137,8 @@ export default async function serverPage({ params }: { params: SlugParams }) {
                 </a>
               </li>
             </ul>
-
           </div>
         </div>
-
       )}
     </div>
   );

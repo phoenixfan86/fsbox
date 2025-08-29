@@ -31,13 +31,12 @@ export const metadata: Metadata = {
 
 const GameServers = () => {
   const servers: ServerData[] = getSortedServerData();
-  console.log(servers);
   const pageServers = servers.slice(0, SERVERS_PER_PAGE);
   const totalPages = Math.ceil(servers.length / SERVERS_PER_PAGE);
 
   return (
     <section className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
-      <h1 className="text-xl font-bold mb-6">Нові сервери</h1>
+      <h1 className="text-xl font-bold mb-6">Список серверів:</h1>
       <p>
         Вибирайте з нашого списку найпопулярніших серверів для улюблених ігор — Minecraft, CS:GO, Rust, GTA та інших.
         Тут ви знайдете активні спільноти, стабільний онлайн і кращі місця для гри з друзями.

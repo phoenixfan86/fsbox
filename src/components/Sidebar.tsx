@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { getSortedServerData } from "@/lib/servers";
 import { getSortedModsData, getAllGames } from "@/lib/mods";
 import { pickRandomMods } from "@/lib/randomMods";
+import type { ServerData } from "@/types/ServerData";
 import type { ModData } from "@/types/ModsData";
 import TopNav from "./TopNav";
 
@@ -10,9 +12,14 @@ type Props = {
 
 
 const Sidebar = ({ exclude }: Props) => {
+  const servers: ServerData[] = getSortedServerData();
   const games = getAllGames();
   const allMods: ModData[] = getSortedModsData();
   const randoms = pickRandomMods(allMods, 3, exclude);
+
+  const uniqueGames = Array.from(
+    new Map(servers.map((s) => [s.gameSlug, s])).values()
+  );
 
   if (randoms.length === 0) return null;
 
@@ -45,7 +52,19 @@ const Sidebar = ({ exclude }: Props) => {
           ))}
         </ul>
       </div>
-    </aside>
+      <div className="shadow">
+        <h4>Сервери для:</h4>
+        <ul>
+          {uniqueGames.map((server) => (
+            <li key={server.gameSlug}>
+              <Link href={`/game-servers/${server.gameSlug}`}>
+                {server.game}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </aside >
   );
 }
 export default Sidebar;

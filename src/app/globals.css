@@ -61,7 +61,8 @@ a:hover {
 }
 
 main a,
-section a {
+section a,
+li a {
 	color: var(--primary-color-1);
 }
 

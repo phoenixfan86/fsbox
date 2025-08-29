@@ -58,7 +58,6 @@ export default function RootLayout({
           <HeaderWrapper />
           <div className="md:flex">
             {children}
-
             <Sidebar />
           </div>
           <About />
