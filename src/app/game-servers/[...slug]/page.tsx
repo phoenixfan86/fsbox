@@ -1,10 +1,10 @@
-import { getServerData, getSortedServerData } from "@/lib/servers";
+import { getServerData } from "@/lib/servers";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { Metadata } from "next";
 import Markdown from "react-markdown";
 import { ServerData } from "@/types/ServerData";
 import { stripMarkdown } from "@/lib/stripMarkDown";
+import CopyText from "@/components/CopyText";
 
 
 type SlugParams = Promise<{ slug: string[] }>;
@@ -106,22 +106,12 @@ export default async function serverPage({ params }: { params: SlugParams }) {
               </li>
               <li className="flex gap-3 justify-between shadow">
                 <span>IP: </span>
-                <span
-                  className="!text-(--color-1)"
-                  aria-label={`IP ${server.title}`}
-                >
-                  {server.server_ip}
-                </span>
+                <CopyText text={server.server_ip ?? ""} label={`IP ${server.title}`} />
               </li>
               {server.server_port && (
                 <li className="flex gap-3 justify-between shadow">
                   <span >PORT: </span>
-                  <span
-                    className="!text-(--color-1)"
-                    aria-label={`Port ${server.title}`}
-                  >
-                    {server.server_port}
-                  </span>
+                  <CopyText text={server.server_port ?? ""} label={`Port ${server.title}`} />
                 </li>
               )}
               <li className="flex gap-3 justify-between mt-3">
