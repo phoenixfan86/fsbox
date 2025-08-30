@@ -25,6 +25,9 @@ const Sidebar = ({ exclude }: Props) => {
 
   return (
     <aside className="hidden md:flex md:gap-10 md:flex-col md:p-[25px] border-l-1 border-(--color-5)">
+      <div className="shadow pb-5">
+        <Link href={`/articles`} className=" !text-(--primary-color-1)">Статті</Link>
+      </div>
       <div className="shadow">
         <h4>Моди для:</h4>
         <TopNav games={games} variant="logos" className="items-center flex-col py-5" />
