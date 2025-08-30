@@ -1,6 +1,6 @@
 ---
-title: "Xaero's Minimap - download mod for"
-title_ua: "Xaero's Minimap - скачати мод"
+title: "Xaero's Minimap - download mod minimap for"
+title_ua: "Xaero's Minimap - скачати мод мінікарта"
 description: "Unlike many other minimap mods, Xaero's minimap retains the aesthetics of vanilla Minecraft, helping it to be a more seamless addition to the game. It is also the first square minimap for Minecraft that rotates."
 mod_name: "Xaero's Minimap"
 game: "Minecraft"
