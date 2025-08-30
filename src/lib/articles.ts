@@ -1,64 +1,66 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import type { ServerData } from "@/types/ServerData";
+import type { ArticleData } from "@/types/ArticleData";
 
-const serversDirectory = path.join(process.cwd(), "src", "data", "gameServers");
+const articlesDirectory = path.join(process.cwd(), "src", "data", "articles");
 
-export function getSortedServerData(): ServerData[] {
-  const servers = fs.readdirSync(serversDirectory);
 
-  let allServers: ServerData[] = [];
+//Виводить всі статті
+export function getSortedArticlesData(): ArticleData[] {
+  const articles = fs.readdirSync(articlesDirectory);
 
-  for (const server of servers) {
-    const serverPath = path.join(serversDirectory, server);
-    const filenames = fs.readdirSync(serverPath);
+  let allArticles: ArticleData[] = [];
+
+  for (const article of articles) {
+    const articlePath = path.join(articlesDirectory, article);
+    const filenames = fs.readdirSync(articlePath);
 
     for (const filename of filenames) {
       if (!filename.endsWith(".md")) continue;
 
-      const fullPath = path.join(serverPath, filename);
+      const fullPath = path.join(articlePath, filename);
       const fileContents = fs.readFileSync(fullPath, "utf8");
 
       const { data, content } = matter(fileContents);
 
       const slug = filename.replace(/\.md$/, "");
 
-      allServers.push({
+      allArticles.push({
         slug,
         title: data.title,
         title_ua: data.title_ua,
         description: data.description,
         game: data.game,
         game_collection: data.game_collection,
-        gameSlug: server,
-        game_version: data.game_version,
+        gameSlug: article,
+        article_type: data.article_type || "",
+        article_img: data.article_img || [],
+        link: data.link,
+        link_text: data.link_text || "",
+        video_link: data.video_link || "",
         date: data.date,
         tags: data.tags || [],
-        server_image: data.server_image || "",
-        server_link: data.server_link || "",
-        server_ip: data.server_ip || "",
-        server_port: data.server_port || "",
         content,
       });
     }
   }
 
-  return allServers.sort((a, b) => (a.date < b.date ? 1 : -1));
+  return allArticles.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-
-export function getServerData(slug: string | string[]): ServerData {
-  let server: string;
+//Відображення конкретної статті 
+export function getArticleData(slug: string | string[]): ArticleData {
+  let article: string;
   let file: string;
 
   if (Array.isArray(slug)) {
-    [server, file] = slug;
+    [article, file] = slug;
   } else {
-    [server, file] = slug.split("/");
+    [article, file] = slug.split("/");
   }
 
-  const fullPath = path.join(serversDirectory, server, `${file}.md`);
+  const fullPath = path.join(articlesDirectory, article, `${file}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
   const { data, content } = matter(fileContents);
@@ -70,28 +72,26 @@ export function getServerData(slug: string | string[]): ServerData {
     title: data.title,
     title_ua: data.title_ua,
     description: data.description,
-    game_version: data.game_version,
     date: data.date,
     tags: data.tags || [],
-    server_online: data.server_online || "",
-    server_image: data.server_image || "",
-    server_link: data.server_link || "",
-    server_ip: data.server_ip || "",
-    server_port: data.server_port || "",
-    server_discord: data.server_discord || "",
+    article_type: data.article_type || "",
+    article_img: data.article_img || [],
+    link: data.link,
+    link_text: data.link_text || "",
+    video_link: data.video_link || "",
     content,
   };
 }
 
-export function getAllServers(): { slug: string; name: string }[] {
+export function getAllArticles(): { slug: string; name: string }[] {
   return fs
-    .readdirSync(serversDirectory)
+    .readdirSync(articlesDirectory)
     .filter((folder) => {
-      const folderPath = path.join(serversDirectory, folder);
+      const folderPath = path.join(articlesDirectory, folder);
       return fs.statSync(folderPath).isDirectory();
     })
     .map((folder) => {
-      const folderPath = path.join(serversDirectory, folder);
+      const folderPath = path.join(articlesDirectory, folder);
       const files = fs.readdirSync(folderPath);
       const firstMd = files.find((f) => f.endsWith(".md"));
       

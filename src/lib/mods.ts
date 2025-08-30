@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import type { ModData } from "@/types/ModsData";
 
-const modsDirectory = path.join(process.cwd(), "src", "mods");
+const modsDirectory = path.join(process.cwd(), "src", "data", "mods");
 
 export function getSortedModsData(): ModData[] {
   const games = fs.readdirSync(modsDirectory);
