@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import TopNav from "./TopNav";
 import { ModData } from "@/types/ModsData";
 import { stripMarkdown } from "@/lib/stripMarkDown";
@@ -68,15 +69,23 @@ const Header = ({ allMods, games }: Props) => {
                 <ul className="flex flex-col gap-5">
                   {results.map((mod) => (
                     <li key={mod.slug}>
-                      <Link href={`/mods/${mod.gameSlug}/${mod.slug}`} onClick={handleCloseModal}>
-                        <div className="flex flex-col md:flex-row gap-3 items-start md:items-end shadow">
-                          <img src={mod.image_first} alt={mod.title} className="size-20" />
-                          <h3 className="!text-(--primary-color-1)">{mod.mod_name}</h3>
-                          <p className="text-sm text-gray-700 mr-10">
+                      <div className="flex flex-col md:flex-row gap-3 items-start md:items-end shadow">
+                        <Image
+                          src={mod.image_first}
+                          alt={mod.title}
+                          width={100}
+                          height={80} />
+                        <div className="flex flex-col items-start">
+                          <h3 className="!text-(--primary-color-1) whitespace-nowrap overflow-hidden text-ellipsis">
+                            <Link href={`/mods/${mod.gameSlug}/${mod.slug}`} onClick={handleCloseModal}>
+                              {mod.mod_name}
+                            </Link>
+                          </h3>
+                          <p className="flex-1/2 text-sm text-start text-gray-700 ">
                             {stripMarkdown(mod.content).slice(0, 150)}...
                           </p>
                         </div>
-                      </Link>
+                      </div>
                     </li>
                   ))}
                 </ul>

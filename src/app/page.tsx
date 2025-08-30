@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 import { getSortedModsData } from "@/lib/mods";
 import { stripMarkdown } from "@/lib/stripMarkDown";
@@ -43,9 +44,11 @@ export default function Home() {
         {pageMods.map((mod) => (
           <li key={mod.slug} className="p-0 md:p-4 rounded shadow">
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 md:py-4 cursor-pointer hover:opacity-90 transition">
-              <img
+              <Image
                 src={mod.image_first}
                 alt={mod.title}
+                width={300}
+                height={100}
                 className="postImg hover:!scale-none object-cover rounded"
               />
               <div className="flex gap-5 flex-col justify-between">

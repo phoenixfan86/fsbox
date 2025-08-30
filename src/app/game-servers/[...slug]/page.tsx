@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getServerData } from "@/lib/servers";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
@@ -78,10 +79,12 @@ export default async function serverPage({ params }: { params: SlugParams }) {
         ))}
       </div>
       <div className="flex flex-col md:flex-row gap-4 items-center justify-center pt-5">
-        <img
+        <Image
           src={server.server_image}
           alt={server.title}
-          className="postImg h-auto rounded mb-6"
+          width={300}
+          height={100}
+          className="postImg rounded mb-6"
         />
       </div>
       <div className="flex gap-5 flex-col mt-5">

@@ -19,7 +19,7 @@ video_link: "https://www.youtube.com/embed/L0NCz_hDu9I"
 date: "2025-08-30"
 ---
 
- -Знайдіть та скачайте [мод для Minecraft](/mods/minecraft)
+- Знайдіть та скачайте [мод для Minecraft](/mods/minecraft)
 - Переконайтеся, що у вас встановлений Minecraft Forge або Fabric — це - обов’язкові інструменти для більшості модів.
 - Відкрийте папку гри Minecraft (/user/username/appdata/roaming/.minecraft) на вашому комп’ютері.
 - Перейдіть у директорію /mods/ (створіть її, якщо вона відсутня).

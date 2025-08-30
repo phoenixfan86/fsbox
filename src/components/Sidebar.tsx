@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getSortedServerData } from "@/lib/servers";
 import { getSortedModsData, getAllGames } from "@/lib/mods";
 import { pickRandomMods } from "@/lib/randomMods";
@@ -39,9 +40,11 @@ const Sidebar = ({ exclude }: Props) => {
             <li key={mod.slug} className=" p-2 rounded hover:opacity-90 transition hover:shadow">
               <Link href={`/mods/${mod.gameSlug}/${mod.slug}`} className="block">
                 <div className="flex gap-3 flex-col items-center">
-                  <img
+                  <Image
                     src={mod.image_first}
                     alt={mod.title}
+                    width={80}
+                    height={80}
                     className="size-20 object-cover rounded"
                     loading="lazy"
                   />

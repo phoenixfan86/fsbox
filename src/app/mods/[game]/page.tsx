@@ -1,7 +1,7 @@
 
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
-import { ModData } from "@/types/ModsData";
 import { getAllGames, getSortedModsData } from "@/lib/mods";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 
@@ -60,9 +60,11 @@ export default async function GameModsPage({ params }: { params: Promise<{ game:
         {gameMods.map((mod) => (
           <li key={mod.slug} className="p-4 rounded shadow">
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 hover:opacity-90 transition">
-              <img
+              <Image
                 src={mod.image_first}
                 alt={mod.title}
+                width={300}
+                height={100}
                 className="postImg hover:!scale-none object-cover rounded"
               />
               <div className="flex gap-5 flex-col justify-between">

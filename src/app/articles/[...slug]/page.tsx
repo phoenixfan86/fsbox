@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Image from "next/image";
 import { getArticleData } from "@/lib/articles";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
@@ -55,7 +57,7 @@ export default async function articlePage({ params }: { params: SlugParams }) {
 
 
   return (
-    <div className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
+    <article className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
       <h1 className="text-3xl font-bold mb-2">{article.title_ua}</h1>
       <div className="flex justify-between">
         <p className="text-xs text-(--color-4) mb-4">Додано: {article.date}</p>
@@ -70,28 +72,31 @@ export default async function articlePage({ params }: { params: SlugParams }) {
           </span>
         ))}
       </div>
-      <div className="flex flex-wrap gap-4 items-center justify-center pt-5">
-        {article.article_img?.map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt={`${article.title} image ${i + 1}`}
-            className="postImg h-auto rounded mb-6"
-          />
-        ))}
-      </div>
-      <div className="flex gap-5 flex-col mt-5">
+      <div className="flex gap-5 flex-col my-5">
         <h3 className="text-xl text-center">{article.article_type}</h3>
-        <div className="text-sm text-(--color-3)">
+        <div className="content text-sm text-(--color-3)">
           <Markdown>{article.content}</Markdown>
         </div>
       </div>
+      <div className="flex flex-col gap-4 items-center justify-center pt-5">
+        {article.article_img?.map((src, i) => (
+          <Image
+            key={i}
+            src={src}
+            width={500}
+            height={200}
+            alt={`${article.title} image ${i + 1}`}
+            className="postImg rounded mb-6"
+          />
+        ))}
+      </div>
+
       {article.link && (
         <div className="flex flex-col items-start mt-6">
-          <span>Посилання: </span>
+          <span>Для: <Link href={article.link}>{article.game}</Link></span>
 
         </div>
       )}
-    </div>
+    </article>
   );
 }

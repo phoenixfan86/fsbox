@@ -1,6 +1,7 @@
 import { getModData, getSortedModsData } from "@/lib/mods";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 import Markdown from "react-markdown";
 import { ModData } from "@/types/ModsData";
@@ -78,15 +79,19 @@ export default async function ModPage({ params }: { params: SlugParams }) {
       </div>
 
       <div className="flex flex-col md:flex-row gap-4 items-center justify-center pt-5">
-        <img
+        <Image
           src={mod.image_first}
           alt={mod.title}
+          width={300}
+          height={100}
           className="postImg h-auto rounded mb-6"
         />
         {mod.image_second && (
-          <img
+          <Image
             src={mod.image_second}
             alt={mod.title}
+            width={300}
+            height={100}
             className="postImg h-auto rounded mb-6"
           />
         )}
@@ -146,18 +151,34 @@ export default async function ModPage({ params }: { params: SlugParams }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {similarMods.map(simMod => (
               <Link key={simMod.slug} href={`https://fsbox.pp.ua${mod.game_collection}/${simMod.slug}`} className="flex flex-col items-center justify-between p-3 rounded hover:shadow-lg transition !text-(--primary-color-1)">
-                <img src={simMod.image_first} alt={simMod.title} className="md:w-40 mb-2 rounded" />
+                <Image
+                  src={simMod.image_first}
+                  alt={simMod.title}
+                  width={160}
+                  height={100}
+                  className="md:w-40 mb-2 rounded" />
                 <h4 className="font-semibold">{simMod.title}</h4>
               </Link>
             ))}
           </div>
         </div>
       )}
-      {mod.game_collection && (
-        <p>
-          Дивись більше модів для <Link href={mod.game_collection} className="!text-(--primary-color-1)"> {mod.game}</Link>
-        </p>
-      )}
+      <h4 className="shadow mb-3">Корисні посилання:</h4>
+      <ul>
+        <li>
+          {mod.game_collection && (
+            <p>
+              Дивись більше модів для <Link href={mod.game_collection} className="!text-(--primary-color-1)"> {mod.game}</Link>
+            </p>
+          )}
+        </li>
+        <li>
+          {mod.game === "Minecraft" && (
+            <Link href={`/articles/minecraft/minecraft-mod-install-guide`}
+              className="!text-(--primary-color-1)">Як встановити моди на Майнкрафт</Link>
+          )}
+        </li>
+      </ul>
     </div>
   );
 }

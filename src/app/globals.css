@@ -62,18 +62,23 @@ a:hover {
 
 main a,
 section a,
+article a,
 li a {
 	color: var(--primary-color-1);
 }
 
 .postImg {
-	width: 300px;
 	filter: drop-shadow(1px 1px 10px #000);
 	transition: scale 0.5s ease;
 }
 
 .postImg:hover {
 	scale: 1.1;
+}
+
+.content ul li {
+	list-style-type: decimal-leading-zero;
+	margin-left: 10px;
 }
 
 .downloadBtn {

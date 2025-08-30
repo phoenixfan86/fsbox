@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { getSortedArticlesData } from "@/lib/articles";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 import type { ArticleData } from "@/types/ArticleData";
@@ -47,9 +48,11 @@ const Articles = () => {
 
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 md:py-4 cursor-pointer hover:opacity-90 transition">
               {article.article_img?.[0] && (
-                <img
+                <Image
                   src={article.article_img[0]}
                   alt={`${article.title}`}
+                  width={300}
+                  height={100}
                   className="postImg hover:!scale-none object-cover rounded"
                 />
               )}

@@ -15,6 +15,24 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  images:{
+    domains:[
+      'media.forgecdn.net',
+      'staticdelivery.nexusmods.com',
+      'bisecthosting.com',
+      'i.imgur.com',
+      'docs.darkhax.net',
+      'github.com',
+      'cdn.modrinth.com',
+      'gitlab.com',
+      'pixelmonmod.com',
+      'chocolateminecraft.com',
+      'puu.sh',
+      'raw.githubusercontent.com',
+      'minecrafter.in.ua',
+      'i.ibb.co',
+    ]
+  }
 };
 
 export default nextConfig;
