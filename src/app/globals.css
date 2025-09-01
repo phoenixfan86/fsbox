@@ -76,6 +76,18 @@ li a {
 	scale: 1.1;
 }
 
+.content {
+	display: flex;
+	gap: 5px;
+	flex-direction: column;
+}
+
+.content h3,
+h4 {
+	font-weight: 600;
+	margin-top: 10px;
+}
+
 .content ul li {
 	list-style-type: decimal-leading-zero;
 	margin-left: 10px;

@@ -1,6 +1,6 @@
 ---
 title: "Mod install guide for Minecraft"
-title_ua: "Як встановити моди на Майнкрафт"
+title_ua: "Інструкція як встановити моди на Майнкрафт"
 description: "A quick guide to installing mods on Minecraft"
 game: "Minecraft"
 game_collection: "/game-servers/minecraft"
