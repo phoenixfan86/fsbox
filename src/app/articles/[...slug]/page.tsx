@@ -81,6 +81,7 @@ export default async function articlePage({ params }: { params: SlugParams }) {
       <div className="flex items-center justify-center">
         <iframe width="90%" height="480" src={article.video_link} title="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
       </div>
+      <h4>Картинки:</h4>
       <div className="flex flex-col gap-4 items-center justify-center pt-5">
         {article.article_img?.map((src, i) => (
           <Image

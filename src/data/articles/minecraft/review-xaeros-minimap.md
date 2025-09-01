@@ -11,7 +11,7 @@ article_img:
 - "https://chocolateminecraft.com/images/minimap_2020.png"
 link: "/mods/minecraft"
 link_text: "Minecraft"
-video_link: "https://youtu.be/ogdwEkY7leI"
+video_link: "https://youtube.com/embed/ogdwEkY7leI"
 date: "2025-08-30"
 ---
 
