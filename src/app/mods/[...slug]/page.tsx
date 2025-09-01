@@ -100,7 +100,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
 
       <div className="flex gap-5 flex-col mt-5">
         <h3 className="text-xl text-center">Опис моду</h3>
-        <div className="text-sm text-(--color-3)">
+        <div className="description text-sm text-(--color-3)">
           <Markdown>{mod.content}</Markdown>
         </div>
 
