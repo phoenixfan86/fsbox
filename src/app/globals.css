@@ -83,15 +83,16 @@ li a {
 	flex-direction: column;
 }
 
-.content,
+.content h3,
 .description h3 {
 	font-weight: 600;
 	margin-top: 15px;
 }
 
-.content ul li {
+.content ul li,
+.description ul li {
 	list-style-type: decimal-leading-zero;
-	margin-left: 10px;
+	margin-left: 20px;
 }
 
 .description a {
