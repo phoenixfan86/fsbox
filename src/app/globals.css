@@ -76,16 +76,17 @@ li a {
 	scale: 1.1;
 }
 
-.content {
+.content,
+.description {
 	display: flex;
 	gap: 5px;
 	flex-direction: column;
 }
 
-.content h3,
-h4 {
+.content,
+.description h3 {
 	font-weight: 600;
-	margin-top: 10px;
+	margin-top: 15px;
 }
 
 .content ul li {
