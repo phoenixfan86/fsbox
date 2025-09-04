@@ -9,13 +9,13 @@ const ARTICLES_PER_PAGE = 5;
 
 export const metadata: Metadata = {
   title: "FSbox - Статті про Майнкрафт та для інших ігор",
-  description: "Підбірка статей, гайдів, артів про Майнкрафт та інших ігор Українською",
+  description: "Статті та гайди по Minecraft та інших ігор: як встановити моди, налаштувати сервер. Покрокові інструкції українською мовою для початківців та досвідчених",
   alternates: {
     canonical: "https://fsbox.pp.ua/articles"
   },
   openGraph: {
     title: "FSbox - Статті про Майнкрафт та для інших ігор",
-    description: "Підбірка статей, гайдів, артів про Майнкрафт та інших ігор Українською",
+    description: "Статті та гайди по Minecraft та інших ігор: як встановити моди, налаштувати сервер. Покрокові інструкції українською мовою для початківців та досвідчених",
     url: "https://fsbox.pp.ua/articles",
     siteName: "FSBox",
     type: "article",
@@ -86,12 +86,6 @@ const Articles = () => {
                 </div>
               </div>
             </div>
-
-            {/*<div className="flex justify-between mt-4">
-              <span className="text-xs text-gray-500 block">
-                <a href={`/articles/${article.gameSlug}`}>сервер для: {article.game}</a>
-              </span>
-            </div>*/}
           </li>
         ))}
       </ul>
