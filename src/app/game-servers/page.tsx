@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: "/img/preview.png",
         width: 1200,
         height: 630,
-        alt: "FSBox — кращі моди для ігор",
+        alt: "FSBox — кращі сервери для ігор",
       },
     ],
   }
