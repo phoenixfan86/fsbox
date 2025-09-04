@@ -9,13 +9,13 @@ const SERVERS_PER_PAGE = 5;
 
 export const metadata: Metadata = {
   title: "FSbox - сервера для Майнкрафт та для інших ігор",
-  description: "Підбірка серверів на Майнкрафт, Українські сервера для Minecraft.",
+  description: "Список найпопулярніших серверів для улюблених ігор — Minecraft, CS:GO, Rust, GTA та інших. Тут ви знайдете активні спільноти.",
   alternates: {
     canonical: "https://fsbox.pp.ua/game-servers"
   },
   openGraph: {
     title: "FSbox - сервера для Майнкрафт та для інших ігор",
-    description: "Підбірка серверів на Майнкрафт, Українські сервера для Minecraft.",
+    description: "Список найпопулярніших серверів для улюблених ігор — Minecraft, CS:GO, Rust, GTA та інших. Тут ви знайдете активні спільноти.",
     url: "https://fsbox.pp.ua/game-servers",
     siteName: "FSBox",
     type: "website",
