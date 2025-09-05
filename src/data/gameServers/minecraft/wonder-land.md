@@ -1,6 +1,7 @@
 ---
 title: "Server WonderLand"
 title_ua: "Сервер WonderLand"
+server_name: "WonderLand"
 description: "Minecraft Server griefing Survival/Anarchy"
 game: "Minecraft"
 game_collection: "/game-servers/minecraft"

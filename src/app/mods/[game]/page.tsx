@@ -56,7 +56,7 @@ export default async function GameModsPage({ params }: { params: Promise<{ game:
         Збірка модів на {gameName}
       </h1>
       <p className="mb-5">Популярні моди для {gameName}: моди на зброю та броню, моди на техніку і транспорт, моди на біоми, меблі та прикраси. Завантажуйте доповнення для різних версій гри та робіть світ в {gameName} ще цікавішим.</p>
-      <ul className="space-y-8">
+      <ul className="space-y-4 md:space-y-8">
         {gameMods.map((mod) => (
           <li key={mod.slug} className="p-4 rounded shadow">
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 hover:opacity-90 transition">
@@ -99,7 +99,7 @@ export default async function GameModsPage({ params }: { params: Promise<{ game:
             <div className="flex justify-between mt-4">
               <span className="text-xs text-gray-500 block">Автор: {mod.author}</span>
               <span className="text-xs text-gray-500 block">
-                <a href={mod.game_collection}>для: {mod.game}</a>
+                <Link href={`${mod.game_collection}`}>для: {mod.game}</Link>
               </span>
             </div>
           </li>

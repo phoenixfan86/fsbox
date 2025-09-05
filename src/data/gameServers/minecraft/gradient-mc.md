@@ -1,6 +1,7 @@
 ---
 title: "Server Gradient-mc"
 title_ua: "Сервер Gradient-mc"
+server_name: "Gradient-mc"
 description: "Cool Ukrainian Minecraft server. This server features:
 - A beautiful, huge spawn.
 - A diverse shop where you can find everything from levitation items to orbits!

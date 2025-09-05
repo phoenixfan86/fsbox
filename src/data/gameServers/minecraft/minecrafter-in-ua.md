@@ -1,6 +1,7 @@
 ---
 title: "Server Minecrafter in UA"
 title_ua: "Сервер Майнкрафтер in UA"
+server_name: "Майнкрафтер in UA"
 description: "TServer version 1.21.7! IPs from Russia blocked! Server without Russians!"
 game: "Minecraft"
 game_collection: "/game-servers/minecraft"

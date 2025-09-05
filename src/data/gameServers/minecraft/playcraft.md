@@ -1,6 +1,7 @@
 ---
 title: "Server Playcraft"
 title_ua: "Сервер Playcraft"
+server_name: "Playcraft"
 description: "PlayCraft is the first Ukrainian and Ukrainian-language Minecraft server. It is a server with a warm atmosphere, whose history began back in 2012 and continues to this day."
 game: "Minecraft"
 game_collection: "/game-servers/minecraft"

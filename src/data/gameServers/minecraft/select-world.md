@@ -1,6 +1,7 @@
 ---
 title: "Server Select World"
 title_ua: "Сервер Select World"
+server_name: "Select World"
 description: "Vanilla+ server is designed for enjoyable gameplay with friends on a clean version of the game and has several plugins and features to engage players and add variety: Improved FPS: The server takes over some of the processes, which improves FPS and reduces lag during gameplay. Various commands: Use commands such as /spawn and /home. Events: Take part in exciting events. Giveaways: Win items and in-game currency. Economy: Sell items using /sell, create your own shops using /qs create, and buy decorative heads using /hdb."
 game: "Minecraft"
 game_collection: "/game-servers/minecraft"

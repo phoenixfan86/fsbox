@@ -4,6 +4,7 @@ import Image from "next/image";
 import type { ServerData } from "@/types/ServerData";
 import { getSortedServerData } from "@/lib/servers";
 import { stripMarkdown } from "@/lib/stripMarkDown";
+import Pagination from "@/components/Pagination";
 
 const SERVERS_PER_PAGE = 5;
 
@@ -32,20 +33,20 @@ export const metadata: Metadata = {
 
 const GameServers = () => {
   const servers: ServerData[] = getSortedServerData();
-  const pageServers = servers.slice(0, SERVERS_PER_PAGE);
+  const allServers = servers.slice(0, SERVERS_PER_PAGE);
   const totalPages = Math.ceil(servers.length / SERVERS_PER_PAGE);
 
   return (
     <section className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
-      <h1 className="text-xl font-bold mb-6">Список серверів:</h1>
+      <h1 className="text-xl font-bold mb-6">Список серверів на FSBox</h1>
       <p>
         Вибирайте з нашого списку найпопулярніших серверів для улюблених ігор — Minecraft, CS:GO, Rust, GTA та інших.
         Тут ви знайдете активні спільноти, стабільний онлайн і кращі місця для гри з друзями.
       </p>
 
       <ul className="space-y-4 md:space-y-8">
-        {pageServers.map((server) => (
-          <li key={server.slug} className="p-0 md:p-4 rounded shadow">
+        {allServers.map((server) => (
+          <li key={server.slug} className="p-4 rounded shadow">
 
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 md:py-4 cursor-pointer hover:opacity-90 transition">
               <Image
@@ -96,11 +97,14 @@ const GameServers = () => {
 
       {totalPages > 1 && (
         <div className="mt-8 flex justify-center">
-          <Link href={`/page/2`} className="hover:translate-x-2">
-            Вперед →
-          </Link>
+          <Pagination
+            pageNumber={1}
+            totalPages={totalPages}
+            basePath="/game-servers/page"
+          />
         </div>
       )}
+
     </section>
   );
 }

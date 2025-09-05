@@ -88,7 +88,7 @@ export default async function serverPage({ params }: { params: SlugParams }) {
         />
       </div>
       <div className="flex gap-5 flex-col mt-5">
-        <h3 className="text-xl text-center">Опис сервера</h3>
+        <h3 className="text-xl text-center">Опис сервера {server.server_name}</h3>
         <div className="description text-sm text-(--color-3)">
           <Markdown>{server.content}</Markdown>
         </div>

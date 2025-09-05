@@ -57,7 +57,7 @@ export default async function GameServersPage({ params }: { params: Promise<{ ga
       </h1>
       <ul className="space-y-8">
         {gameServers.map((server) => (
-          <li key={server.slug} className="py-5 px-3 rounded shadow">
+          <li key={server.slug} className="p-4 rounded shadow">
             <Link href={`/game-servers/${server.gameSlug}/${server.slug}`}>
               <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 cursor-pointer hover:opacity-90 transition">
                 <Image

@@ -1,6 +1,7 @@
 export type ServerData = {
   title: string;
   title_ua: string;
+  server_name?: string;
   description: string;
   game: string;
   game_collection?:string;

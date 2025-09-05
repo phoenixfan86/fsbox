@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { getSortedModsData } from "@/lib/mods";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 import { ModData } from "@/types/ModsData";
+import Pagination from "@/components/Pagination";
 
 
 const MODS_PER_PAGE = 5;
@@ -33,17 +34,17 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const mods: ModData[] = getSortedModsData();
-  const pageMods = mods.slice(0, MODS_PER_PAGE);
+  const allMods = mods.slice(0, MODS_PER_PAGE);
   const totalPages = Math.ceil(mods.length / MODS_PER_PAGE);
 
 
   return (
     <main className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
-      <h1 className="text-xl font-bold mb-6">Нові моди</h1>
+      <h1 className="text-xl font-bold mb-6">Нові моди на FSBox</h1>
       <ul className="space-y-4 md:space-y-8">
-        {pageMods.map((mod) => (
-          <li key={mod.slug} className="p-0 md:p-4 rounded shadow">
-            <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 md:py-4 cursor-pointer hover:opacity-90 transition">
+        {allMods.map((mod) => (
+          <li key={mod.slug} className="p-4 rounded shadow">
+            <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 cursor-pointer hover:opacity-90 transition">
               <Image
                 src={mod.image_first}
                 alt={mod.title}
@@ -84,7 +85,7 @@ export default function Home() {
             <div className="flex justify-between mt-4">
               <span className="text-xs text-gray-500 block">Автор: {mod.author}</span>
               <span className="text-xs text-gray-500 block">
-                <a href={mod.game_collection}>мод для: {mod.game}</a>
+                <Link href={`${mod.game_collection}`}>мод для: {mod.game}</Link>
               </span>
             </div>
           </li>
@@ -93,9 +94,11 @@ export default function Home() {
 
       {totalPages > 1 && (
         <div className="mt-8 flex justify-center">
-          <Link href={`/page/2`} className="hover:translate-x-2">
-            Вперед →
-          </Link>
+          <Pagination
+            pageNumber={1}
+            totalPages={totalPages}
+            basePath="/page"
+          />
         </div>
       )}
     </main>

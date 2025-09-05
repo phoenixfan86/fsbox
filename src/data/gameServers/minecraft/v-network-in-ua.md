@@ -1,6 +1,7 @@
 ---
 title: "survival Server v-network.in.ua"
 title_ua: "Сервер для виживання v-network.in.ua"
+server_name: "v-network.in.ua"
 description: "Ukrainian Minecraft server. V-Network.in.ua server for those who love survival but don't mind a few conveniences. Improved tools and systems: some things work better, and the game becomes more convenient."
 game: "Minecraft"
 game_collection: "/game-servers/minecraft"

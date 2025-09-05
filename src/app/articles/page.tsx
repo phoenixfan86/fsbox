@@ -4,6 +4,7 @@ import Image from "next/image";
 import { getSortedArticlesData } from "@/lib/articles";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 import type { ArticleData } from "@/types/ArticleData";
+import Pagination from "@/components/Pagination";
 
 const ARTICLES_PER_PAGE = 5;
 
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
 
 const Articles = () => {
   const articles: ArticleData[] = getSortedArticlesData();
-  const pageArticles = articles.slice(0, ARTICLES_PER_PAGE);
+  const allArticles = articles.slice(0, ARTICLES_PER_PAGE);
   const totalPages = Math.ceil(articles.length / ARTICLES_PER_PAGE);
 
   return (
@@ -43,7 +44,7 @@ const Articles = () => {
       </p>
 
       <ul className="space-y-4 md:space-y-8">
-        {pageArticles.map((article) => (
+        {allArticles.map((article) => (
           <li key={article.slug} className="p-0 md:p-4 rounded shadow">
 
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 md:py-4 cursor-pointer hover:opacity-90 transition">
@@ -92,9 +93,11 @@ const Articles = () => {
 
       {totalPages > 1 && (
         <div className="mt-8 flex justify-center">
-          <Link href={`/page/2`} className="hover:translate-x-2">
-            Вперед →
-          </Link>
+          <Pagination
+            pageNumber={1}
+            totalPages={totalPages}
+            basePath="/articles"
+          />
         </div>
       )}
     </section>
