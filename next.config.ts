@@ -32,6 +32,7 @@ const nextConfig: NextConfig = {
       'minecrafter.in.ua',
       'i.ibb.co',
       'static.wikia.nocookie.net',
+      'blogger.googleusercontent.com',
     ]
   }
 };
