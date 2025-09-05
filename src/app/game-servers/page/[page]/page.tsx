@@ -39,7 +39,7 @@ export default async function Page({ params }: { params: Promise<{ page: string 
         <h1 className="text-sm text-gray-500">Список серверів на FSBox </h1>
         <span className="text-sm text-gray-500">сторінка {pageNumber}</span>
         <span className="text-sm text-gray-500">
-          Всього {totalPages >= 2 ? `${totalPages} сторінки` : `${totalPages} сторінок`}
+          Всього {totalPages <= 2 ? `${totalPages} сторінки` : `${totalPages} сторінок`}
         </span>
       </div>
       <ul className="space-y-8">
