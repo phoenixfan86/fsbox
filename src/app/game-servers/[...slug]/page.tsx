@@ -95,7 +95,7 @@ export default async function serverPage({ params }: { params: SlugParams }) {
       </div>
       {server.server_link && (
         <div className="flex flex-col items-start mt-6">
-          <span>Посилання: </span>
+          <span className="font-bold">Посилання на сервер: </span>
           <div className="">
             <ul className="flex gap-2 flex-col bg-(--bg-3) py-1 px-3 !text-(--primary-color-1) mt-2 rounded-sm">
               <li className="flex gap-3 justify-between shadow">
