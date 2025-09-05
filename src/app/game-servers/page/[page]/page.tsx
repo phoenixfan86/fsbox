@@ -57,7 +57,7 @@ export default async function Page({ params }: { params: Promise<{ page: string 
               <div className="flex gap-5 flex-col justify-between">
                 <div>
                   <h2 className="text-xl font-semibold">
-                    <Link href={`/game-serves/${serv.gameSlug}/${serv.slug}`}>
+                    <Link href={`/game-servers/${serv.gameSlug}/${serv.slug}`}>
                       {serv.title_ua} для {serv.game} {serv.tags?.[serv.tags.length - 1] ?? ''}
                     </Link>
                   </h2>
