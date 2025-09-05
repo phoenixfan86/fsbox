@@ -20,6 +20,7 @@ const nextConfig: NextConfig = {
       'media.forgecdn.net',
       'staticdelivery.nexusmods.com',
       'bisecthosting.com',
+      'imgur.com',
       'i.imgur.com',
       'docs.darkhax.net',
       'github.com',
