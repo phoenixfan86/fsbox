@@ -33,6 +33,7 @@ const nextConfig: NextConfig = {
       'i.ibb.co',
       'static.wikia.nocookie.net',
       'blogger.googleusercontent.com',
+      'playcraft.com.ua'
     ]
   }
 };
