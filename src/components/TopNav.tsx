@@ -33,29 +33,30 @@ const TopNav = ({ games, variant = "text", className = "" }: Props) => {
           Головна
         </Link>
       )}
-      {games.map((game) => {
-        const logo = LOGO_MAP[game.slug.toLowerCase()];
-        return (
-          <Link
-            key={game.slug}
-            href={`/mods/${game.slug}`}
-            className="flex items-center"
-            aria-label={game.name}
-          >
-            {variant === "logos" && logo ? (
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                width={100}
-                height={100}
-              />
-            ) : (
-              <span className="text-[8px] md:text-[11px] uppercase">{game.name}</span>
-            )}
-          </Link>
-
-        );
-      })}
+      <div className={`flex ${variant === "logos" ? "flex-col" : ""} gap-1 md:gap-2 mx-1 md:mx-3`}>
+        {games.map((game) => {
+          const logo = LOGO_MAP[game.slug.toLowerCase()];
+          return (
+            <Link
+              key={game.slug}
+              href={`/mods/${game.slug}`}
+              className="flex items-center"
+              aria-label={game.name}
+            >
+              {variant === "logos" && logo ? (
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={100}
+                  height={100}
+                />
+              ) : (
+                <span className="text-[8px] md:text-[11px] uppercase">{game.name}</span>
+              )}
+            </Link>
+          );
+        })}
+      </div>
       {variant === "text" && (
         <Link href="/instruction" className="text-[8px] md:text-[11px] uppercase">
           Інструкції

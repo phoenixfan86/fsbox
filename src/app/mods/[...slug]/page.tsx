@@ -7,6 +7,7 @@ import Markdown from "react-markdown";
 import { ModData } from "@/types/ModsData";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 import { pickStableMods } from "@/lib/randomGameMod";
+import JsonLd from "@/components/JsonLd";
 
 type SlugParams = Promise<{ slug: string[] }>;
 
@@ -63,8 +64,36 @@ export default async function ModPage({ params }: { params: SlugParams }) {
   const allMods = getSortedModsData();
   const similarMods = pickStableMods(allMods, mod, 3);
 
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: mod.title,
+    applicationCategory: "GameMod",
+    operatingSystem: "Windows, Linux, macOS",
+    game: {
+      "@type": "VideoGame",
+      name: mod.game,
+    },
+    description: stripMarkdown(mod.description).slice(0, 200),
+    author: { "@type": "Person", name: mod.author },
+    publisher: { "@type": "Organization", name: "FSBox" },
+    datePublished: mod.date,
+    version: lastVersion,
+    url: `https://fsbox.pp.ua/mods/${mod.slug}`,
+    image: mod.image_first,
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      url: mod.download_link ?? `https://fsbox.pp.ua/mods/${mod.slug}`,
+    },
+  };
+
   return (
     <div className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
+
+      <JsonLd data={schemaData} />
+
       <h1 className="text-3xl font-bold mb-2">{mod.title_ua} для {mod.game} {lastVersion}</h1>
       <p className="text-xs text-(--color-4) mb-4">Додано: {mod.date}</p>
       <div className="mb-5 space-x-2">
