@@ -33,7 +33,7 @@ export async function generateMetadata({
           height: 630,
           title: {title},
         }
-      ] 
+      ],
       url: canonical,
       type: "article",
       siteName: "FSBox",
