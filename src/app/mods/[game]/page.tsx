@@ -31,7 +31,7 @@ export async function generateMetadata({
           url: "./img/preview.png",
           width: 1200,
           height: 630,
-          alt: {title},
+          alt: title,
         }
       ],
       url: canonical,
