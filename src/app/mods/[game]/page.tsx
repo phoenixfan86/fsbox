@@ -26,7 +26,14 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      image: "./img/preview.png",
+      images: [
+        {
+          url: "./img/preview.png",
+          width: 1200,
+          height: 630,
+          title: {title},
+        }
+      ] 
       url: canonical,
       type: "article",
       siteName: "FSBox",
