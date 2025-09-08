@@ -18,7 +18,7 @@ export async function generateMetadata({
 
   const gameTitle = game.charAt(0).toUpperCase() + game.slice(1);
   const title = `Сервери для ${gameTitle}`;
-  const description = `Підбірка самих кращих серверів з України та усього світу, для ${game}`;
+  const description = `Добірка кращих серверів на любий смак з України та усього світу, для ${game}. Сервери на виживання, хардкор сервери, сервери для креативу все в одному місці`;
 
   return {
     alternates: { canonical },
