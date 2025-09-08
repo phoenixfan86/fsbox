@@ -1,6 +1,6 @@
 ---
-title: "Lucky Block Spiral - 1.8 Lucky Block Addon - download mod for"
-title_ua: "Lucky Block Spiral - 1.8 Lucky Block Addon - скачати мод"
+title: "1.8 Lucky Block Spiral Addon - download mod for"
+title_ua: "1.8 Lucky Block Spiral Addon - скачати мод"
 description: "Lucky Block Addon! About 200 new drops and about 50 modified ones, including procedurally generating dungeons and custom added items! =)"
 mod_name: "Lucky Block Spiral - 1.8 Lucky Block Addon"
 game: "Minecraft"
