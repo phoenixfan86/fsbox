@@ -17,7 +17,7 @@ export async function generateMetadata({
 
   const gameTitle = game.charAt(0).toUpperCase() + game.slice(1);
   const title = `Збірка модів на ${gameTitle}`;
-  const description = `Добірка модів для ${gameTitle}: моди на зброю та броню, моди на техніку і транспорт, моди на біоми, меблі та прикраси. Завантажуйте доповнення для різних версій гри та робіть світ в ${gameTitle} ще цікавішим`;
+  const description = `Добірка модів для ${gameTitle}: моди на зброю та броню, моди на техніку і транспорт, моди на біоми, меблі та прикраси. Завантажуйте моди та робіть гру в ${gameTitle} цікавішою`;
 
   return {
     alternates: { canonical },
