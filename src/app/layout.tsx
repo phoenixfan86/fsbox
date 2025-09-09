@@ -47,9 +47,11 @@ export default function RootLayout({
     <html lang="uk">
       <head>
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="google-adsense-account" content="ca-pub-3225881199838520"></meta>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=all" />
         <link rel="stylesheet" href="https://fsbox.pp.ua/page/2" />
-<script src="https://analytics.ahrefs.com/analytics.js" data-key="vP4pGDp8OZm8gnXTfwI4XA" async></script>
+
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="vP4pGDp8OZm8gnXTfwI4XA" async></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} ${oswald.variable} antialiased`}
