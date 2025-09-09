@@ -100,15 +100,19 @@ export default async function serverPage({ params }: { params: SlugParams }) {
             <ul className="flex gap-2 flex-col bg-(--bg-3) py-1 px-3 !text-(--primary-color-1) mt-2 rounded-sm">
               <li className="flex gap-3 justify-between shadow">
                 <span>Сайт: </span>
-                <a
-                  href={server.server_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="!text-(--color-1)"
-                  aria-label={`${server.title}`}
-                >
-                  {server.title}
-                </a>
+                {server.server_link === "/" ? (
+                  "Відсутній"
+                ) : (
+                  <a
+                    href={server.server_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="!text-(--color-1)"
+                    aria-label={`Discord ${server.title}`}
+                  >
+                    {server.title}
+                  </a>
+                )}
               </li>
               <li className="flex gap-3 justify-between shadow">
                 <span>IP: </span>
@@ -122,15 +126,19 @@ export default async function serverPage({ params }: { params: SlugParams }) {
               )}
               <li className="flex gap-3 justify-between mt-3">
                 <span >Discord: </span>
-                <a
-                  href={server.server_discord}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="!text-(--color-1)"
-                  aria-label={`IP${server.title}`}
-                >
-                  {server.title_ua}
-                </a>
+                {server.server_discord === "/" ? (
+                  "Відсутній"
+                ) : (
+                  <a
+                    href={server.server_discord}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="!text-(--color-1)"
+                    aria-label={`Discord ${server.title}`}
+                  >
+                    {server.server_discord}
+                  </a>
+                )}
               </li>
             </ul>
           </div>
