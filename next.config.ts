@@ -16,6 +16,7 @@ const nextConfig: NextConfig = {
     ];
   },
   images:{
+    unoptimized: true,
     domains:[
       'media.forgecdn.net',
       'staticdelivery.nexusmods.com',

@@ -205,9 +205,6 @@ export default async function ModPage({ params }: { params: SlugParams }) {
             </p>
           )}
         </li>
-        <li>
-
-        </li>
       </ul>
     </div>
   );
