@@ -160,7 +160,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
       {mod.download_link && (
         <div className="flex flex-col items-center mt-6">
           <span>Посилання для завантаження: </span>
-          <a
+          <Link
             href={mod.download_link}
             target="_blank"
             rel="noopener noreferrer"
@@ -169,14 +169,18 @@ export default async function ModPage({ params }: { params: SlugParams }) {
           >
             <span>Download mod</span>
             <span className="text-extra">: {mod.mod_name}</span>
-          </a>
+          </Link>
+          {mod.game === "Minecraft" && (
+            <Link href={`/articles/minecraft/minecraft-mod-install-guide`}
+              className="!text-(--primary-color-1)">Як встановити мод {mod.mod_name} на Майнкрафт</Link>
+          )}
         </div>
 
       )}
 
       {similarMods.length > 0 && (
         <div className="my-10">
-          <h3 className="text-xl font-bold mb-4">Добірка модів на {mod.game}</h3>
+          <h3 className="text-lg font-bold mb-4">Добірка модів на {mod.game}</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {similarMods.map(simMod => (
               <Link key={simMod.slug} href={`https://fsbox.pp.ua${mod.game_collection}/${simMod.slug}`} className="flex flex-col items-center justify-between p-3 rounded hover:shadow-lg transition !text-(--primary-color-1)">
@@ -202,10 +206,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
           )}
         </li>
         <li>
-          {mod.game === "Minecraft" && (
-            <Link href={`/articles/minecraft/minecraft-mod-install-guide`}
-              className="!text-(--primary-color-1)">Як встановити моди на Майнкрафт</Link>
-          )}
+
         </li>
       </ul>
     </div>

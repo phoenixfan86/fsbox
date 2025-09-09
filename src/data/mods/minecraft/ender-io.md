@@ -1,7 +1,7 @@
 ---
-title: "Ender IO - download mod for"
-title_ua: "Ender IO - скачати мод"
-description: "Ender IO is a full-featured technology mod. It includes armor, tools, weapons, machines, channels, inventory management, mobs, and more."
+title: "Ender IO - скачати мод на машини, трубопроводи, броню"
+title_ua: "Ender IO - скачати мод на машини, трубопроводи, броню"
+description: "Ender IO — технологічний мод для Minecraft 1.20.1 з машинами, трубопроводами (система передачі енергії, рідин і предметів), бронею, зброєю, інвентарним керуванням та декоративними блоками. Потрібен EnderCore. Інструкція з встановлення"
 mod_name: "Ender IO"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -13,16 +13,15 @@ image_second: ""
 download_link: "https://www.curseforge.com/minecraft/mc-mods/ender-io/files/all?page=1&pageSize=20"
 mod_dependencies: "EnderCore"
 dependencies_link: "/mods/minecraft/endercore"
-date: "2025-08-8"
+date: "2025-09-9"
 ---
 
-Ender IO — це повнофункціональний технологічний мод. Він містить броню, інструменти, зброю, машини, канали, управління інвентарем, мобів тощо. 
+**Ender IO** — це повнофункціональний технологічний мод для Minecraft 1.20.1.
 
-Основні характеристики
-Машини,
-Трубопроводи,
-Броня,
-Зброя,
-Інструменти,
-Чари,
-Декоративні блоки
+### Що додає мод Ender IO для Minecraft?
+- **Машини Ender IO** — автоматизація процесів і крафтів,
+- **Трубопроводи (conduits)** — передача енергії, предметів та рідин,
+- **Броню та зброю** з унікальними ефектами,
+- **Інструменти та чари** для покращення виживання,
+- **Декоративні блоки** для будівництва,
+- **Канали управління інвентарем** для зручної організації ресурсів.
