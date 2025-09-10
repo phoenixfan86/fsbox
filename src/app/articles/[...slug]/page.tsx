@@ -73,7 +73,7 @@ export default async function articlePage({ params }: { params: SlugParams }) {
         ))}
       </div>
       <div className="flex gap-5 flex-col my-5">
-        <h3 className="text-xl text-center">{article.title_ua}</h3>
+        <h3 className="text-xl text-center">{article.link ? article.title_ua : "Опис"}</h3>
         <div className="content text-sm text-(--color-3)">
           <Markdown>{article.content}</Markdown>
         </div>

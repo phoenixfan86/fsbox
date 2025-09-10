@@ -25,13 +25,26 @@ const Sidebar = ({ exclude }: Props) => {
   if (randoms.length === 0) return null;
 
   return (
-    <aside className="hidden md:flex md:gap-10 md:flex-col md:p-[25px] border-l-1 border-(--color-5)">
-      <div className="shadow pb-5">
-        <Link href={`/articles`} className=" !text-(--primary-color-1)">Статті</Link>
-      </div>
+    <aside className="hidden md:flex md:gap-5 md:flex-col md:p-[25px] border-l-1 border-(--color-5)">
+
       <div className="shadow">
         <h4>Моди для:</h4>
         <TopNav games={games} variant="logos" className="items-center flex-col py-5" />
+      </div>
+      <div className="shadow">
+        <h4>Сервери для:</h4>
+        <ul>
+          {uniqueGames.map((server) => (
+            <li key={server.gameSlug}>
+              <Link href={`/game-servers/${server.gameSlug}`}>
+                {server.game}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="shadow pb-1">
+        <Link href={`/articles`} className=" !text-(--primary-color-1)">Статті та новини</Link>
       </div>
       <div className="mt-10">
         <h4>Інші моди:</h4>
@@ -58,18 +71,7 @@ const Sidebar = ({ exclude }: Props) => {
           ))}
         </ul>
       </div>
-      <div>
-        <h4>Сервери для:</h4>
-        <ul>
-          {uniqueGames.map((server) => (
-            <li key={server.gameSlug}>
-              <Link href={`/game-servers/${server.gameSlug}`}>
-                {server.game}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+
     </aside >
   );
 }
