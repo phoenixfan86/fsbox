@@ -1,7 +1,7 @@
 ---
-title: "Farmer's Delight - download mod for"
-title_ua: "Farmer's Delight - скачати мод"
-description: "Farmer's Delight is a mod that expands the possibilities of farming and cooking in Minecraft. Using a simple cooking system and a few familiar ingredients, you can prepare a wide variety of hearty dishes, from sandwiches to salads and stews."
+title: "Farmer's Delight - download farmer mod for"
+title_ua: "Farmer's Delight - скачати мод на фермерство"
+description: "Farmer's Delight is a farmer mod that expands the possibilities of farming and cooking in Minecraft. Using a simple cooking system and a few familiar ingredients, you can prepare a wide variety of hearty dishes, from sandwiches to salads and stews."
 mod_name: "Farmer's Delight"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -16,4 +16,4 @@ dependencies_link: ""
 date: "2025-07-30"
 ---
 
-Farmer's Delight - цей мод, який розширює можливості фермерства та кулінарії у Minecraft. Використовуючи просту систему приготування їжі та кілька знайомих інгредієнтів, ви зможете готувати найрізноманітніші ситні страви: від бутербродів до салатів і рагу, від красивих десертів до апетитних бенкетів - жоден інгредієнт не залишиться поза увагою на вашій кухні!
+***Farmer's Delight*** - це **мод на фермерство**, який розширює можливості фермерства та кулінарії у Minecraft. Використовуючи просту систему приготування їжі та кілька знайомих інгредієнтів, ви зможете готувати найрізноманітніші ситні страви: від бутербродів до салатів і рагу, від красивих десертів до апетитних бенкетів - жоден інгредієнт не залишиться поза увагою на вашій кухні!
