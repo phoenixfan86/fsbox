@@ -4,7 +4,7 @@ title_ua: "DaveSpectre's Assets - скачати мод"
 description: "Retextures and Kitbashes"
 mod_name: "DaveSpectre's Assets"
 game: "StarCraft 2"
-game_collection: "/mods/sc2"
+game_collection: "/mods/star-craft-2"
 tags: [StarCraft2, Assets, Models]
 author: "DaveTheSpectre"
 author_link: "https://www.curseforge.com/members/davethespectre"
