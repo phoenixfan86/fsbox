@@ -22,13 +22,13 @@ export async function generateMetadata({ params }: { params: SlugParams }): Prom
   const mod: ModData = getModData(slugPatch);
   if (!mod) return {};
 
-  const title = mod.title;
+  const title = mod.title_ua;
   const lastVersion = getLastVersion(mod)
   const description = `${stripMarkdown(mod.description).slice(0, 150)}...`
 
   return {
     alternates: { canonical },
-    title: `${mod.title} ${mod.game} ${lastVersion}`,
+    title: `${mod.title_ua} ${mod.game} ${lastVersion}`,
     description,
     openGraph: {
       title,
