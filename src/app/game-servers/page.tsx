@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import type { ServerData } from "@/types/ServerData";
 import { getSortedServerData } from "@/lib/servers";
 import { stripMarkdown } from "@/lib/stripMarkDown";
@@ -49,7 +48,7 @@ const GameServers = () => {
           <li key={server.slug} className="p-4 rounded shadow">
 
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 md:py-4 cursor-pointer hover:opacity-90 transition">
-              <Image
+              <img
                 src={server.server_image}
                 alt={server.title}
                 width={300}

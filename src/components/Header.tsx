@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import TopNav from "./TopNav";
 import { ModData } from "@/types/ModsData";
 import { stripMarkdown } from "@/lib/stripMarkDown";
@@ -70,7 +69,7 @@ const Header = ({ allMods, games }: Props) => {
                   {results.map((mod) => (
                     <li key={mod.slug}>
                       <div className="flex flex-col md:flex-row gap-3 items-start md:items-end shadow">
-                        <Image
+                        <img
                           src={mod.image_first}
                           alt={mod.title}
                           width={100}

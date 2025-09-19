@@ -1,7 +1,6 @@
 import { getModData, getSortedModsData } from "@/lib/mods";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { Metadata } from "next";
 import Markdown from "react-markdown";
 import { ModData } from "@/types/ModsData";
@@ -108,19 +107,17 @@ export default async function ModPage({ params }: { params: SlugParams }) {
       </div>
 
       <div className="flex flex-col md:flex-row gap-4 items-center justify-center pt-5">
-        <Image
+        <img
           src={mod.image_first}
           alt={mod.title}
           width={300}
-          height={100}
           className="postImg h-auto rounded mb-6"
         />
         {mod.image_second && (
-          <Image
+          <img
             src={mod.image_second}
             alt={mod.title}
             width={300}
-            height={100}
             className="postImg h-auto rounded mb-6"
           />
         )}
@@ -184,7 +181,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {similarMods.map(simMod => (
               <Link key={simMod.slug} href={`https://fsbox.pp.ua${mod.game_collection}/${simMod.slug}`} className="flex flex-col items-center justify-between p-3 rounded hover:shadow-lg transition !text-(--primary-color-1)">
-                <Image
+                <img
                   src={simMod.image_first}
                   alt={simMod.title}
                   width={160}

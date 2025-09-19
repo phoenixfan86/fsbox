@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { getServerData } from "@/lib/servers";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
@@ -79,7 +78,7 @@ export default async function serverPage({ params }: { params: SlugParams }) {
         ))}
       </div>
       <div className="flex flex-col md:flex-row gap-4 items-center justify-center pt-5">
-        <Image
+        <img
           src={server.server_image}
           alt={server.title}
           width={300}

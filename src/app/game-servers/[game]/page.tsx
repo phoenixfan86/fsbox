@@ -1,7 +1,6 @@
 // app/game-servers/[game]/page.tsx
 
 import Link from "next/link";
-import Image from "next/image";
 import { Metadata } from "next";
 import { getAllServers, getSortedServerData } from "@/lib/servers";
 import { stripMarkdown } from "@/lib/stripMarkDown";
@@ -60,7 +59,7 @@ export default async function GameServersPage({ params }: { params: Promise<{ ga
           <li key={server.slug} className="p-4 rounded shadow">
             <Link href={`/game-servers/${server.gameSlug}/${server.slug}`}>
               <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 cursor-pointer hover:opacity-90 transition">
-                <Image
+                <img
                   src={server.server_image}
                   alt={server.title}
                   width={300}

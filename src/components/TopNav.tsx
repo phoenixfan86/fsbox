@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 
 export type GameItem = {
   slug: string;
@@ -44,7 +43,7 @@ const TopNav = ({ games, variant = "text", className = "" }: Props) => {
               aria-label={game.name}
             >
               {variant === "logos" && logo ? (
-                <Image
+                <img
                   src={logo.src}
                   alt={logo.alt}
                   width={100}

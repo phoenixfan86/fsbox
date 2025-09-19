@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getSortedArticlesData } from "@/lib/articles";
 import { stripMarkdown } from "@/lib/stripMarkDown";
@@ -41,7 +40,7 @@ export default async function Page({ params }: { params: Promise<{ page: string 
 
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 cursor-pointer hover:opacity-90 transition">
               {artcl.article_img?.map((src, i) => (
-                <Image
+                <img
                   key={i}
                   src={src}
                   alt={artcl.title}

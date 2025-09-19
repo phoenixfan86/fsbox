@@ -1,6 +1,5 @@
 
 import Link from "next/link";
-import Image from "next/image";
 import { Metadata } from "next";
 import { getAllGames, getSortedModsData } from "@/lib/mods";
 import { stripMarkdown } from "@/lib/stripMarkDown";
@@ -68,7 +67,7 @@ export default async function GameModsPage({ params }: { params: Promise<{ game:
         {gameMods.map((mod) => (
           <li key={mod.slug} className="p-4 rounded shadow">
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 hover:opacity-90 transition">
-              <Image
+              <img
                 src={mod.image_first}
                 alt={mod.title}
                 width={300}

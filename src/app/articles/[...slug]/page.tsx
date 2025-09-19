@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { getArticleData } from "@/lib/articles";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
@@ -84,7 +83,7 @@ export default async function articlePage({ params }: { params: SlugParams }) {
       <h4>Картинки:</h4>
       <div className="flex flex-col gap-4 items-center justify-center pt-5">
         {article.article_img?.map((src, i) => (
-          <Image
+          <img
             key={i}
             src={src}
             width={500}
