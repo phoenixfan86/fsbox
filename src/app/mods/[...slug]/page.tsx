@@ -66,7 +66,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: mod.title,
+    name: mod.title_ua,
     applicationCategory: "GameMod",
     operatingSystem: "Windows, Linux, macOS",
     game: {
