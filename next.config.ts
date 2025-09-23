@@ -8,6 +8,31 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+        source:"/2025/05/shs-wild-animals-stardew-valley-1615.html",
+        destination: "/mods/stardew-valley/shs-wild-animals",
+        permanent: true,
+      },
+      {
+        source:"/p/minecraft.html",
+        destination: "/mods/minecraft",
+        permanent: true,
+      },
+      {
+        source:"/2025/05/scholar-minecraft-1211.html",
+        destination: "/mods/minecraft/scholar",
+        permanent: true,
+      },
+      {
+        source:"/2025/05/enchantment-descriptions-minecraft-1211.html",
+        destination: "/mods/minecraft/enchantment-descriptions",
+        permanent: true,
+      },
+      {
+        source:"/2025/05/all-mods-10-atm10-minecraft-1211.html",
+        destination: "mods/minecraft/all-the-mods-10",
+        permanent: true,
+      },
     ];
   },
   images:{

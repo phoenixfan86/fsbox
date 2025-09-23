@@ -1,7 +1,7 @@
 ---
 title: "TerraBlender (Forge) - download mod for"
 title_ua: "TerraBlender (Forge) - скачати мод"
-description: "TerraBlender is a library mod for adding biomes in a simple and compatible way with Minecraft's new biome/terrain system."
+description: "Завантажте мод TerraBlender для Minecraft — бібліотечний мод, що спрощує створення та додавання біомів у нову систему генерації світу."
 mod_name: "TerraBlender (Forge)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -16,4 +16,10 @@ dependencies_link: ""
 date: "2025-08-14"
 ---
 
-TerraBlender - це бібліотечний мод для додавання біомів простим і сумісним способом із новою системою біомів/рельєфу Minecraft.
+**TerraBlender (Forge)** — це бібліотечний мод для Minecraft, який полегшує створення та додавання біомів у світ гри. Він широко використовується багатьма модами, що змінюють генерацію світу.
+
+### Особливості цього моду:
+- Простий API для модифікаторів біомів.  
+- Повна сумісність із новою системою рельєфу **Minecraft**.  
+- Використовується як залежність у популярних модах (наприклад, [Biomes O’ Plenty](/mods/minecraft/biomes-o-plenty)).  
+> ⚠️ ***TerraBlender сам по собі не додає нових біомів. Він потрібен для роботи інших модів.***

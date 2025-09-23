@@ -93,6 +93,29 @@ export default async function ModPage({ params }: { params: SlugParams }) {
 
       <JsonLd data={schemaData} />
 
+      <ul className="flex gap-2 text-[10px] md:text-xs mb-4">
+        <li className="">
+          <Link
+            href={`/`}
+            className="!text-(--color-1) hover:!text-(--primary-color-1)"
+          >Mods</Link>
+        </li>
+        <li className="before:content-['>'] before:mr-2">
+          <Link
+            href={`${mod.game_collection}`}
+            className="!text-(--color-1) hover:!text-(--primary-color-1)"
+          >{mod.game}</Link>
+        </li>
+        <li className="before:content-['>'] before:mr-2">
+          <Link
+            href={`${mod.game_collection}/${mod.slug}`}
+            className="!text-(--color-1) hover:!text-(--primary-color-1)"
+          >{mod.title_ua}</Link>
+        </li>
+      </ul>
+
+      <span></span>
+
       <h1 className="text-3xl font-bold mb-2">{mod.title_ua} для {mod.game} {lastVersion}</h1>
       <p className="text-xs text-(--color-4) mb-4">Додано: {mod.date}</p>
       <div className="mb-5 space-x-2">
@@ -109,14 +132,14 @@ export default async function ModPage({ params }: { params: SlugParams }) {
       <div className="flex flex-col md:flex-row gap-4 items-center justify-center pt-5">
         <img
           src={mod.image_first}
-          alt={mod.title}
+          alt={mod.title_ua}
           width={300}
           className="postImg h-auto rounded mb-6"
         />
         {mod.image_second && (
           <img
             src={mod.image_second}
-            alt={mod.title}
+            alt={mod.title_ua}
             width={300}
             className="postImg h-auto rounded mb-6"
           />
