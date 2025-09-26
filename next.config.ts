@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   async headers(){
     return[
       {
-        source: "/sitemap.xml",
+        source: "/:path*.xml",
         headers: [
           {
             key: "Content-Type",
@@ -23,7 +23,7 @@ const nextConfig: NextConfig = {
       },
     ]
   },
-  
+
   async redirects() {
     return [
       {
