@@ -2,14 +2,8 @@ import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
-export async function GET(request: Request) {
-  const url = new URL(request.url);
-  const file = url.pathname.split("/").pop();
-
-  if (!file) return new NextResponse("Not Found", { status: 404 });
-
-  const filePath = path.join(process.cwd(), "public", file);
-
+export async function GET() {
+  const filePath = path.join(process.cwd(), "public", "sitemap.xml");
   if (!fs.existsSync(filePath)) {
     return new NextResponse("Not Found", { status: 404 });
   }
