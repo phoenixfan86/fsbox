@@ -6,4 +6,4 @@ Allow: /
 Host: https://fsbox.pp.ua
 
 # Sitemaps
-Sitemap: https://fsbox.pp.ua/sitemap-0.xml/
+Sitemap: https://fsbox.pp.ua/sitemap.xml
