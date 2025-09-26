@@ -51,6 +51,11 @@ const Header = ({ allMods, games }: Props) => {
             placeholder="Почніть писати назву"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                handleSearch();
+              }
+            }}
             autoComplete="off"
             className="w-40 md:focus:w-1/2 text-white py-[5px] px-[10px] ring-1 ring-(--color-1) focus:ring-(--primary-color-1) rounded-[5px] outline-0 placeholder:text-sm duration-500" />
           <button className="py-[3px] px-[10px] text-white bg-(--primary-color-1) rounded-[5px] hover:scale-95 duration-300" onClick={handleSearch}>Пошук</button>
