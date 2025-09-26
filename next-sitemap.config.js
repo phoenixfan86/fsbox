@@ -1,12 +1,11 @@
-// next-sitemap.config.js
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
 
-// Правильний шлях до твоїх md-файлів
+
 const modsDirectory = path.join(process.cwd(), "src", "data", "mods");
 
-// Функція, яка повертає усі URL модів
+
 function getAllModUrls() {
   const games = fs.readdirSync(modsDirectory);
   let urls = [];
@@ -22,7 +21,6 @@ function getAllModUrls() {
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const { data } = matter(fileContents);
 
-      // Формуємо URL модів
       const modUrl = `${data.game_collection}/${filename.replace(/\.md$/, "")}`;
       urls.push(modUrl);
     }
@@ -34,10 +32,10 @@ function getAllModUrls() {
 module.exports = {
   siteUrl: "https://fsbox.pp.ua",
   generateRobotsTxt: true,
-  sitemapSize: 5000, // щоб всі URL потрапили в один файл
+  sitemapSize: 5000,
   outDir: "./public",
 
-  // Додаємо динамічні URL модів
+  
   additionalPaths: async (config) => {
     const modUrls = getAllModUrls();
     return modUrls.map((url) => ({
