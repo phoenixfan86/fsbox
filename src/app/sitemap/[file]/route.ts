@@ -19,6 +19,7 @@ export async function GET(request: Request) {
     status: 200,
     headers: {
       "Content-Type": "application/xml",
+      "Cache-Control": "no-cache, no-store, must-revalidate",
     },
   });
 }
