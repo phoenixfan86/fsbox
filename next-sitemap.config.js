@@ -33,7 +33,7 @@ module.exports = {
   siteUrl: "https://fsbox.pp.ua",
   generateRobotsTxt: true,
   sitemapSize: 5000,
-  outDir: "./.next/static/sitemap",
+  outDir: "./public",
 
   
   additionalPaths: async (config) => {
