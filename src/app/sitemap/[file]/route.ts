@@ -8,7 +8,7 @@ export async function GET(request: Request) {
 
   if (!file) return new NextResponse("Not Found", { status: 404 });
 
-  const filePath = path.join(process.cwd(), "public", file);
+  const filePath = path.join(process.cwd(), "sitemap", file);
 
   if (!fs.existsSync(filePath)) {
     return new NextResponse("Not Found", { status: 404 });
