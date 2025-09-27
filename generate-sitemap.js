@@ -2,13 +2,13 @@ const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
 
-
+// Папка з модами
 const modsDirectory = path.join(process.cwd(), "src/data/mods");
 
-
+// Файл для генерації
 const publicPath = path.join(process.cwd(), "public", "sitemap.xml");
 
-
+// Збираємо всі URL
 function getAllModUrls() {
   if (!fs.existsSync(modsDirectory)) return [];
 
@@ -26,7 +26,7 @@ function getAllModUrls() {
       const fullPath = path.join(gamePath, filename);
       const { data } = matter(fs.readFileSync(fullPath, "utf8"));
 
-
+      // формуємо URL модифікованим шляхом
       const modUrl = `${data.game_collection}/${filename.replace(/\.md$/, "")}`;
       urls.push(modUrl);
     }
@@ -35,7 +35,7 @@ function getAllModUrls() {
   return urls;
 }
 
-
+// Генеруємо XML
 const urls = getAllModUrls();
 const xmlUrls = urls.map(u => `
   <url>
@@ -50,6 +50,6 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>
 ${xmlUrls}
 </urlset>`;
 
-
+// Записуємо у public
 fs.writeFileSync(publicPath, xml, "utf8");
 console.log(`✅ sitemap.xml generated in /public (${urls.length} URLs)`);
