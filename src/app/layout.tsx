@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono, Nunito, Oswald } from "next/font/google";
 import "./globals.css";
 import HeaderWrapper from "@/components/HeaderWrapper";
@@ -50,8 +51,9 @@ export default function RootLayout({
         <meta name="google-adsense-account" content="ca-pub-3225881199838520"></meta>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=all" />
         <link rel="stylesheet" href="https://fsbox.pp.ua/page/2" />
-
-        <script src="https://analytics.ahrefs.com/analytics.js" data-key="vP4pGDp8OZm8gnXTfwI4XA" async></script>
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3225881199838520"
+          crossOrigin="anonymous"></Script>
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="vP4pGDp8OZm8gnXTfwI4XA" async></Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} ${oswald.variable} antialiased`}
