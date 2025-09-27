@@ -1,3 +1,4 @@
+// app/sitemap/[file]/route.ts
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
@@ -19,7 +20,6 @@ export async function GET(request: Request) {
     status: 200,
     headers: {
       "Content-Type": "application/xml",
-      "Cache-Control": "no-cache, no-store, must-revalidate",
     },
   });
 }
