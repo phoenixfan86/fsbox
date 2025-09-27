@@ -60,7 +60,8 @@ export async function GET() {
     status: 200,
     headers: {
       "Content-Type": "application/xml",
-      "Cache-Control": "no-cache, no-store, must-revalidate",
+       "Cache-Control": "public, max-age=3600, must-revalidate",
+      "X-Robots-Tag": "all",
     },
   });
 }
