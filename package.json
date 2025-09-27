@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "generate-sitemap": "node generate-sitemap.js",    
-    "build": "next build",
+    "build": "npm run generate-sitemap && next build",
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap"
