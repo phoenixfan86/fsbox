@@ -2,9 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
 
-
 const modsDirectory = path.join(process.cwd(), "src", "data", "mods");
-
 
 function getAllModUrls() {
   const games = fs.readdirSync(modsDirectory);
@@ -32,11 +30,9 @@ function getAllModUrls() {
 module.exports = {
   siteUrl: "https://fsbox.pp.ua",
   generateRobotsTxt: true,
-  sitemapSize: 5000,
+  sitemapSize: 50000,
   outDir: "./sitemap",
-
-  
-  additionalPaths: async (config) => {
+  additionalPaths: async () => {
     const modUrls = getAllModUrls();
     return modUrls.map((url) => ({
       loc: url,
@@ -44,14 +40,5 @@ module.exports = {
       changefreq: "weekly",
       priority: 0.8,
     }));
-  },
-
-  transform: async (config, url) => {
-    return {
-      loc: url,
-      changefreq: "weekly",
-      priority: 0.8,
-      lastmod: new Date().toISOString(),
-    };
   },
 };

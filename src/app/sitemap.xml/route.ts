@@ -1,20 +1,22 @@
+// app/sitemap.xml/route.ts
 import { NextResponse } from "next/server";
+import fs from "fs";
+import path from "path";
 
 export async function GET() {
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>https://fsbox.pp.ua/sitemap-0.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://fsbox.pp.ua/sitemap-1.xml</loc>
-  </sitemap>
-</sitemapindex>`;
+  const filePath = path.join(process.cwd(), "sitemap", "sitemap.xml");
 
-  return new NextResponse(xml, {
+  if (!fs.existsSync(filePath)) {
+    return new NextResponse("Not Found", { status: 404 });
+  }
+
+  const content = fs.readFileSync(filePath, "utf8");
+
+  return new NextResponse(content, {
     status: 200,
     headers: {
       "Content-Type": "application/xml",
+      "Cache-Control": "no-cache, no-store, must-revalidate",
     },
   });
 }
