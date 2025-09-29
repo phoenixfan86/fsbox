@@ -1,6 +1,6 @@
 ---
 title: "ModernFix - download mod for"
-title_ua: "ModernFix - скачати мод на поліпшення продуктивності, оптимізація пам’яті і багфікси"
+title_ua: "ModernFix - скачати мод на продуктивність, оптимізацію" 
 description: "Завантажте мод ModernFix для Minecraft — покращує продуктивність, зменшує використання пам’яті та виправляє численні помилки. Сумісний з іншими модами оптимізації."
 mod_name: "ModernFix"
 game: "Minecraft"
