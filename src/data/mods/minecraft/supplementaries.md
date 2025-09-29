@@ -1,19 +1,26 @@
 ---
 title: "Supplementaries — download mod for"
-title_ua: "Supplementaries — скачати мод"
-description: "Supplementaries is a highly customizable modification of Forge designed to add valuable content that fills in the gaps in the base version."
-mod_name: "Immersive Railroading"
+title_ua: "Supplementaries — скачати мод на нові блоки та предмети"
+description: "Supplementaries — це мод для Minecraft, який додає безліч декоративних та функціональних блоків, предметів та механізмів, розширюючи можливості гри без зміни її основної суті."
+mod_name: "Supplementaries"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "Forge", "1.16.5", "1.20", "1.20.1", "1.21.1", "1.21.5"]
 author: "mehvahdjukaar"
 author_link: "https://www.curseforge.com/members/mehvahdjukaar"
-image_first: "https://media.forgecdn.net/attachments/334/226/2021-01-14_02.png"
-image_second: "https://media.forgecdn.net/attachments/395/796/2021-09-19_12.png"
-download_link: "https://www.curseforge.com/minecraft/mc-mods/supplementaries/files/all?page=1&amp;pageSize=20"
+image_first: "https://media.forgecdn.net/avatars/358/166/637518566737953306.gif"
+image_second: "https://media.forgecdn.net/attachments/619/846/way-sign.png"
+download_link: "https://edge.forgecdn.net/files/3515/57/supplementaries-1.17.1-0.18.1.jar"
 mod_dependencies: "Для роботи модифікації необхідна бібліотека Moonlight Library."
 dependencies_link: "/mods/minecraft/moonlight-lib"
-date: "2025-08-7"
+date: "2025-09-29"
 ---
 
-Supplementaries — це модифікація Forge з широкими можливостями налаштування, спрямована на додавання цінного контенту, який заповнює прогалини в базовій версії. Її функції розроблені так, щоб бути функціональними, естетично привабливими та доповнювати існуючий контент, а також надавати безліч нових можливостей для покращення вашого досвіду.
+**Supplementaries** — це мод для Minecraft, розроблений для **Forge, Fabric та NeoForge**, який додає безліч декоративних та функціональних блоків, предметів та механізмів, розширюючи можливості гри без зміни її основної суті. Ідеально підходить для гравців, які шукають нові можливості для будівництва та автоматизації.  
+
+### Основні можливості
+
+- **Декоративні блоки**: прапори, статуї, підсвічники, годинники, таблички та багато іншого для прикрашання вашого світу.
+- **Функціональні предмети**: сейфи, люки, крани, годинники, що додають нові можливості для взаємодії з оточенням.
+- **Механізми та автоматизація**: пружинні пускові механізми, редстоун-активовані пристрої, що розширюють можливості автоматизації.
+- **Інтеграція з іншими модами**: підтримка сумісності з іншими популярними модами через спеціальні датапаки.
