@@ -47,7 +47,11 @@ export function getSortedModsData(): ModData[] {
     }
   }
 
-  return allMods.sort((a, b) => (a.date < b.date ? 1 : -1));
+  return allMods.sort((a, b) => {
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
+});
+
+  {/*return allMods.sort((a, b) => (a.date < b.date ? 1 : -1));*/}
 }
 
 
