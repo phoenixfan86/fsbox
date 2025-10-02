@@ -1,7 +1,7 @@
 ---
 title: "Growthcraft - download mod for"
 title_ua: "Growthcraft Community Edition - скачати мод на фермерство"
-description: "Growthcraft Community Edition — мод Minecraft, який додає фермерство, вирощування культур, виноробство та молочні продукти. Пориньте у життя на природі у світі Minecraft"
+description: "Growthcraft Community Edition - мод Minecraft, який додає фермерство, вирощування культур, виноробство та молочні продукти. Пориньте у життя на природі у світі Minecraft"
 mod_name: "Growthcraft (CE)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
@@ -16,7 +16,7 @@ dependencies_link: ""
 date: "2025-08-3"
 ---
 
- **Growthcraft Community Edition** — це спільнотна версія оригінального [мода Growthcraft](/mods/minecraft/growthcraft), яка додає глибші механіки фермерства, вина, пива, ферментації, нові культури, рецепти молочних продуктів та інші доповнення, щоб зробити життя в Minecraft більш сільським і приємним.
+ **Growthcraft Community Edition** - це спільнотна версія оригінального [мода Growthcraft](/mods/minecraft/growthcraft), яка додає глибші механіки фермерства, вина, пива, ферментації, нові культури, рецепти молочних продуктів та інші доповнення, щоб зробити життя в Minecraft більш сільським і приємним.
 
  ### Основні можливості
 
