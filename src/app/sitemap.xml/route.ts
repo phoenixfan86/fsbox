@@ -56,11 +56,15 @@ export async function GET() {
   const buffer = await streamToPromise(smStream);
   const xmlString = buffer.toString("utf-8");
 
+   const ts = new Date().toISOString();
+
   return new NextResponse(xmlString, {
     status: 200,
     headers: {
       "Content-Type": "application/xml; charset=utf-8",
-      "Cache-Control": "public, max-age=3600, must-revalidate",
+      "Cache-Control": "s-maxage=0, max-age=0, must-revalidate",
+     // "Cache-Control": "public, max-age=3600, must-revalidate",
+     "X-Sitemap-Generated": ts,
       "X-Robots-Tag": "all",
     },
   });
