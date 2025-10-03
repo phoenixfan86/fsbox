@@ -25,8 +25,7 @@ function getAllModUrls() {
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const { data } = matter(fileContents);
 
-      let basePath = (data?.game_collection || "").replace(/\/+$/, ""); 
-
+      let basePath = (data?.game_collection || "").replace(/\/+$/, "");
       const slug = filename.replace(/\.md$/, "");
       const urlPath = `${basePath}/${slug}`.replace(/\/+/g, "/");
 
@@ -41,13 +40,14 @@ function getAllModUrls() {
   return urls;
 }
 
-
 export async function GET() {
   const smStream = new SitemapStream({ hostname });
 
+  // Статичні сторінки
   smStream.write({ url: "/", changefreq: "daily", priority: 1.0 });
   smStream.write({ url: "/mods", changefreq: "weekly", priority: 0.8 });
 
+  // Динамічні моди
   const modUrls = getAllModUrls();
   modUrls.forEach((u) => smStream.write(u));
 
@@ -59,8 +59,8 @@ export async function GET() {
   return new NextResponse(xmlString, {
     status: 200,
     headers: {
-      "Content-Type": "application/xml",
-       "Cache-Control": "public, max-age=3600, must-revalidate",
+      "Content-Type": "application/xml; charset=utf-8",
+      "Cache-Control": "public, max-age=3600, must-revalidate",
       "X-Robots-Tag": "all",
     },
   });
