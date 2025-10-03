@@ -58,14 +58,11 @@ export async function GET() {
 
    const ts = new Date().toISOString();
 
-  return new NextResponse(xmlString, {
+  return new NextResponse(xmlString.replace(/^\uFEFF/, ""), {
     status: 200,
     headers: {
       "Content-Type": "application/xml; charset=utf-8",
-      "Cache-Control": "s-maxage=0, max-age=0, must-revalidate",
-     // "Cache-Control": "public, max-age=3600, must-revalidate",
-     "X-Sitemap-Generated": ts,
-      "X-Robots-Tag": "all",
+      "Cache-Control": "public, max-age=3600, must-revalidate",
     },
   });
 }
