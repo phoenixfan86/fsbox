@@ -45,7 +45,7 @@ export async function GET() {
 
   // Статичні сторінки
   smStream.write({ url: "/", changefreq: "daily", priority: 1.0 });
-  smStream.write({ url: "/mods", changefreq: "weekly", priority: 0.8 });
+  // smStream.write({ url: "/mods", changefreq: "weekly", priority: 0.8 });
 
   // Динамічні моди
   const modUrls = getAllModUrls();
