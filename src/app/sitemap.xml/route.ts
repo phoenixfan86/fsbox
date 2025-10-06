@@ -43,11 +43,9 @@ function getAllModUrls() {
 export async function GET() {
   const smStream = new SitemapStream({ hostname });
 
-  // Статичні сторінки
   smStream.write({ url: "/", changefreq: "daily", priority: 1.0 });
   // smStream.write({ url: "/mods", changefreq: "weekly", priority: 0.8 });
 
-  // Динамічні моди
   const modUrls = getAllModUrls();
   modUrls.forEach((u) => smStream.write(u));
 

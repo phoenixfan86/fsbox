@@ -179,7 +179,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
 
       {mod.download_link && (
         <div className="flex flex-col items-center mt-6">
-          <span>Посилання для завантаження: </span>
+          <span>Для того щоб скачати мод натисніть: </span>
           <Link
             href={mod.download_link}
             target="_blank"
