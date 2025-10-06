@@ -1,9 +1,4 @@
-# *
 User-agent: *
 Allow: /
 
-# Host
-Host: https://fsbox.pp.ua
-
-# Sitemaps
 Sitemap: https://fsbox.pp.ua/sitemap.xml

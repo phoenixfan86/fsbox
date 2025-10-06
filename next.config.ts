@@ -12,15 +12,6 @@ const nextConfig: NextConfig = {
           },
         ],
       },
-      {
-        source: "/robots.txt",
-        headers: [
-          {
-            key: "Content-Type",
-            value: "text/plain",
-          },
-        ],
-      },
     ]
   },
 
@@ -85,3 +76,5 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+export const dynamic = 'force-static'
+export const revalidate = 3600

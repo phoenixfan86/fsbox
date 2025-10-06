@@ -1,3 +1,4 @@
+// app/sitemap.ts
 import { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
@@ -19,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 2. Основні розділи
   const mainPages = [
+    { path: '/mods', priority: 0.9 },
     { path: '/articles', priority: 0.7 },
     { path: '/game-servers', priority: 0.7 },
   ]
@@ -40,7 +42,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       for (const game of games) {
         const gamePath = path.join(modsDirectory, game)
         
-        // Перевіряємо чи це директорія
         if (!fs.statSync(gamePath).isDirectory()) continue
 
         // Додаємо сторінку гри
@@ -51,7 +52,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
           priority: 0.9,
         })
 
-        // Додаємо всі моди для гри
         const filenames = fs.readdirSync(gamePath)
         
         for (const filename of filenames) {
@@ -63,21 +63,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
             const fileContents = fs.readFileSync(fullPath, 'utf8')
             const { data } = matter(fileContents)
 
-            // Отримуємо slug з filename
             const slug = filename.replace(/\.md$/, '')
             
-            // Будуємо URL
             let urlPath: string
             if (data?.game_collection) {
-              // Використовуємо game_collection якщо є
               const basePath = data.game_collection.replace(/\/+$/, '')
               urlPath = `${basePath}/${slug}`
             } else {
-              // Fallback на /mods/{game}/{slug}
               urlPath = `/mods/${game}/${slug}`
             }
 
-            // Нормалізуємо URL (прибираємо подвійні слеші)
             urlPath = urlPath.replace(/\/+/g, '/')
 
             urls.push({
