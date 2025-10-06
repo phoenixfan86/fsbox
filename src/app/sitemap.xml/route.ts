@@ -115,18 +115,3 @@ ${urlEntries}
     return new NextResponse("Error generating sitemap", { status: 500 });
   }
 }
-
-// Додатково: robots.txt helper
-export function generateRobotsTxt(): string {
-  return `# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Allow: /
-
-# Sitemaps
-Sitemap: ${hostname}/sitemap.xml
-
-# Disallow admin pages if any
-# Disallow: /admin/
-# Disallow: /api/
-`;
-}
