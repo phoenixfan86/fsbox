@@ -1,4 +1,3 @@
-import { SitemapStream, streamToPromise } from "sitemap";
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
@@ -10,8 +9,8 @@ const modsDirectory = path.join(process.cwd(), "src", "data", "mods");
 function getAllModUrls() {
   if (!fs.existsSync(modsDirectory)) return [];
 
+  const urls: string[] = [];
   const games = fs.readdirSync(modsDirectory);
-  const urls: { url: string; changefreq: string; priority: number }[] = [];
 
   for (const game of games) {
     const gamePath = path.join(modsDirectory, game);
@@ -21,46 +20,45 @@ function getAllModUrls() {
     for (const filename of filenames) {
       if (!filename.endsWith(".md")) continue;
 
-      const fullPath = path.join(gamePath, filename);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-      const { data } = matter(fileContents);
-
-      let basePath = (data?.game_collection || "").replace(/\/+$/, "");
+      const { mtime } = fs.statSync(path.join(gamePath, filename));
+      const { data } = matter(fs.readFileSync(path.join(gamePath, filename), "utf8"));
+      const basePath = (data?.game_collection || "").replace(/\/+$/, "");
       const slug = filename.replace(/\.md$/, "");
       const urlPath = `${basePath}/${slug}`.replace(/\/+/g, "/");
 
-      urls.push({
-        url: urlPath,
-        changefreq: "weekly",
-        priority: 0.8,
-      });
+      urls.push(`
+  <url>
+    <loc>${hostname}${urlPath}</loc>
+    <lastmod>${mtime.toISOString().split("T")[0]}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`);
     }
   }
 
-  return urls;
+  return urls.join("");
 }
 
 export async function GET() {
-  const smStream = new SitemapStream({ hostname });
+  const urls = getAllModUrls();
 
-  smStream.write({ url: "/", changefreq: "daily", priority: 1.0 });
-  // smStream.write({ url: "/mods", changefreq: "weekly", priority: 0.8 });
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>${hostname}/</loc>
+    <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  ${urls}
+</urlset>`;
 
-  const modUrls = getAllModUrls();
-  modUrls.forEach((u) => smStream.write(u));
-
-  smStream.end();
-
-  const buffer = await streamToPromise(smStream);
-  const xmlString = buffer.toString("utf-8");
-
-   const ts = new Date().toISOString();
-
-  return new NextResponse(xmlString.replace(/^\uFEFF/, ""), {
+  return new NextResponse(xml, {
     status: 200,
     headers: {
       "Content-Type": "application/xml; charset=utf-8",
       "Cache-Control": "public, max-age=3600, must-revalidate",
+      "X-Robots-Tag": "all",
     },
   });
 }
