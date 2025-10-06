@@ -14,6 +14,7 @@ export default function Pagination({ pageNumber, totalPages, basePath }: Paginat
       {pageNumber > 1 ? (
         <Link
           href={pageNumber === 2 ? basePath.replace("/page", "") : `${basePath}/${pageNumber - 1}`}
+          rel="noindex, follow"
           className="hover:-translate-x-2 transition-transform"
         >
           ← Назад

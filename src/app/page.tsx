@@ -46,7 +46,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 cursor-pointer hover:opacity-90 transition">
               <img
                 src={mod.image_first}
-                alt={mod.title}
+                alt={`Скріншот мода ${mod.mod_name} для ${mod.game}`}
                 width={300}
                 height={100}
                 className="postImg hover:!scale-none object-cover rounded"

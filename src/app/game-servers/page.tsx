@@ -50,7 +50,7 @@ const GameServers = () => {
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 md:py-4 cursor-pointer hover:opacity-90 transition">
               <img
                 src={server.server_image}
-                alt={server.title}
+                alt={`Скріншот сервера ${server.title_ua} для ${server.game}`}
                 width={300}
                 height={100}
                 className="postImg hover:!scale-none object-cover rounded"

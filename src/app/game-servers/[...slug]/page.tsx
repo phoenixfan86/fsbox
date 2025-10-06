@@ -80,7 +80,7 @@ export default async function serverPage({ params }: { params: SlugParams }) {
       <div className="flex flex-col md:flex-row gap-4 items-center justify-center pt-5">
         <img
           src={server.server_image}
-          alt={server.title}
+          alt={`Скріншот мода ${server.title_ua} для ${server.game}`}
           width={300}
           height={100}
           className="postImg rounded mb-6"
@@ -105,7 +105,7 @@ export default async function serverPage({ params }: { params: SlugParams }) {
                   <a
                     href={server.server_link}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer noindex"
                     className="!text-(--color-1)"
                     aria-label={`Discord ${server.title}`}
                   >

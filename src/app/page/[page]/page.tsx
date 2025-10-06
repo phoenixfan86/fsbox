@@ -30,8 +30,6 @@ export default async function Page({ params }: { params: Promise<{ page: string 
   const endIndex = startIndex + MODS_PER_PAGE;
   const pageMods = mods.slice(startIndex, endIndex);
 
-
-
   return (
     <main className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px]">
       <div className="flex gap-2 mb-4">
@@ -48,7 +46,7 @@ export default async function Page({ params }: { params: Promise<{ page: string 
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 cursor-pointer hover:opacity-90 transition">
               <img
                 src={mod.image_first}
-                alt={mod.title}
+                alt={`Скріншот мода ${mod.mod_name} для ${mod.game}`}
                 width={300}
                 height={100}
                 className="postImg hover:!scale-none object-cover rounded "

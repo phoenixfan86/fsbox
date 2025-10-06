@@ -61,7 +61,7 @@ export default async function GameServersPage({ params }: { params: Promise<{ ga
               <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 cursor-pointer hover:opacity-90 transition">
                 <img
                   src={server.server_image}
-                  alt={server.title}
+                  alt={`Скріншот мода ${server.title_ua} для ${server.game}`}
                   width={300}
                   height={100}
                   className="postImg mb-3 hover:!scale-none object-cover rounded"

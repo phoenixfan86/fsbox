@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: { params: SlugParams }): Prom
     alternates: { canonical },
     title: `${mod.title_ua} ${mod.game} ${lastVersion}`,
     description,
+    keywords: `${mod.game}, мод, ${mod.mod_name}, скачати, українською`,
     openGraph: {
       title,
       description,
@@ -132,14 +133,14 @@ export default async function ModPage({ params }: { params: SlugParams }) {
       <div className="flex flex-col md:flex-row gap-4 items-center justify-center pt-5">
         <img
           src={mod.image_first}
-          alt={mod.title_ua}
+          alt={`Скріншот мода ${mod.mod_name} для ${mod.game} версії ${lastVersion}`}
           width={300}
           className="postImg h-auto rounded mb-6"
         />
         {mod.image_second && (
           <img
             src={mod.image_second}
-            alt={mod.title_ua}
+            alt={`Скріншот мода ${mod.mod_name} для ${mod.game} версії ${lastVersion}`}
             width={300}
             className="postImg h-auto rounded mb-6"
           />
@@ -148,7 +149,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
       </div>
 
       <div className="flex gap-5 flex-col mt-5">
-        <h2 className="text-xl text-center">Опис моду {mod.mod_name} для {mod.game} {lastVersion}</h2>
+        <h2 className="text-xl text-center">Опис та завантаження моду {mod.mod_name} для {lastVersion}</h2>
         <div className="description text-sm text-(--color-3)">
           <Markdown>{mod.content}</Markdown>
         </div>
@@ -183,10 +184,13 @@ export default async function ModPage({ params }: { params: SlugParams }) {
           <Link
             href={mod.download_link}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="downloadBtn"
             aria-label={`Завантажити мод ${mod.mod_name}`}
           >
+            <svg className="inline w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 12l-5-5h3V3h4v4h3l-5 5z" />
+            </svg>
             <span>Download mod</span>
             <span className="text-extra">: {mod.mod_name}</span>
           </Link>
@@ -200,17 +204,17 @@ export default async function ModPage({ params }: { params: SlugParams }) {
 
       {similarMods.length > 0 && (
         <div className="my-10">
-          <h3 className="text-lg font-bold mb-4">Добірка модів на {mod.game}</h3>
+          <h3 className="text-lg font-bold mb-4">Також якщо вам сподобався мод {mod.mod_name} скачайте один з цих модів</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {similarMods.map(simMod => (
               <Link key={simMod.slug} href={`https://fsbox.pp.ua${mod.game_collection}/${simMod.slug}`} className="flex flex-col items-center justify-between p-3 rounded hover:shadow-lg transition !text-(--primary-color-1)">
                 <img
                   src={simMod.image_first}
-                  alt={simMod.title}
+                  alt={`Скріншот мода ${simMod.mod_name} для ${simMod.game} версії ${lastVersion}`}
                   width={160}
                   height={100}
                   className="md:w-40 mb-2 rounded" />
-                <h4 className="font-semibold">{simMod.title}</h4>
+                <h4 className="font-semibold">{simMod.mod_name} для {simMod.game}</h4>
               </Link>
             ))}
           </div>

@@ -17,11 +17,13 @@ export async function generateMetadata({
   const gameTitle = game.charAt(0).toUpperCase() + game.slice(1);
   const title = `Збірка модів на ${gameTitle}`;
   const description = `Добірка модів для ${gameTitle}: моди на зброю та броню, моди на техніку і транспорт, моди на біоми, меблі та прикраси. Завантажуйте моди та робіть гру в ${gameTitle} цікавішою`;
+  const keywords = `моди ${game}, ${game} mods, моди на зброю, моди на машини, шейдери, карти, інтерєри`;
 
   return {
     alternates: { canonical },
     title,
     description,
+    keywords,
     openGraph: {
       title,
       description,
@@ -69,7 +71,7 @@ export default async function GameModsPage({ params }: { params: Promise<{ game:
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 hover:opacity-90 transition">
               <img
                 src={mod.image_first}
-                alt={mod.title}
+                alt={`Скріншот мода ${mod.mod_name} для ${mod.game}`}
                 width={300}
                 height={100}
                 className="postImg hover:!scale-none object-cover rounded"
