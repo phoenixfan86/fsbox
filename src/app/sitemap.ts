@@ -20,7 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 2. Основні розділи
   const mainPages = [
-    { path: '/mods', priority: 0.9 },
     { path: '/articles', priority: 0.7 },
     { path: '/game-servers', priority: 0.7 },
   ]
