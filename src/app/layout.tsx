@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono, Nunito, Oswald } from "next/font/google";
 import "./globals.css";
 import HeaderWrapper from "@/components/HeaderWrapper";
@@ -63,6 +64,7 @@ export default function RootLayout({
           <div className="md:flex">
             {children}
             <Sidebar />
+            <Analytics />
           </div>
           <About />
           <Footer />
