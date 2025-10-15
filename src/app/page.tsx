@@ -10,6 +10,7 @@ const MODS_PER_PAGE = 5;
 
 export const metadata: Metadata = {
   title: "FSbox - скачати безкоштовно моди для Майнкрафт та для інших ігор",
+  keywords: "моди для ігор, скачати моди, моди українською, minecraft mods, моди на Майнкрафт, моди на Project Zomboid, аддони на WoW, моди на Stardew Valley",
   description: "Cкачати моди на Майнкрафт, скачати моди для Stardew Valley, скачати моди для Terraria та інших ігор. Безплатно, швидко, без реєстрації.",
   alternates: {
     canonical: "https://fsbox.pp.ua/"
