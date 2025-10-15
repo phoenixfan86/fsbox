@@ -14,6 +14,7 @@ export type ModData = {
   author: string;
   author_link: string;
   download_link: string;
+  video_link?: string;
   mod_dependencies?: string;
   dependencies_link?: string;
   slug: string;

@@ -50,8 +50,6 @@ export function getSortedModsData(): ModData[] {
   return allMods.sort((a, b) => {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
 });
-
-  {/*return allMods.sort((a, b) => (a.date < b.date ? 1 : -1));*/}
 }
 
 
@@ -84,6 +82,7 @@ export function getModData(slug: string | string[]): ModData {
     image_second: data.image_second || "",
     author: data.author,
     author_link: data.author_link || "",
+    video_link: data.video_link ||"",
     download_link: data.download_link || "",
     mod_dependencies: data.mod_dependencies || undefined,
     dependencies_link: data.dependencies_link || undefined,

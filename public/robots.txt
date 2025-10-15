@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /_next/
+Disallow: /static/
+Disallow: /favicon.ico
 
 Sitemap: https://fsbox.pp.ua/sitemap.xml

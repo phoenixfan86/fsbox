@@ -154,6 +154,13 @@ export default async function ModPage({ params }: { params: SlugParams }) {
           <Markdown>{mod.content}</Markdown>
         </div>
 
+        {mod.video_link && (
+          <div className="flex gap-3 flex-col items-center justify-center my-4">
+            <h3 className="text-lg font-semibold">Огляд, гайд та туторіал моду {mod.mod_name}</h3>
+            <iframe width="90%" height="480" src={mod.video_link} title={mod.mod_name} allow="accelerometer; autoplay; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+          </div>
+        )}
+
         {mod.mod_dependencies && (
           <div className="px-3">
             <span className="py-1 px-3 text-(--color-1) rounded-sm bg-(--bg-3)">
