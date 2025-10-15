@@ -29,7 +29,7 @@ const TopNav = ({ games, variant = "text", className = "" }: Props) => {
   return (
     <nav className={`w-full flex gap-2 items-center ${className}`}>
       {variant === "text" && (
-        <Link href="/" className="text-[8px] md:text-[11px] uppercase">
+        <Link href="/" className="text-[8px] md:text-[10px] uppercase">
           Головна
         </Link>
       )}
@@ -51,19 +51,19 @@ const TopNav = ({ games, variant = "text", className = "" }: Props) => {
                   height={100}
                 />
               ) : (
-                <span className="text-[8px] md:text-[11px] uppercase">{game.name}</span>
+                <span className=" text-[8px] md:text-[10px] uppercase">{game.name}</span>
               )}
             </Link>
           );
         })}
       </div>
       {variant === "text" && (
-        <Link href="/instruction" className="text-[8px] md:text-[11px] uppercase">
+        <Link href="/instruction" className="text-[8px] md:text-[10px] uppercase">
           Інструкції
         </Link>
       )}
       {variant === "text" && (
-        <Link href="/game-servers" className="text-[8px] md:text-[11px] uppercase">
+        <Link href="/game-servers" className="text-[8px] md:text-[10px] uppercase">
           Сервери для Ігор
         </Link>
       )}

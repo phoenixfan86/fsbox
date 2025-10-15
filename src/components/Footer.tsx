@@ -20,7 +20,7 @@ const Footer = () => {
         <span className="text-[10px] md:text-[12px]">На сайті всього: {totalMods} модів</span>
       </div>
       <div className="w-full md:w-auto flex gap-4 flex-col items-center md:items-start">
-        <TopNav games={games} className="text-xs" />
+        <TopNav games={games} className="" />
         <span className="text-xs text-center">2025 Fan</span>
       </div>
     </footer>
