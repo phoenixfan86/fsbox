@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: SlugParams }): Prom
     alternates: { canonical },
     title: `${mod.title_ua} ${mod.game} ${lastVersion}`,
     description,
-    keywords: `${mod.game}, мод, ${mod.mod_name}, скачати, українською`,
+    keywords: `${mod.game}, мод, ${mod.mod_name}, скачати, українською, скачать моды`,
     openGraph: {
       title,
       description,
