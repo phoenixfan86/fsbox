@@ -11,9 +11,10 @@ author_link: "https://www.curseforge.com/members/theillusivec4"
 image_first: "https://media.forgecdn.net/avatars/203/105/636930549407382137.png"
 image_second: "https://media.forgecdn.net/attachments/219/973/hammockpan.png"
 download_link: "https://edge.forgecdn.net/files/2705/810/comforts-1.12.2-1.4.1.2.jar"
+video_link: "https://www.youtube.com/embed/W0u9q5Q0L5c"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2025-10-06"
+date: "2025-10-15"
 ---
 
 **Comforts** - це мод для **Minecraft** (працює з Forge, Fabric, NeoForge), який додає спальні мішки та гамаки. Вони працюють як ліжка - змінюють ніч на день, _*але не змінюють точку спавну гравця*_, тож ваша база лишається безпечною. Усіх предметів доступні в 16 кольорах. 

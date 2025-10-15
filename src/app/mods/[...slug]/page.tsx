@@ -6,7 +6,9 @@ import Markdown from "react-markdown";
 import { ModData } from "@/types/ModsData";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 import { pickStableMods } from "@/lib/randomGameMod";
-import JsonLd from "@/components/JsonLd";
+import { VideoEmbed } from "@/components/VideoEmbed";
+import { VideoSchema } from "@/components/Schema/VideoSchema";
+import { ModSchema } from "@/components/Schema/ModSchema";
 
 type SlugParams = Promise<{ slug: string[] }>;
 
@@ -92,7 +94,16 @@ export default async function ModPage({ params }: { params: SlugParams }) {
   return (
     <div className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
 
-      <JsonLd data={schemaData} />
+      <ModSchema mod={mod} lastVersion={lastVersion} />
+
+      {mod.video_link && (
+        <VideoSchema
+          videoLink={mod.video_link}
+          modName={mod.mod_name}
+          modTitle={mod.title_ua}
+          date={mod.date}
+        />
+      )}
 
       <ul className="flex gap-2 text-[10px] md:text-xs mb-4">
         <li className="">
@@ -155,10 +166,10 @@ export default async function ModPage({ params }: { params: SlugParams }) {
         </div>
 
         {mod.video_link && (
-          <div className="flex gap-3 flex-col items-center justify-center my-4">
-            <h3 className="text-lg font-semibold">Огляд, гайд та туторіал моду {mod.mod_name}</h3>
-            <iframe width="90%" height="480" src={mod.video_link} title={mod.mod_name} allow="accelerometer; autoplay; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-          </div>
+          <VideoEmbed
+            videoLink={mod.video_link}
+            modName={mod.mod_name}
+          />
         )}
 
         {mod.mod_dependencies && (
