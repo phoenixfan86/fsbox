@@ -1,19 +1,28 @@
 ---
 title: "RLCraft - download mod for"
-title_ua: "RLCraft - скачати мод"
-description: "RLCraft, where RL stands for Real Life or Realism, is a variation of another mod I created for Unreal called RLCoop, which has a similar goal overall."
+title_ua: "RLCraft - скачати модпак на виживання"
+description: "RLCraft - складний модпак Minecraft, що додає реалістичне виживання, небезпечні монстри, погоду, систему голоду й механіку зламаності. Випробуйте справжній виживач у світі Minecraft!"
 mod_name: "RLCraft"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
 tags: ["Minecraft", "Mods", "Forge", "1.1.2", "1.12.2"]
 author: "shivaxi"
 author_link: "https://www.curseforge.com/members/shivaxi"
-image_first: "https://bisecthosting.com/images/CF/RLCraft/BH_RL_Header.webp"
+image_first: "https://media.forgecdn.net/avatars/468/243/637751369169569212.png"
 image_second: ""
 download_link: "https://www.curseforge.com/minecraft/modpacks/rlcraft/files/all?page=1&amp;pageSize=20"
+video_link: "https://www.youtube.com/embed/CthCMgEt7Dc"
 mod_dependencies: ""
 dependencies_link: ""
-date: "2025-08-6"
+date: "2025-10-16"
 ---
 
-RLCraft, де RL означає Real Life (реальне життя) або Realism (реалізм), є варіацією іншого мода, який я створив для Unreal під назвою RLCoop і який загалом має подібну мету. Це моя інтерпретація того, чого я завжди хотів від Minecraft, коли йдеться про чисте виживання, пригоди, RPG та занурення.  Я вручну відібрав багато модів і індивідуально налаштував кожен з них, щоб вони відповідали саме тому стилю гри, який я шукав, переконавшись, що всі вони плавно взаємодіють між собою, додавши свої власні скрипти для різних змін у стандартній поведінці тощо.
+**RLCraft** - дуже складний і реалістичний модпак для **Minecraft**, який перетворює гру на сурове виживання. Він додає небезпечних монстрів, реалістичну систему голоду, зміну погоди, речі, що ламаються, і багато небезпек для гравця.
+
+### Основні особливості:
+
+- Підвищена складність - монстри сильніші, шкоди більше
+- Реалістична система виживання: спрага, голод, температура
+- Зброя, броня та ресурси ламаються
+- Система навколишнього середовища: погода, гравітація, довкілля
+- Безпечні фази практично відсутні - постійна загроза
