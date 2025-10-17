@@ -29,6 +29,9 @@ date: "2025-10-17"
 - Налаштування через конфіг (frequency структур, які біоми мають генерувати, які монстри зʼявляються тощо) 
 - Сумісність з Forge / NeoForge платформами 
 
+### Ще моди на біоми для Minecraft
+- [More Biomes](/mods/minecraft/more-biomes)
+
 ### Скріншот з моду
 ![Скріншот з моду The Graveyard](https://media.forgecdn.net/attachments/436/433/2022-02-26_18.png)
 ![Скріншот з моду The Graveyard](https://media.forgecdn.net/attachments/436/439/2022-02-26_18.png)
