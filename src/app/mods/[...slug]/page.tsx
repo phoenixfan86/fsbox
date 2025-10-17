@@ -191,7 +191,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
         <p>
           Автор:
           <a href={mod.author_link} className="!text-(--primary-color-1)">
-            {mod.author}
+            {` ${mod.author}`}
           </a>
         </p>
       </div>

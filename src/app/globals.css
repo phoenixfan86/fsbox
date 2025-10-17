@@ -99,6 +99,16 @@ li a {
 	color: var(--primary-color-1);
 }
 
+.description p img {
+	display: block;
+	margin-bottom: 20px;
+	border-radius: 6px;
+	filter: drop-shadow(1px 1px 10px #000);
+}
+.description p img:nth-child(1) {
+	margin-top: 10px;
+}
+
 .downloadBtn {
 	display: inline-block;
 	overflow: hidden;
