@@ -28,7 +28,7 @@ date: "2025-10-17"
 - Візуальні ефекти адаптовані під кожний біом (волога, освітлення)
 - Вдосконалення генерації світу - плавні переходи між біомами
 ### Ще моди на біоми на FSBox
-- [The Graveyard](mods/minecraft/graveyard)
+- [The Graveyard](/mods/minecraft/graveyard)
 
 ### Скріншоти з More Biomes
 ![More Biomes [FORGE]](https://media.forgecdn.net/attachments/800/734/more-biomes-3.jpg)
