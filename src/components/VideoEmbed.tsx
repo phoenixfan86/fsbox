@@ -27,7 +27,7 @@ export function VideoEmbed({ videoLink, modName }: VideoEmbedProps) {
       </div>
 
       <p className="mt-3 text-sm text-gray-600">
-        На цьому відео ви дізнаєтесь як встановити та користуватися модом {modName}.
+        На цьому відео ви дізнаєтесь як користуватися модом {modName}.
       </p>
     </section>
   )
