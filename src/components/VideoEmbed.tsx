@@ -22,7 +22,6 @@ export function VideoEmbed({ videoLink, modName }: VideoEmbedProps) {
           title={`Огляд, гайд та туторіал мода ${modName}`}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
-          loading="lazy"
         />
       </div>
 
