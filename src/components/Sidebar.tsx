@@ -88,6 +88,11 @@ const Sidebar = ({ exclude }: Props) => {
               />
             </a>
           </li>
+          <li>
+            <a href="http://www.wingee.com">
+              Top Blog Feeds
+            </a>
+          </li>
         </ul>
       </div>
     </aside >
