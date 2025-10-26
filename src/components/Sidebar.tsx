@@ -76,7 +76,6 @@ const Sidebar = ({ exclude }: Props) => {
               <img
                 src="https://www.ontoplist.com/images/ontoplist32.png?id=68fe91d37dab9"
                 alt="Best Web Development Companies - OnToplist.com"
-                border="0"
               />
             </a>
           </li>
