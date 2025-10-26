@@ -68,7 +68,12 @@ const Sidebar = ({ exclude }: Props) => {
           ))}
         </ul>
       </div>
-
+      <div className="">
+        <h4>Каталоги</h4>
+        <ul className="flex flex-col items-center mt-4">
+          <li><a href="https://www.ontoplist.com/web-development-companies/" target="_blank"><img src="https://www.ontoplist.com/images/ontoplist32.png?id=68fe91d37dab9" alt="Best Web Development Companies - OnToplist.com" /></a></li>
+        </ul>
+      </div>
     </aside >
   );
 }
