@@ -51,6 +51,7 @@ export default function RootLayout({
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="google-adsense-account" content="ca-pub-3225881199838520"></meta>
         <meta name="wot-verification" content="d2d35e775075c47a76b6" />
+        <meta name="blogarama-site-verification" content="blogarama-a76f38ae-c555-4f1f-9758-3b2b2159ba24"></meta>
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=all"
