@@ -50,6 +50,7 @@ export default function RootLayout({
       <head>
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="google-adsense-account" content="ca-pub-3225881199838520"></meta>
+        <meta name="wot-verification" content="d2d35e775075c47a76b6"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=all" />
         <link rel="stylesheet" href="https://fsbox.pp.ua/page/2" />
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3225881199838520"
