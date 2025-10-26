@@ -70,8 +70,25 @@ const Sidebar = ({ exclude }: Props) => {
       </div>
       <div className="">
         <h4>Каталоги</h4>
-        <ul className="flex flex-col items-center mt-4">
-          <li><a href="https://www.ontoplist.com/web-development-companies/" target="_blank"><img src="https://www.ontoplist.com/images/ontoplist32.png?id=68fe91d37dab9" alt="Best Web Development Companies - OnToplist.com" /></a></li>
+        <ul className="flex flex-col items-center gap-3 mt-4">
+          <li>
+            <a href="https://www.ontoplist.com/web-development-companies/" target="_blank">
+              <img
+                src="https://www.ontoplist.com/images/ontoplist32.png?id=68fe91d37dab9"
+                alt="Best Web Development Companies - OnToplist.com"
+                border="0"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://follow.it/fsbox-game-mods-feed?leanpub">
+              <img
+                src="/img/follow.png"
+                alt="follow me"
+                width={120}
+              />
+            </a>
+          </li>
         </ul>
       </div>
     </aside >
