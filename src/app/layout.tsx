@@ -63,6 +63,11 @@ export default function RootLayout({
           title="FSBox RSS Feed"
           href="/rss.xml"
         />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          href="/rss"
+        />
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3225881199838520"
           crossOrigin="anonymous"></Script>
         <Script src="https://analytics.ahrefs.com/analytics.js" data-key="vP4pGDp8OZm8gnXTfwI4XA" async></Script>
