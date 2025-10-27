@@ -21,6 +21,9 @@ const Footer = () => {
       </div>
       <div className="w-full md:w-auto flex gap-4 flex-col items-center md:items-start">
         <TopNav games={games} className="" />
+        <div className="">
+          <ul><li className="text-xs"><a href="http://www.blogarama.com/fashion-blogs/1351624-blog/" title="Blogarama.com - Follow me on Blogarama">Blogarama - Blog Directory</a></li></ul>
+        </div>
         <span className="text-xs text-center">2025 Fan</span>
       </div>
     </footer>

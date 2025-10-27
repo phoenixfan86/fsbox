@@ -93,9 +93,6 @@ const Sidebar = ({ exclude }: Props) => {
               Top Blog Feeds
             </a>
           </li>
-          <li>
-            <a href="http://www.blogarama.com/fashion-blogs/1351624-blog/" title="Blogarama.com - Follow me on Blogarama">Blogarama - Blog Directory</a>
-          </li>
         </ul>
       </div>
     </aside >
