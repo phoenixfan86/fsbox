@@ -24,7 +24,7 @@ const Sidebar = ({ exclude }: Props) => {
   if (randoms.length === 0) return null;
 
   return (
-    <aside className="hidden md:flex md:gap-5 md:flex-col md:p-[25px] border-l-1 border-(--color-5)">
+    <aside className="hidden md:w-[20%] md:flex md:gap-5 md:flex-col md:p-[25px] border-l-1 border-(--color-5)">
 
       <div className="shadow">
         <h4>Моди для:</h4>
@@ -92,6 +92,9 @@ const Sidebar = ({ exclude }: Props) => {
             <a href="http://www.wingee.com">
               Top Blog Feeds
             </a>
+          </li>
+          <li>
+            <a href="http://www.blogarama.com/fashion-blogs/1351624-blog/" title="Blogarama.com - Follow me on Blogarama">Blogarama - Blog Directory</a>
           </li>
         </ul>
       </div>
