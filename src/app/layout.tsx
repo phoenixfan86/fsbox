@@ -51,26 +51,26 @@ export default function RootLayout({
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="google-adsense-account" content="ca-pub-3225881199838520"></meta>
         <meta name="wot-verification" content="d2d35e775075c47a76b6" />
-        <meta name="blogarama-site-verification" content="blogarama-f65351db-200a-469d-9878-a863412f08d2">
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=all"
-          />
+        <meta name="blogarama-site-verification" content="blogarama-f65351db-200a-469d-9878-a863412f08d2" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=all"
+        />
 
-          <link
-            rel="alternate"
-            type="application/rss+xml"
-            title="FSBox RSS Feed"
-            href="/rss.xml"
-          />
-          <link
-            rel="alternate"
-            type="application/rss+xml"
-            href="/rss"
-          />
-          <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3225881199838520"
-            crossOrigin="anonymous"></Script>
-          <Script src="https://analytics.ahrefs.com/analytics.js" data-key="vP4pGDp8OZm8gnXTfwI4XA" async></Script>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="FSBox RSS Feed"
+          href="/rss.xml"
+        />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          href="/rss"
+        />
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3225881199838520"
+          crossOrigin="anonymous"></Script>
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="vP4pGDp8OZm8gnXTfwI4XA" async></Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} ${oswald.variable} antialiased`}
