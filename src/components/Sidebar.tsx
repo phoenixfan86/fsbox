@@ -54,7 +54,7 @@ const Sidebar = ({ exclude }: Props) => {
                 <div className="flex gap-3 flex-col items-center">
                   <img
                     src={mod.image_first}
-                    alt={`Скріншот мода ${mod.mod_name} для ${mod.game}`}
+                    alt={`${mod.mod_name} для ${mod.game}`}
                     className="size-25 object-cover rounded"
                     loading="lazy"
                   />

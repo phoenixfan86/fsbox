@@ -49,6 +49,7 @@ const TopNav = ({ games, variant = "text", className = "" }: Props) => {
                   alt={logo.alt}
                   width={100}
                   height={100}
+                  loading="lazy"
                 />
               ) : (
                 <span className=" text-[8px] md:text-[10px] uppercase">{game.name}</span>
