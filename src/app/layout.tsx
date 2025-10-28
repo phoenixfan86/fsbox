@@ -53,11 +53,6 @@ export default function RootLayout({
         <meta name="wot-verification" content="d2d35e775075c47a76b6" />
         <meta name="blogarama-site-verification" content="blogarama-f65351db-200a-469d-9878-a863412f08d2" />
         <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=all"
-        />
-
-        <link
           rel="alternate"
           type="application/rss+xml"
           title="FSBox RSS Feed"
