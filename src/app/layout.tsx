@@ -58,13 +58,8 @@ export default function RootLayout({
           title="FSBox RSS Feed"
           href="/rss.xml"
         />
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          href="/rss"
-        />
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3225881199838520"
-          crossOrigin="anonymous"></Script>
+          crossOrigin="anonymous" strategy="afterInteractive"></Script>
         <Script src="https://analytics.ahrefs.com/analytics.js" data-key="vP4pGDp8OZm8gnXTfwI4XA" async></Script>
       </head>
       <body
@@ -80,8 +75,8 @@ export default function RootLayout({
           <About />
           <Footer />
         </div>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NP9SJ9M1Y9"></script>
-        <script>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NP9SJ9M1Y9" strategy="afterInteractive"></Script>
+        <Script strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
           function gtag(){
             dataLayer.push(arguments)
@@ -89,7 +84,7 @@ export default function RootLayout({
           gtag('js', new Date());
 
           gtag('config', 'G-NP9SJ9M1Y9');`}
-        </script>
+        </Script>
       </body>
     </html>
   );
