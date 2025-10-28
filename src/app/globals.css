@@ -35,7 +35,7 @@
 }
 
 body {
-	background-image: url('/img/bg.jpg');
+	background-image: url('/img/bg.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center top;

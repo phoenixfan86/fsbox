@@ -14,13 +14,13 @@ type Props = {
 }
 
 const LOGO_MAP: Record<string, { src: string; alt: string }> = {
-  "minecraft": { src: "/img/logos/minecraft-logo.jpg", alt: "Minecraft" },
-  "stardew-valley": { src: "/img/logos/stardew-valley-logo.jpg", alt: "Stardew Valley" },
-  "terraria": { src: "/img/logos/terraria-logo.jpg", alt: "Terraria" },
-  "teardown": { src: "/img/logos/teardown-logo.png", alt: "Teardown" },
-  "pz": { src: "/img/logos/project-zomboid-logo.png", alt: "Project Zomboid" },
-  "ksp": { src: "/img/logos/ksp-logo.png", alt: "KSP" },
-  "wow": { src: "/img/logos/wow-logo.png", alt: "WoW" },
+  "minecraft": { src: "/img/logos/minecraft-logo.webp", alt: "Minecraft" },
+  "stardew-valley": { src: "/img/logos/stardew-valley-logo.webp", alt: "Stardew Valley" },
+  "terraria": { src: "/img/logos/terraria-logo.webp", alt: "Terraria" },
+  "teardown": { src: "/img/logos/teardown-logo.webp", alt: "Teardown" },
+  "pz": { src: "/img/logos/project-zomboid-logo.webp", alt: "Project Zomboid" },
+  "ksp": { src: "/img/logos/ksp-logo.webp", alt: "KSP" },
+  "wow": { src: "/img/logos/wow-logo.webp", alt: "WoW" },
 };
 
 
