@@ -93,6 +93,9 @@ const Sidebar = ({ exclude }: Props) => {
               Top Blog Feeds
             </a>
           </li>
+          <li>
+            <a href="http://catalog.clubcoua.com"><img src="http://catalog.clubcoua.com/images/banner/wcccu.gif" alt="Безкоштовний каталог сайтів" border="0"/></a>
+          </li>
         </ul>
       </div>
     </aside >
