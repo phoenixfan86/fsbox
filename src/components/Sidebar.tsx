@@ -94,7 +94,12 @@ const Sidebar = ({ exclude }: Props) => {
             </a>
           </li>
           <li>
-            <a href="http://catalog.clubcoua.com"><img src="http://catalog.clubcoua.com/images/banner/wcccu.gif" alt="Безкоштовний каталог сайтів"/></a>
+            <a href="http://catalog.clubcoua.com">
+              <img src="http://catalog.clubcoua.com/images/banner/wcccu.gif" alt="Безкоштовний каталог сайтів" />
+            </a>
+          </li>
+          <li>
+            <Link rel="me" href="https://mastodon.social/@fsboxmods">Mastodon</Link>
           </li>
         </ul>
       </div>
