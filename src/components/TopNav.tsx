@@ -19,6 +19,7 @@ const LOGO_MAP: Record<string, { src: string; alt: string }> = {
   "terraria": { src: "/img/logos/terraria-logo.webp", alt: "Terraria" },
   "teardown": { src: "/img/logos/teardown-logo.webp", alt: "Teardown" },
   "pz": { src: "/img/logos/project-zomboid-logo.webp", alt: "Project Zomboid" },
+  "star-craft-2": { src: "/img/logos/sc2-logo.webp", alt: "Star Craft 2" },
   "ksp": { src: "/img/logos/ksp-logo.webp", alt: "KSP" },
   "wow": { src: "/img/logos/wow-logo.webp", alt: "WoW" },
 };

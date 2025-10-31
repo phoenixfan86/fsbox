@@ -5,6 +5,7 @@ import { pickRandomMods } from "@/lib/randomMods";
 import type { ServerData } from "@/types/ServerData";
 import type { ModData } from "@/types/ModsData";
 import TopNav from "./TopNav";
+import Nav from "./Nav";
 
 type Props = {
   exclude?: string;
@@ -29,6 +30,7 @@ const Sidebar = ({ exclude }: Props) => {
       <div className="shadow">
         <h4>Моди для:</h4>
         <TopNav games={games} variant="logos" className="items-center flex-col py-5" />
+        {/*<Nav games={games} variant="logos" position="sidebar" className="" />*/}
       </div>
       <div className="shadow">
         <h4>Сервери для:</h4>
