@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { MdOutlineCalendarMonth } from "react-icons/md";
 import { getSortedModsData } from "@/lib/mods";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 import Pagination from "@/components/Pagination";
@@ -59,9 +60,7 @@ export default async function Page({ params }: { params: Promise<{ page: string 
                     </Link>
                   </h2>
                   <div className="flex items-center text-xs text-gray-500 gap-1">
-                    <span className="material-symbols-outlined text-gray-400" style={{ fontSize: 16 }}>
-                      calendar_month
-                    </span>
+                    <MdOutlineCalendarMonth size={16} className="inline-block text-gray-400" />
                     <span>{mod.date}</span>
                   </div>
                 </div>
