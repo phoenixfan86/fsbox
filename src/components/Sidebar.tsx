@@ -91,13 +91,13 @@ const Sidebar = ({ exclude }: Props) => {
             </a>
           </li>
           <li>
-            <a href="http://www.wingee.com">
+            <a href="https://www.wingee.com">
               Top Blog Feeds
             </a>
           </li>
           <li>
-            <a href="http://catalog.clubcoua.com">
-              <img src="http://catalog.clubcoua.com/images/banner/wcccu.gif" alt="Безкоштовний каталог сайтів" />
+            <a href="https://catalog.clubcoua.com">
+              <img src="https://catalog.clubcoua.com/images/banner/wcccu.gif" alt="Безкоштовний каталог сайтів" />
             </a>
           </li>
           <li>

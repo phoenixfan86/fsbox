@@ -26,7 +26,7 @@ const Footer = () => {
           <span>Каталоги</span>
           <ul>
             <li className="text-xs">
-              <a href="http://www.blogarama.com/fashion-blogs/1351624-blog/" title="Blogarama.com - Follow me on Blogarama">Blogarama - Blog Directory</a>
+              <a href="https://www.blogarama.com/fashion-blogs/1351624-blog/" title="Blogarama.com - Follow me on Blogarama">Blogarama - Blog Directory</a>
             </li>
           </ul>
           <span className="text-[10px] md:text-[12px] my-3">На сайті всього: {totalMods} модів</span>
