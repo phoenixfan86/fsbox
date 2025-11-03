@@ -70,7 +70,8 @@ const nextConfig: NextConfig = {
       'static.wikia.nocookie.net',
       'blogger.googleusercontent.com',
       'playcraft.com.ua',
-      'i.blamejared.com'
+      'i.blamejared.com',
+      'ik.imagekit.io' //imageKit
     ]
   }
 };
