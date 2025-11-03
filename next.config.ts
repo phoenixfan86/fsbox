@@ -71,7 +71,7 @@ const nextConfig: NextConfig = {
       'blogger.googleusercontent.com',
       'playcraft.com.ua',
       'i.blamejared.com',
-      'ik.imagekit.io' //imageKit
+      'images.weserv.nl' //weserv
     ]
   }
 };
