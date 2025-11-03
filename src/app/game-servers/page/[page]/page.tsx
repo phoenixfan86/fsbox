@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getSortedServerData } from "@/lib/servers";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 import Pagination from "@/components/Pagination";
+import OptimizedImage from "@/components/OptimizedImages";
 
 const SERVERS_PER_PAGE = 5;
 
@@ -46,13 +47,17 @@ export default async function Page({ params }: { params: Promise<{ page: string 
           <li key={serv.slug} className="p-4 rounded shadow">
 
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 cursor-pointer hover:opacity-90 transition">
-              <img
-                src={serv.server_image}
-                alt={serv.title}
-                width={300}
-                height={100}
-                className="postImg hover:!scale-none object-cover rounded "
-              />
+              {serv.server_image.startsWith("data:image") ? (
+                < img src={serv.server_image} alt={serv.title_ua} width={300} />
+              ) : (
+                <OptimizedImage
+                  src={serv.server_image}
+                  alt={`${serv.title_ua} для ${serv.game}`}
+                  width={300}
+                  height={0}
+                  className="postImg hover:!scale-none object-cover rounded"
+                />
+              )}
               <div className="flex gap-5 flex-col justify-between">
                 <div>
                   <h2 className="text-xl font-semibold">

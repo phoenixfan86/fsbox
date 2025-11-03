@@ -6,6 +6,7 @@ import type { ServerData } from "@/types/ServerData";
 import type { ModData } from "@/types/ModsData";
 import TopNav from "./TopNav";
 import Nav from "./Nav";
+import OptimizedImage from "@/components/OptimizedImages"
 
 type Props = {
   exclude?: string;
@@ -54,14 +55,14 @@ const Sidebar = ({ exclude }: Props) => {
             <li key={mod.slug} className=" p-2 rounded hover:opacity-90 transition hover:shadow">
               <Link href={`/mods/${mod.gameSlug}/${mod.slug}`} className="block">
                 <div className="flex gap-3 flex-col items-center">
-                  <img
+                  <OptimizedImage
                     src={mod.image_first}
                     alt={`${mod.mod_name} для ${mod.game}`}
-                    className="size-25 object-cover rounded"
-                    loading="lazy"
+                    width={140}
+                    className="object-cover rounded"
                   />
                   <div className="">
-                    <div className="text-sm text-(--primary-color-1) font-medium">{mod.title_ua} для</div>
+                    <div className="text-sm text-(--primary-color-1) font-medium">{mod.title_ua}</div>
                     <div className="text-xs text-(--color-1)">{mod.game}</div>
                   </div>
                 </div>

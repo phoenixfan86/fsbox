@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { getAllGames, getSortedModsData } from "@/lib/mods";
 import { stripMarkdown } from "@/lib/stripMarkDown";
+import OptimizedImage from "@/components/OptimizedImages";
 
 type GameParams = Promise<{ game: string }>;
 
@@ -70,11 +71,13 @@ export default async function GameModsPage({ params }: { params: Promise<{ game:
         {gameMods.map((mod) => (
           <li key={mod.slug} className="p-4 rounded shadow">
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 hover:opacity-90 transition">
-              <img
+              <OptimizedImage
                 src={mod.image_first}
                 alt={`Скріншот мода ${mod.mod_name} для ${mod.game}`}
                 width={300}
-                height={100}
+                height={0}
+                fit="inside"
+                objectFit="contain"
                 className="postImg hover:!scale-none object-cover rounded"
               />
               <div className="flex gap-5 flex-col justify-between">

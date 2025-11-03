@@ -5,6 +5,7 @@ import Markdown from "react-markdown";
 import { ServerData } from "@/types/ServerData";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 import CopyText from "@/components/CopyText";
+import OptimizedImage from "@/components/OptimizedImages";
 
 
 type SlugParams = Promise<{ slug: string[] }>;
@@ -78,13 +79,17 @@ export default async function serverPage({ params }: { params: SlugParams }) {
         ))}
       </div>
       <div className="flex flex-col md:flex-row gap-4 items-center justify-center pt-5">
-        <img
-          src={server.server_image}
-          alt={`Скріншот мода ${server.title_ua} для ${server.game}`}
-          width={300}
-          height={100}
-          className="postImg rounded mb-6"
-        />
+        {server.server_image.startsWith("data:image") ? (
+          < img src={server.server_image} alt={server.title_ua} width={300} />
+        ) : (
+          <OptimizedImage
+            src={server.server_image}
+            alt={`${server.title_ua} для ${server.game}`}
+            width={300}
+            height={0}
+            className="postImg hover:!scale-none object-cover rounded"
+          />
+        )}
       </div>
       <div className="flex gap-5 flex-col mt-5">
         <h3 className="text-xl text-center">Опис сервера {server.server_name}</h3>

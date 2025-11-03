@@ -9,6 +9,7 @@ import { pickStableMods } from "@/lib/randomGameMod";
 import { VideoEmbed } from "@/components/VideoEmbed";
 import { VideoSchema } from "@/components/Schema/VideoSchema";
 import { ModSchema } from "@/components/Schema/ModSchema";
+import OptimizedImage from "@/components/OptimizedImages";
 
 type SlugParams = Promise<{ slug: string[] }>;
 
@@ -117,16 +118,16 @@ export default async function ModPage({ params }: { params: SlugParams }) {
       </div>
 
       <div className="flex flex-col md:flex-row gap-4 items-center justify-center pt-5">
-        <img
+        <OptimizedImage
           src={mod.image_first}
-          alt={`Скріншот мода ${mod.mod_name} для ${mod.game} версії ${lastVersion}`}
+          alt={`${mod.mod_name} для ${mod.game} версії ${lastVersion}`}
           width={300}
           className="postImg h-auto rounded mb-6"
         />
         {mod.image_second && (
-          <img
+          <OptimizedImage
             src={mod.image_second}
-            alt={`Скріншот мода ${mod.mod_name} для ${mod.game} версії ${lastVersion}`}
+            alt={`${mod.mod_name} для ${mod.game} версії ${lastVersion}`}
             width={300}
             className="postImg h-auto rounded mb-6"
           />
@@ -201,12 +202,14 @@ export default async function ModPage({ params }: { params: SlugParams }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {similarMods.map(simMod => (
               <Link key={simMod.slug} href={`https://fsbox.pp.ua${mod.game_collection}/${simMod.slug}`} className="flex flex-col items-center justify-between p-3 rounded hover:shadow-lg transition !text-(--primary-color-1)">
-                <img
+                <OptimizedImage
                   src={simMod.image_first}
-                  alt={`Скріншот мода ${simMod.mod_name} для ${simMod.game} версії ${lastVersion}`}
+                  alt={`${simMod.mod_name} для ${simMod.game} версії ${lastVersion}`}
                   width={160}
                   height={100}
-                  className="md:w-40 mb-2 rounded" />
+                  fit="inside"
+                  objectFit="contain"
+                  className="mb-2 rounded" />
                 <h4 className="font-semibold">{simMod.mod_name} для {simMod.game}</h4>
               </Link>
             ))}

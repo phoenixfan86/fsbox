@@ -1,4 +1,3 @@
-// lib/imageOptimizer.ts
 export interface ImageOptions {
   width?: number
   height?: number
@@ -8,15 +7,17 @@ export interface ImageOptions {
   fit?: 'contain' | 'cover' | 'fill' | 'inside' | 'outside'
 }
 
-/**
- * Оптимізує зображення через weserv.nl
- */
 export function getOptimizedImageUrl(
   src: string,
   options: ImageOptions = {}
 ): string {
   if (src.startsWith('/')) return src
   if (src.includes('images.weserv.nl')) return src
+
+  const blockedDomains = ['imgur.com', 'i.imgur.com', 'media.discordapp.net', 'cdn.discordapp.com']
+  if (blockedDomains.some(domain => src.includes(domain))) {
+    return src
+  }
 
   const {
     width,
@@ -36,13 +37,14 @@ export function getOptimizedImageUrl(
   params.append('q', quality.toString())
   params.append('output', format)
   params.append('fit', fit)
-  params.append('il', '') // progressive
-  params.append('n', '-1') // strip metadata
+  params.append('il', '')
+  params.append('n', '-1')
 
   if (blur) params.append('blur', blur.toString())
 
   return `https://images.weserv.nl/?${params.toString()}`
 }
+
 
 export function generateSrcSet(
   src: string,

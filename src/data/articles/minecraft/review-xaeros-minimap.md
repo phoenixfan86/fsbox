@@ -7,7 +7,6 @@ game_collection: "/game-servers/minecraft"
 tags: ["Інструкція", "Minecraft"]
 article_type: "Огляд"
 article_img: 
-- "https://static.wikia.nocookie.net/minecraft_ru_gamepedia/images/9/90/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%28Xaero%27s_Minimap%29.jpg/revision/latest?cb=20181217085539"
 - "https://chocolateminecraft.com/images/minimap_2020.png"
 link: "/mods/minecraft"
 link_text: "Minecraft"

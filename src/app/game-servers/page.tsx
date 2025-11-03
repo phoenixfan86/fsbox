@@ -4,6 +4,7 @@ import type { ServerData } from "@/types/ServerData";
 import { getSortedServerData } from "@/lib/servers";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 import Pagination from "@/components/Pagination";
+import OptimizedImage from "@/components/OptimizedImages";
 
 const SERVERS_PER_PAGE = 5;
 
@@ -39,7 +40,7 @@ const GameServers = () => {
     <section className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
       <h1 className="text-xl font-bold mb-6">Список серверів на FSBox</h1>
       <p>
-        Вибирайте з нашого списку найпопулярніших серверів для улюблених ігор — Minecraft, CS:GO, Rust, GTA та інших.
+        Вибирайте з нашого списку найпопулярніших серверів для улюблених ігор - Minecraft, CS:GO, Rust, GTA та інших.
         Тут ви знайдете активні спільноти, стабільний онлайн і кращі місця для гри з друзями.
       </p>
 
@@ -48,13 +49,17 @@ const GameServers = () => {
           <li key={server.slug} className="p-4 rounded shadow">
 
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 md:py-4 cursor-pointer hover:opacity-90 transition">
-              <img
-                src={server.server_image}
-                alt={`Скріншот сервера ${server.title_ua} для ${server.game}`}
-                width={300}
-                height={100}
-                className="postImg hover:!scale-none object-cover rounded"
-              />
+              {server.server_image.startsWith("data:image") ? (
+                < img src={server.server_image} alt={server.title_ua} width={300} />
+              ) : (
+                <OptimizedImage
+                  src={server.server_image}
+                  alt={`${server.title_ua} для ${server.game}`}
+                  width={300}
+                  height={0}
+                  className="postImg hover:!scale-none object-cover rounded"
+                />
+              )}
               <div className="flex gap-5 flex-col justify-between">
                 <div>
                   <h2 className="text-xl font-semibold">

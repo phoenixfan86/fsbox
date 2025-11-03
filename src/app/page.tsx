@@ -1,12 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Metadata } from "next";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { getSortedModsData } from "@/lib/mods";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 import { ModData } from "@/types/ModsData";
 import Pagination from "@/components/Pagination";
-import OptimizedImage from '@/components/OptimizedImages'
+import OptimizedImage from "@/components/OptimizedImages";
 
 
 const MODS_PER_PAGE = 5;

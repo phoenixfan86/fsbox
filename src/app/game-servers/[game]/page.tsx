@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { getAllServers, getSortedServerData } from "@/lib/servers";
 import { stripMarkdown } from "@/lib/stripMarkDown";
+import OptimizedImage from "@/components/OptimizedImages";
 
 type GameParams = Promise<{ game: string }>;
 
@@ -59,13 +60,17 @@ export default async function GameServersPage({ params }: { params: Promise<{ ga
           <li key={server.slug} className="p-4 rounded shadow">
             <Link href={`/game-servers/${server.gameSlug}/${server.slug}`}>
               <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 cursor-pointer hover:opacity-90 transition">
-                <img
-                  src={server.server_image}
-                  alt={`Скріншот мода ${server.title_ua} для ${server.game}`}
-                  width={300}
-                  height={100}
-                  className="postImg mb-3 hover:!scale-none object-cover rounded"
-                />
+                {server.server_image.startsWith("data:image") ? (
+                  < img src={server.server_image} alt={server.title_ua} width={300} />
+                ) : (
+                  <OptimizedImage
+                    src={server.server_image}
+                    alt={`${server.title_ua} для ${server.game}`}
+                    width={300}
+                    height={0}
+                    className="postImg hover:!scale-none object-cover rounded"
+                  />
+                )}
                 <div className="flex gap-5 flex-col justify-between">
                   <div>
                     <h2 className="text-xl font-semibold">{server.title_ua} для {server.game} {server.tags?.[server.tags.length - 1] ?? ''}</h2>

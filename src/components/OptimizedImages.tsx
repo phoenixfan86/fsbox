@@ -14,7 +14,7 @@ interface OptimizedImageProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, 
   fit?: 'contain' | 'cover' | 'fill' | 'inside' | 'outside'
   responsive?: boolean
   showPlaceholder?: boolean
-  aspectRatio?: string // наприклад "16/9" або "4/3"
+  aspectRatio?: string
 }
 
 export default function OptimizedImage({
@@ -37,14 +37,13 @@ export default function OptimizedImage({
   const [hasError, setHasError] = useState(false)
   const imgRef = useRef<HTMLImageElement>(null)
 
-  // ✅ Перевірка, чи зображення вже в кеші (onLoad може не спрацювати)
+
   useEffect(() => {
     if (imgRef.current?.complete && imgRef.current.naturalWidth > 0) {
       setIsLoaded(true)
     }
   }, [])
 
-  // Розрахунок висоти на основі aspectRatio без eval
   const calculatedHeight =
     height ||
     (aspectRatio

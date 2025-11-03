@@ -4,6 +4,7 @@ import { MdOutlineCalendarMonth } from "react-icons/md";
 import { getSortedModsData } from "@/lib/mods";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 import Pagination from "@/components/Pagination";
+import OptimizedImage from "@/components/OptimizedImages";
 
 const MODS_PER_PAGE = 5;
 
@@ -45,11 +46,11 @@ export default async function Page({ params }: { params: Promise<{ page: string 
           <li key={mod.slug} className="p-0 md:p-4 rounded shadow">
 
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 cursor-pointer hover:opacity-90 transition">
-              <img
+              <OptimizedImage
                 src={mod.image_first}
                 alt={`Скріншот мода ${mod.mod_name} для ${mod.game}`}
                 width={300}
-                height={100}
+                height={0}
                 className="postImg hover:!scale-none object-cover rounded "
               />
               <div className="flex gap-5 flex-col justify-between">
