@@ -8,7 +8,7 @@ export interface ImageKitOptions {
   aspectRatio?: string
 }
 
-const IMAGEKIT_URL_ENDPOINT = 'https://ik.imagekit.io/9ahcnjyn8i' // Замініть на ваш endpoint
+const IMAGEKIT_URL_ENDPOINT = 'https://ik.imagekit.io/9ahcnjyn8i/path/to/myimage.jpg' // Замініть на ваш endpoint
 
 /**
  * Оптимізує зображення через ImageKit.io
