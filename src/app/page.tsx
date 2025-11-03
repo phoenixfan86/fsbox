@@ -6,6 +6,7 @@ import { getSortedModsData } from "@/lib/mods";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 import { ModData } from "@/types/ModsData";
 import Pagination from "@/components/Pagination";
+import OptimizedImage from '@/components/OptimizedImage'
 
 
 const MODS_PER_PAGE = 5;
@@ -47,7 +48,7 @@ export default function Home() {
         {allMods.map((mod) => (
           <li key={mod.slug} className="p-4 rounded shadow">
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 cursor-pointer hover:opacity-90 transition">
-              <Image
+              <OptimizedImage
                 src={mod.image_first}
                 alt={`Скріншот мода ${mod.mod_name} для ${mod.game}`}
                 width={300}
