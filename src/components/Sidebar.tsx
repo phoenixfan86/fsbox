@@ -7,6 +7,7 @@ import type { ModData } from "@/types/ModsData";
 import TopNav from "./TopNav";
 import Nav from "./Nav";
 import OptimizedImage from "@/components/OptimizedImages"
+import PopularTags from "@/components/PopularTags";
 
 type Props = {
   exclude?: string;
@@ -71,6 +72,7 @@ const Sidebar = ({ exclude }: Props) => {
           ))}
         </ul>
       </div>
+      <PopularTags />
       <div className="">
         <h4>Каталоги</h4>
         <ul className="flex flex-col items-center gap-3 mt-4">

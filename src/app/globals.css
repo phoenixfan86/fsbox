@@ -206,6 +206,14 @@ li a {
 	transition: opacity 0.3s ease;
 }
 
+.tagLink {
+	@apply text-xs bg-gray-200 hover:bg-(--primary-color-1) px-2 py-1 rounded-full;
+}
+
+.tagSpan {
+	@apply text-gray-400 hover:text-white;
+}
+
 .serverLink {
 	display: block;
 	overflow: hidden;

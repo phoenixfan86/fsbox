@@ -108,12 +108,13 @@ export default async function ModPage({ params }: { params: SlugParams }) {
       <p className="text-xs text-(--color-4) mb-4">Додано: {mod.date}</p>
       <div className="mb-5 space-x-2">
         {(mod.tags ?? []).map((tag) => (
-          <span
+          <Link
             key={tag}
-            className="text-xs bg-gray-200 hover:text-white hover:bg-(--primary-color-1) duration-300 px-2 py-1 rounded-full"
+            href={`/mods/tags/${tag}`}
+            className="text-xs !text-gray-500 bg-gray-200 hover:!text-white hover:bg-(--primary-color-1) duration-300 px-2 py-1 rounded-full"
           >
             {tag}
-          </span>
+          </Link>
         ))}
       </div>
 

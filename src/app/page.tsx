@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         url: "/img/preview.png",
         width: 1200,
         height: 630,
-        alt: "FSBox — кращі моди для ігор",
+        alt: "FSBox - кращі моди для ігор",
       },
     ],
   }
@@ -76,9 +76,12 @@ export default function Home() {
                 <div>
                   <div className="flex gap-1.5 flex-wrap mt-1 md:mt-2 space-x-0  md:space-x-2">
                     {mod.tags?.map((tag) => (
-                      <span key={tag} className="text-xs bg-gray-200 hover:bg-blue-500 hover:text-white duration-300 px-2 py-1 rounded-full">
+                      <Link
+                        key={tag}
+                        href={`/mods/tags/${tag}`}
+                        className="text-xs !text-gray-500 bg-gray-200 hover:bg-(--primary-color-1) hover:!text-white duration-300 px-2 py-1 rounded-full">
                         {tag}
-                      </span>
+                      </Link>
                     ))}
                   </div>
 
