@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import { MdOutlineCalendarMonth } from "react-icons/md";
-import { getSortedModsData } from "@/lib/mods";
+import { getCachedModsData } from "@/lib/modCached";
+//import { getSortedModsData } from "@/lib/mods";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 import { ModData } from "@/types/ModsData";
 import Pagination from "@/components/Pagination";
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const mods: ModData[] = getSortedModsData();
+  const mods: ModData[] = getCachedModsData();
   const allMods = mods.slice(0, MODS_PER_PAGE);
   const totalPages = Math.ceil(mods.length / MODS_PER_PAGE);
 

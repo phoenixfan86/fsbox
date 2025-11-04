@@ -1,4 +1,5 @@
 import { getModData, getSortedModsData } from "@/lib/mods";
+import { getCachedModsData } from "@/lib/modCached";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Metadata } from "next";
@@ -64,7 +65,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
 
   if (!mod) return notFound();
 
-  const allMods = getSortedModsData();
+  const allMods = getCachedModsData();
   const similarMods = pickStableMods(allMods, mod, 3);
 
   return (

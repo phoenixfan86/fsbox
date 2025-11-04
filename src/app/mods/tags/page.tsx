@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { getSortedModsData } from "@/lib/mods";
+//import { getSortedModsData } from "@/lib/mods";
+import { getCachedModsData } from "@/lib/modCached";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default async function TagsPage() {
-  const allMods = getSortedModsData();
+  const allMods = getCachedModsData();
 
   const allTags = Array.from(
     new Set(allMods.flatMap((mod) => mod.tags || []))

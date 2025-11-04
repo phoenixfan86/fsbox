@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getSortedServerData } from "@/lib/servers";
 import { getSortedModsData, getAllGames } from "@/lib/mods";
+import { getCachedModsData } from "@/lib/modCached";
 import { pickRandomMods } from "@/lib/randomMods";
 import type { ServerData } from "@/types/ServerData";
 import type { ModData } from "@/types/ModsData";
@@ -17,7 +18,7 @@ type Props = {
 const Sidebar = ({ exclude }: Props) => {
   const servers: ServerData[] = getSortedServerData();
   const games = getAllGames();
-  const allMods: ModData[] = getSortedModsData();
+  const allMods: ModData[] = getCachedModsData();
   const randoms = pickRandomMods(allMods, 3, exclude);
 
   const uniqueGames = Array.from(

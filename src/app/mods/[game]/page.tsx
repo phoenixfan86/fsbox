@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { getAllGames, getSortedModsData } from "@/lib/mods";
+import { getCachedModsData } from "@/lib/modCached";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 import OptimizedImage from "@/components/OptimizedImages";
 
@@ -52,7 +53,7 @@ export function generateStaticParams() {
 
 export default async function GameModsPage({ params }: { params: Promise<{ game: string }> }) {
   const { game } = await params;
-  const allMods = getSortedModsData();
+  const allMods = getCachedModsData();
   const gameMods = allMods.filter(mod => mod.gameSlug === game);
 
   if (gameMods.length === 0) {

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MdOutlineCalendarMonth } from "react-icons/md";
-import { getSortedModsData } from "@/lib/mods";
+//import { getSortedModsData } from "@/lib/mods";
+import { getCachedModsData } from "@/lib/modCached";
 import { stripMarkdown } from "@/lib/stripMarkDown";
 import Pagination from "@/components/Pagination";
 import OptimizedImage from "@/components/OptimizedImages";
@@ -10,7 +11,7 @@ const MODS_PER_PAGE = 5;
 
 
 export async function generateStaticParams() {
-  const mods = getSortedModsData();
+  const mods = getCachedModsData();
   const totalPages = Math.ceil(mods.length / MODS_PER_PAGE);
 
   return Array.from({ length: totalPages }, (_, i) => ({
@@ -20,7 +21,7 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: { params: Promise<{ page: string }> }) {
   const { page } = await params;
-  const mods = getSortedModsData();
+  const mods = getCachedModsData();
   const pageNumber = parseInt(page, 10);
   const totalPages = Math.ceil(mods.length / MODS_PER_PAGE);
 

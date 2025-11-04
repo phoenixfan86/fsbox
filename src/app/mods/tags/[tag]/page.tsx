@@ -1,5 +1,5 @@
-// app/tags/[tag]/page.tsx
-import { getSortedModsData } from "@/lib/mods";
+//import { getSortedModsData } from "@/lib/mods";
+import { getCachedModsData } from "@/lib/modCached";
 import Link from "next/link";
 import { Metadata } from "next";
 import OptimizedImage from "@/components/OptimizedImages";
@@ -10,7 +10,7 @@ import { ModData } from "@/types/ModsData";
 type TagParams = Promise<{ tag: string }>;
 
 async function getModsByTag(tag: string) {
-  const allMods = getSortedModsData();
+  const allMods = getCachedModsData();
   const filtered = allMods.filter((mod) =>
     mod.tags?.some(
       (t) => t.toLowerCase() === decodeURIComponent(tag).toLowerCase()
