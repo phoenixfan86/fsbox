@@ -131,7 +131,7 @@ export default function OptimizedImage({
       {showPlaceholder && placeholderSrc && (
         <img
           src={placeholderSrc}
-          alt=""
+          alt="fsbox.pp.ua"
           aria-hidden
           style={placeholderStyle}
           decoding="async"
