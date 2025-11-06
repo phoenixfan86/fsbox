@@ -134,21 +134,19 @@ export default async function ModPage({ params }: { params: SlugParams }) {
             className="postImg h-auto rounded mb-6"
           />
         )}
-
       </div>
 
+      {mod.video_link && (
+        <VideoEmbed
+          videoLink={mod.video_link}
+          modName={mod.mod_name}
+        />
+      )}
       <div className="flex gap-5 flex-col mt-5">
         <h2 className="text-xl text-center">Що робить мод {mod.mod_name} для {mod.game} {lastVersion}</h2>
         <div className="description text-sm text-(--color-3)">
           <Markdown>{mod.content}</Markdown>
         </div>
-
-        {mod.video_link && (
-          <VideoEmbed
-            videoLink={mod.video_link}
-            modName={mod.mod_name}
-          />
-        )}
 
         {mod.mod_dependencies && (
           <div className="px-3">
