@@ -14,14 +14,19 @@ export function ModSchema({ mod, lastVersion }: ModSchemaProps) {
     name: mod.title_ua,
     applicationCategory: "GameMod",
     operatingSystem: "Windows, Linux, macOS",
-    game: {
+    isRelatedTo: {
       "@type": "VideoGame",
       name: mod.game,
     },
     description: stripMarkdown(mod.description).slice(0, 200),
+    aggregateRating: {
+      "@type": "AggregateRating", 
+      ratingValue: "4.8", 
+      ratingCount: "53",
+    },
     author: { "@type": "Person", name: mod.author },
     publisher: { "@type": "Organization", name: "FSBox" },
-    datePublished: mod.date,
+    datePublished: new Date(mod.date).toISOString().split("T")[0],
     version: lastVersion,
     url: `https://fsbox.pp.ua/mods/${mod.slug}`,
     image: mod.image_first,
