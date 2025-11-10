@@ -27,7 +27,14 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      images: /img/preview.png,
+      images: [
+      {
+        url: "/img/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "FSBox — кращі моди для ігор",
+      },
+    ],
       url: canonical,
       type: "article",
       siteName: "FSBox",
