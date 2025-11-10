@@ -47,6 +47,11 @@ const nextConfig: NextConfig = {
         destination: "mods/minecraft/all-the-mods-10",
         permanent: true,
       },
+      {
+        source: '/mods/kerbal/:slug*',
+        destination: '/mods/ksp/:slug*',
+        permanent: true,
+      },
     ];
   },
   images:{
