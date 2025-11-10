@@ -37,6 +37,14 @@ export async function generateMetadata({ params }: { params: TagParams }): Promi
     openGraph: {
       title: title,
       description: description,
+      images: [
+      {
+        url: "/img/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "FSBox — кращі моди для ігор",
+      },
+    ],
       url: canonical,
       siteName: "FSBox",
       type: "website",
