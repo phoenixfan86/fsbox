@@ -179,7 +179,8 @@ export default async function ModPage({ params }: { params: SlugParams }) {
       </div>
 
       {mod.download_link && (
-        <div className="flex flex-col items-center mt-6">
+        <div className="flex flex-col items-center mt-8">
+          <p className="text-sm mb-3">Ви можете завантажити мод <strong>{mod.mod_name}</strong> для <strong>{mod.game}</strong> прямим посиланням з нашого сайту. Ми рекомендуємо використовувати цей спосіб замість того, щоб скачати через торент, оскільки так ви гарантовано отримаєте останню версію без вірусів. Збірка добре налаштована, тому підходить навіть для слабких ПК завдяки вбудованій оптимізації.</p>
           <span>Для того щоб скачати мод натисніть: </span>
           <Link
             href={mod.download_link}
