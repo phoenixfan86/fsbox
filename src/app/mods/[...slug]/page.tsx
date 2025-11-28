@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: { params: SlugParams }): Prom
 
   return {
     alternates: { canonical },
-    title: `${mod.title_ua} ${mod.game} ${lastVersion}`,
+    title: `Скачати ${mod.title_ua}для ${mod.game} ${lastVersion} - Огляд та Гайд`,
     description,
-    keywords: `${mod.game}, мод, ${mod.mod_name}, модифікація, доповнення, скачати, українською`,
+    keywords: `${mod.game},скачати мод, ${mod.mod_name}, модифікація, доповнення, скачати, українською, огляд, гайд`,
     openGraph: {
       title,
       description,
@@ -157,6 +157,8 @@ export default async function ModPage({ params }: { params: SlugParams }) {
               <a
                 href={mod.dependencies_link}
                 className="tracking-wide text-shadow-xs font-thin"
+                target="_blank"
+                rel="noopener nofollow"
               >
                 {mod.mod_dependencies}
               </a>
@@ -166,7 +168,11 @@ export default async function ModPage({ params }: { params: SlugParams }) {
 
         <p>
           Автор:
-          <a href={mod.author_link} className="!text-(--primary-color-1)">
+          <a
+            href={mod.author_link}
+            className="!text-(--primary-color-1)"
+            target="_blank"
+            rel="nofollow noopener">
             {` ${mod.author}`}
           </a>
         </p>
@@ -182,11 +188,14 @@ export default async function ModPage({ params }: { params: SlugParams }) {
             className="downloadBtn"
             aria-label={`Завантажити мод ${mod.mod_name}`}
           >
-            <svg className="inline w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 12l-5-5h3V3h4v4h3l-5 5z" />
-            </svg>
-            <span>Download mod</span>
-            <span className="text-extra">: {mod.mod_name}</span>
+            <div className="flex flex-col md:flex-row items-center md:gap-1">
+              <svg className="inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 12l-5-5h3V3h4v4h3l-5 5z" />
+              </svg>
+              <span className="!text-white">Завантажити </span>
+              <span className="text-extra !text-white"> {mod.mod_name}</span>
+              <span className="text-xs opacity-80 mt-1"> Для версії {lastVersion} - Безпечне завантаження</span>
+            </div>
           </Link>
           {mod.game === "Minecraft" && (
             <Link href={`/articles/minecraft/minecraft-mod-install-guide`}

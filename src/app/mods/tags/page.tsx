@@ -19,6 +19,7 @@ export default async function TagsPage() {
   return (
     <section className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
       <h1 className="text-3xl font-bold mb-6">Список усіх тегів для модів</h1>
+      <p className="mb-2">Тут зібрані найкращі моди для Minecraft, Project Zomboid, WoW, KSP</p>
       <ul className="grid md:grid-cols-7 gap-2">
         {allTags.map((tag) => (
           <li key={tag}>
