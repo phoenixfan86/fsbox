@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import TopNav from "./TopNav";
 import Nav from "./Nav";
 import { ModData } from "@/types/ModsData";
 import { stripMarkdown } from "@/lib/stripMarkDown";
@@ -40,12 +39,13 @@ const Header = ({ allMods, games }: Props) => {
         <Nav games={games} variant="text" position="header" />
       </div>
       <div className="h-35 flex gap-10 md:gap-30 items-center justify-between py-[25px] px-[25px] md:px-[30px] bg-(--bg-2)">
-        <div className="md:w-[40%] flex flex-col">
+        <div className="md:w-[40%] flex flex-col md:flex-row items-start md:items-end gap-2">
           <a href="/" className="group text-3xl uppercase font-bold">
-            <span className="text-(--primary-color-1) group-hover:text-white transition-colors duration-600">FS<span className="text-white group-hover:text-(--primary-color-1) transition-colors duration-600">box</span>
+            <span className="!text-(--primary-color-1) group-hover:text-white transition-colors duration-600">FS<span className="text-white group-hover:text-(--primary-color-1) transition-colors duration-600">box</span>
             </span>
           </a>
-          <span className="text-xs md:text-sm" >Кращі моди для ігор</span>
+          <span className="hidden md:block text-xs md:text-sm text-(--primary-color-1)" >-</span>
+          <span className="text-xs md:text-sm text-(--color-4)" >Кращі моди для ігор</span>
         </div>
         <div className="w-[60%] flex gap-4 justify-end">
           <input

@@ -85,7 +85,8 @@ const nextConfig: NextConfig = {
       'blogger.googleusercontent.com',
       'playcraft.com.ua',
       'i.blamejared.com',
-      'images.weserv.nl' //weserv
+      'images.weserv.nl', //weserv
+      'spacedock.info'
     ]
   }
 };
