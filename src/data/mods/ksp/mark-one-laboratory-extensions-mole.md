@@ -8,7 +8,7 @@ game_collection: "/mods/ksp"
 tags: ["KSP", "Mods", "Station", "Parts", "Science", "1.12.2", "1.12.5"]
 author: "Angel-125"
 author_link: "https://spacedock.info/profile/Angel-125"
-image_first: "http://i.imgur.com/WkqgJf9.jpg"
+image_first: "https://i.imgur.com/WkqgJf9.jpg"
 image_second: ""
 download_link: "https://spacedock.info/mod/792/M.O.L.E./download"
 video_link: ""
