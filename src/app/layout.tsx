@@ -52,6 +52,7 @@ export default function RootLayout({
         <meta name="google-adsense-account" content="ca-pub-3225881199838520"></meta>
         <meta name="wot-verification" content="d2d35e775075c47a76b6" />
         <meta name="blogarama-site-verification" content="blogarama-f65351db-200a-469d-9878-a863412f08d2" />
+        <meta name="p:domain_verify" content="fd640d88647c4424e66c2394a4fce868" />
         <link
           rel="alternate"
           type="application/rss+xml"
