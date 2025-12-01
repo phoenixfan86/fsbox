@@ -42,7 +42,7 @@ date: "2025-11-30"
 Це ідеальний вибір для гравців, які шукають **збалансовані моди на деталі**, люблять історичний реалізм та хочуть розширити можливості **ранньої наукової гри** без порушення балансу.
 
 ### Скріншоти моду Mark One Laboratory Extension
-![M.O.L.E](http://i.imgur.com/gexyZrz.png)
-![M.O.L.E](http://i.imgur.com/uDBpOmG.png)
-![M.O.L.E](http://i.imgur.com/36dShDK.png)
-![M.O.L.E](http://i.imgur.com/ohGkPU7.png)
+![M.O.L.E](https://i.imgur.com/gexyZrz.png)
+![M.O.L.E](https://i.imgur.com/uDBpOmG.png)
+![M.O.L.E](https://i.imgur.com/36dShDK.png)
+![M.O.L.E](https://i.imgur.com/ohGkPU7.png)
