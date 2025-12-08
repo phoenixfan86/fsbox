@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: { params: SlugParams }): Prom
       images: mod.image_first ? [
         {
           url: mod.image_first,
-          width: 300,
+          width: 1200,
           alt: mod.title,
         },
       ] : [],
@@ -68,8 +68,23 @@ export default async function ModPage({ params }: { params: SlugParams }) {
   const allMods = getCachedModsData();
   const similarMods = pickStableMods(allMods, mod, 3);
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Mods", "item": "https://fsbox.pp.ua/" },
+      { "@type": "ListItem", "position": 2, "name": mod.game, "item": `https://fsbox.pp.ua${mod.game_collection}` },
+      { "@type": "ListItem", "position": 3, "name": mod.title_ua, "item": `https://fsbox.pp.ua${mod.game_collection}/${mod.slug}` }
+    ]
+  };
+
   return (
-    <div className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
+    <article className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 
       <ModSchema mod={mod} lastVersion={lastVersion} />
 
@@ -82,7 +97,23 @@ export default async function ModPage({ params }: { params: SlugParams }) {
         />
       )}
 
-      <ul className="flex gap-2 text-[10px] md:text-xs mb-4">
+      <nav aria-label="Breadcrumb" className="mb-4">
+        <ul className="flex gap-2 text-[10px] md:text-xs text-gray-600 flex-wrap">
+          <li>
+            <Link href={`/`} className="hover:text-[var(--primary-color-1)] transition-colors">Mods</Link>
+          </li>
+          <li className="before:content-['/'] before:mr-2 before:text-gray-400">
+            <Link href={`${mod.game_collection}`} className="hover:text-[var(--primary-color-1)] transition-colors">
+              {mod.game}
+            </Link>
+          </li>
+          <li className="before:content-['/'] before:mr-2 before:text-gray-400">
+            <span className="text-gray-900 font-medium truncate max-w-[200px] inline-block align-bottom">{mod.title_ua}</span>
+          </li>
+        </ul>
+      </nav>
+
+      {/*<ul className="flex gap-2 text-[10px] md:text-xs mb-4">
         <li className="">
           <Link
             href={`/`}
@@ -101,9 +132,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
             className="!text-(--color-1) hover:!text-(--primary-color-1)"
           >{mod.title_ua}</Link>
         </li>
-      </ul>
-
-      <span></span>
+      </ul>*/}
 
       <h1 className="text-3xl font-bold mb-2">{mod.title_ua} для {mod.game} {lastVersion}</h1>
       <p className="text-xs text-(--color-4) mb-4">Додано: {mod.date}</p>
@@ -123,14 +152,19 @@ export default async function ModPage({ params }: { params: SlugParams }) {
         <OptimizedImage
           src={mod.image_first}
           alt={`${mod.mod_name} для ${mod.game} версії ${lastVersion}`}
-          width={300}
+          width={400}
+          sizes="(max-width: 768px) 100vw, 400px"
+          priority={true}
+          quality={80}
           className="postImg h-auto rounded mb-6"
         />
         {mod.image_second && (
           <OptimizedImage
             src={mod.image_second}
             alt={`${mod.mod_name} для ${mod.game} версії ${lastVersion}`}
-            width={300}
+            width={400}
+            sizes="(max-width: 768px) 100vw, 400px"
+            priority={false}
             className="postImg h-auto rounded mb-6"
           />
         )}
@@ -195,7 +229,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
               </svg>
               <span className="!text-white">Завантажити </span>
               <span className="text-extra !text-white"> {mod.mod_name}</span>
-              <span className="text-xs opacity-80 mt-1"> Для версії {lastVersion} - Безпечне завантаження</span>
+              <span className="hidden md:block text-xs opacity-80 mt-1"> Для версії {lastVersion} - Безпечне завантаження</span>
             </div>
           </Link>
           {mod.game === "Minecraft" && (
@@ -211,14 +245,15 @@ export default async function ModPage({ params }: { params: SlugParams }) {
           <h3 className="text-lg font-bold mb-4">Також якщо вам сподобався мод {mod.mod_name} скачайте один з цих модів</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {similarMods.map(simMod => (
-              <Link key={simMod.slug} href={`https://fsbox.pp.ua${mod.game_collection}/${simMod.slug}`} className="flex flex-col items-center justify-between p-3 rounded hover:shadow-lg transition !text-(--primary-color-1)">
+              <Link key={simMod.slug} href={`${mod.game_collection}/${simMod.slug}`} className="flex flex-col items-center justify-between p-3 rounded hover:shadow-lg transition !text-(--primary-color-1)">
                 <OptimizedImage
                   src={simMod.image_first}
                   alt={`${simMod.mod_name} для ${simMod.game} версії ${lastVersion}`}
-                  width={160}
+                  width={300}
                   height={100}
-                  fit="inside"
-                  objectFit="contain"
+                  sizes="(max-width: 768px) 50vw, 300px"
+                  quality={70}
+                  fit="cover"
                   className="mb-2 rounded" />
                 <h4 className="font-semibold">{simMod.mod_name} для {simMod.game}</h4>
               </Link>
@@ -236,6 +271,6 @@ export default async function ModPage({ params }: { params: SlugParams }) {
           )}
         </li>
       </ul>
-    </div>
+    </article>
   );
 }
