@@ -22,7 +22,7 @@ export default function OptimizedImage({
   alt,
   width,
   height,
-  priority = false,
+  priority = false, // Якщо true - це LCP картинка
   quality = 75,
   objectFit = 'cover',
   fit = 'inside',
@@ -37,38 +37,35 @@ export default function OptimizedImage({
   const [hasError, setHasError] = useState(false)
   const imgRef = useRef<HTMLImageElement>(null)
 
+  // Якщо priority, ми вважаємо, що вона завантажена одразу (для CSS)
+  // Це прибирає залежність від гідратації JS
+  const isVisible = priority || isLoaded
 
   useEffect(() => {
-    if (imgRef.current?.complete && imgRef.current.naturalWidth > 0) {
+    if (!priority && imgRef.current?.complete && imgRef.current.naturalWidth > 0) {
       setIsLoaded(true)
     }
-  }, [])
+  }, [priority])
 
+  // Розрахунок висоти
   const calculatedHeight =
     height ||
     (aspectRatio
       ? Math.round(width / (Number(aspectRatio.split('/')[0]) / Number(aspectRatio.split('/')[1])))
       : undefined)
 
+  // Розрахунок CSS Aspect Ratio для уникнення CLS
+  const cssAspectRatio = aspectRatio
+    ? aspectRatio.replace('/', ' / ')
+    : (width && calculatedHeight ? `${width} / ${calculatedHeight}` : undefined)
+
   if (hasError) {
     return (
       <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height: calculatedHeight, ...style }}
+        style={{ width, height: calculatedHeight, aspectRatio: cssAspectRatio, ...style }}
       >
-        <svg
-          className="w-12 h-12 text-gray-400"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-          />
-        </svg>
+        <span className="text-gray-400 text-xs">Error</span>
       </div>
     )
   }
@@ -82,12 +79,15 @@ export default function OptimizedImage({
   })
 
   const srcSet = responsive
-    ? generateSrcSet(src, [Math.floor(width * 0.5), width, Math.floor(width * 1.5)], quality)
+    ? generateSrcSet(src, [640, 768, 1024, 1280, 1536], quality) // Стандартизовані розміри
     : undefined
 
   const sizes = responsive ? generateSizes(width) : undefined
 
-  const placeholderSrc = showPlaceholder
+  // НЕ показуємо плейсхолдер для LCP (priority) картинок - це економить запити
+  const shouldShowPlaceholder = showPlaceholder && !priority && !isLoaded
+
+  const placeholderSrc = shouldShowPlaceholder
     ? getOptimizedImageUrl(src, {
       width: 20,
       quality: 10,
@@ -98,43 +98,30 @@ export default function OptimizedImage({
 
   const containerStyle: CSSProperties = {
     position: 'relative',
-    width,
+    width: '100%', // Дозволяємо контейнеру бути гнучким
+    maxWidth: width,
+    aspectRatio: cssAspectRatio,
     height: calculatedHeight || 'auto',
     overflow: 'hidden',
-  }
-
-  const imageStyle: CSSProperties = {
-    width: '100%',
-    height: calculatedHeight ? '100%' : 'auto',
-    objectFit,
-    opacity: isLoaded ? 1 : 0,
-    transition: 'opacity 0.4s ease-in-out',
-    position: 'relative',
-    zIndex: 2,
-    ...style,
-  }
-
-  const placeholderStyle: CSSProperties = {
-    width: '100%',
-    height: '100%',
-    objectFit,
-    filter: 'blur(10px)',
-    position: 'absolute',
-    inset: 0,
-    transition: 'opacity 0.4s ease-in-out',
-    opacity: isLoaded ? 0 : 1,
-    zIndex: 1,
+    ...style, // Дозволяємо перезаписувати стилі ззовні
   }
 
   return (
     <div style={containerStyle} className={className}>
-      {showPlaceholder && placeholderSrc && (
+      {shouldShowPlaceholder && placeholderSrc && (
         <img
           src={placeholderSrc}
-          alt="fsbox.pp.ua"
-          aria-hidden
-          style={placeholderStyle}
-          decoding="async"
+          alt=""
+          aria-hidden="true"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit,
+            filter: 'blur(10px)',
+            position: 'absolute',
+            inset: 0,
+            zIndex: 1,
+          }}
         />
       )}
 
@@ -148,10 +135,20 @@ export default function OptimizedImage({
         height={calculatedHeight}
         loading={priority ? 'eager' : 'lazy'}
         decoding="async"
+        // Важливо: для priority ставимо high, щоб браузер вантажив раніше за CSS/JS
         fetchPriority={priority ? 'high' : 'auto'}
         onLoad={() => setIsLoaded(true)}
         onError={() => setHasError(true)}
-        style={imageStyle}
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit,
+          // Ключовий момент: якщо priority, opacity завжди 1
+          opacity: isVisible ? 1 : 0,
+          transition: priority ? 'none' : 'opacity 0.4s ease-in-out',
+          position: 'relative',
+          zIndex: 2,
+        }}
         {...props}
       />
     </div>

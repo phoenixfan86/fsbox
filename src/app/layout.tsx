@@ -59,6 +59,7 @@ export default function RootLayout({
           title="FSBox RSS Feed"
           href="/rss.xml"
         />
+        <link rel="preconnect" href="https://images.weserv.nl" />
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3225881199838520"
           crossOrigin="anonymous" strategy="afterInteractive"></Script>
         <Script src="https://analytics.ahrefs.com/analytics.js" data-key="vP4pGDp8OZm8gnXTfwI4XA" async></Script>
