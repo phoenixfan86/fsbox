@@ -61,11 +61,23 @@ export default function RootLayout({
           title="FSBox RSS Feed"
           href="/rss.xml"
         />
-        <link rel="preconnect" href="https://images.weserv.nl" />
-        <link rel="dns-prefetch" href="https://images.weserv.nl" />
-        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3225881199838520"
-          crossOrigin="anonymous" strategy="afterInteractive"></Script>
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="vP4pGDp8OZm8gnXTfwI4XA" async></Script>
+        <link
+          rel="preconnect"
+          href="https://images.weserv.nl"
+        />
+        <link
+          rel="dns-prefetch"
+          href="https://images.weserv.nl"
+        />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3225881199838520"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js" data-key="vP4pGDp8OZm8gnXTfwI4XA"
+          async />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} ${oswald.variable} antialiased`}
@@ -80,7 +92,11 @@ export default function RootLayout({
           <About />
           <Footer />
         </div>
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NP9SJ9M1Y9" strategy="afterInteractive"></Script>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-NP9SJ9M1Y9"
+          strategy="afterInteractive"
+        />
         <Script strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
           function gtag(){
