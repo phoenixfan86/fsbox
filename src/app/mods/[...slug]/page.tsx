@@ -18,6 +18,14 @@ function getLastVersion(mod: ModData) {
   return mod.tags?.[mod.tags.length - 1] ?? ''
 }
 
+export async function generateStaticParams() {
+  const mods = getCachedModsData();
+
+  return mods.map((mod) => ({
+    slug: [mod.gameSlug, mod.slug], // Повертаємо масив, бо у вас [...slug]
+  }));
+}
+
 export async function generateMetadata({ params }: { params: SlugParams }): Promise<Metadata> {
   const { slug } = await params;
   const slugPatch = slug.join("/");
@@ -148,14 +156,14 @@ export default async function ModPage({ params }: { params: SlugParams }) {
         ))}
       </div>
 
-      <div className="flex flex-col md:flex-row gap-4 items-center justify-center pt-5">
+      <section className="flex flex-col md:flex-row gap-4 items-center justify-center pt-5">
         <OptimizedImage
           src={mod.image_first}
           alt={`${mod.mod_name} для ${mod.game} версії ${lastVersion}`}
           width={400}
           sizes="(max-width: 768px) 100vw, 400px"
           priority={true}
-          quality={80}
+          quality={60}
           className="postImg h-auto rounded mb-6"
         />
         {mod.image_second && (
@@ -168,7 +176,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
             className="postImg h-auto rounded mb-6"
           />
         )}
-      </div>
+      </section>
 
       {mod.video_link && (
         <VideoEmbed
@@ -252,7 +260,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
                   width={300}
                   height={100}
                   sizes="(max-width: 768px) 50vw, 300px"
-                  quality={70}
+                  quality={50}
                   fit="cover"
                   className="mb-2 rounded" />
                 <h4 className="font-semibold">{simMod.mod_name} для {simMod.game}</h4>

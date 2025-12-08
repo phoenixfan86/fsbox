@@ -22,11 +22,13 @@ const geistMono = Geist_Mono({
 const nunito = Nunito({
   variable: "--font-nunito-sans",
   subsets: ["cyrillic"],
+  display: "swap",
 });
 
 const oswald = Oswald({
   variable: "--font-oswald-sans",
   subsets: ["cyrillic"],
+  display: "swap",
 });
 
 
@@ -60,6 +62,7 @@ export default function RootLayout({
           href="/rss.xml"
         />
         <link rel="preconnect" href="https://images.weserv.nl" />
+        <link rel="dns-prefetch" href="https://images.weserv.nl" />
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3225881199838520"
           crossOrigin="anonymous" strategy="afterInteractive"></Script>
         <Script src="https://analytics.ahrefs.com/analytics.js" data-key="vP4pGDp8OZm8gnXTfwI4XA" async></Script>

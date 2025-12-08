@@ -59,7 +59,7 @@ export default function Home() {
                     sizes="(max-width: 768px) 100vw, 380px"
                     aspectRatio="16/9"
                     priority={index === 0}
-                    quality={80}
+                    quality={60}
                     fit="cover"
                     className="rounded object-cover w-full h-auto"
                   />
