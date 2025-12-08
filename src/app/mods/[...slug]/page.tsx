@@ -22,7 +22,7 @@ export async function generateStaticParams() {
   const mods = getCachedModsData();
 
   return mods.map((mod) => ({
-    slug: [mod.gameSlug, mod.slug], // Повертаємо масив, бо у вас [...slug]
+    slug: [mod.gameSlug, mod.slug],
   }));
 }
 
@@ -144,7 +144,7 @@ export default async function ModPage({ params }: { params: SlugParams }) {
 
       <h1 className="text-3xl font-bold mb-2">{mod.title_ua} для {mod.game} {lastVersion}</h1>
       <p className="text-xs text-(--color-4) mb-4">Додано: {mod.date}</p>
-      <div className="mb-5 space-x-2">
+      <div className="flex flex-wrap gap-2 mb-5">
         {(mod.tags ?? []).map((tag) => (
           <Link
             key={tag}
@@ -191,32 +191,31 @@ export default async function ModPage({ params }: { params: SlugParams }) {
         </div>
 
         {mod.mod_dependencies && (
-          <div className="px-3">
-            <span className="py-1 px-3 text-(--color-1) rounded-sm bg-(--bg-3)">
+          <div className="flex px-3">
+            <span className="text-[13px] md:text-base py-1 px-3 text-(--color-1) rounded-sm bg-(--bg-3)">
               Для роботи цього мода потрібен:
             </span>
-            <span className="py-1 px-3 bg-(--color-4)">
-              <a
-                href={mod.dependencies_link}
+            <span className="text-[13px] md:text-base py-1 px-3 bg-(--color-4)">
+              <Link
+                href={mod.dependencies_link || '/'}
                 className="tracking-wide text-shadow-xs font-thin"
                 target="_blank"
-                rel="noopener nofollow"
               >
                 {mod.mod_dependencies}
-              </a>
+              </Link>
             </span>
           </div>
         )}
 
         <p>
           Автор:
-          <a
+          <Link
             href={mod.author_link}
             className="!text-(--primary-color-1)"
             target="_blank"
             rel="nofollow noopener">
             {` ${mod.author}`}
-          </a>
+          </Link>
         </p>
       </div>
 
@@ -232,11 +231,11 @@ export default async function ModPage({ params }: { params: SlugParams }) {
             aria-label={`Завантажити мод ${mod.mod_name}`}
           >
             <div className="flex flex-col md:flex-row items-center md:gap-1">
-              <svg className="inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="inline w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M10 12l-5-5h3V3h4v4h3l-5 5z" />
               </svg>
               <span className="!text-white">Завантажити </span>
-              <span className="text-extra !text-white"> {mod.mod_name}</span>
+              <span className="text-extra"> {mod.mod_name}</span>
               <span className="hidden md:block text-xs opacity-80 mt-1"> Для версії {lastVersion} - Безпечне завантаження</span>
             </div>
           </Link>
