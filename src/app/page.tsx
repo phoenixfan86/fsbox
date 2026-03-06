@@ -7,7 +7,7 @@ import { ModData } from "@/types/ModsData";
 import Pagination from "@/components/Pagination";
 import OptimizedImage from "@/components/OptimizedImages";
 
-const MODS_PER_PAGE = 5;
+const MODS_PER_PAGE = 8;
 
 export const metadata: Metadata = {
   title: "FSbox - скачати безкоштовно моди для Майнкрафт та для інших ігор",
@@ -76,8 +76,11 @@ export default function Home() {
                       <time dateTime={mod.date}>{mod.date}</time>
                     </div>
                   </div>
-                  <p className="text-sm text-gray-700 line-clamp-3 md:line-clamp-2">
-                    {stripMarkdown(mod.content)}
+                  <p className="text-sm text-gray-700 line-clamp-2 md:line-clamp-4">
+                    {mod.summary_ua
+                      ? mod.summary_ua
+                      : stripMarkdown(mod.content).slice(0, 300) + "..."
+                    }
                   </p>
                   <div className="mt-auto pt-2">
                     <div className="flex gap-2 flex-wrap">

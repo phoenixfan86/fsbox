@@ -2,6 +2,7 @@
 title: "Dungeon Heroes (RPG Series) - download mod for"
 title_ua: "Dungeon Heroes - скачати RPG модпак на підземелля"
 description: "Dungeon Heroes - це епічний RPG модпак для дослідження підземель, який перетворює Minecraft на захоплюючу пригоду, наповнену небезпечними данжами, могутніми босами, унікальним лутом та системами прокачки персонажа. Відчуйте інтенсивні бої, досліджуйте процедурно згенеровані структури та станьте легендарним героєм."
+summary_ua: ""
 mod_name: "Dungeon Heroes (RPG Series)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"

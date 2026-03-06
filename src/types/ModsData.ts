@@ -2,6 +2,7 @@ export type ModData = {
   title: string;
   title_ua: string;
   description: string;
+  summary_ua: string;
   mod_name: string;
   game: string;
   game_collection?:string;

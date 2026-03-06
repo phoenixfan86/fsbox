@@ -97,7 +97,10 @@ export default async function GameModsPage({ params }: { params: Promise<{ game:
                   </div>
                 </div>
                 <p className="text-sm text-gray-700 mr-10">
-                  {stripMarkdown(mod.content).slice(0, 100)}...
+                  {mod.summary_ua
+                    ? mod.summary_ua
+                    : stripMarkdown(mod.content).slice(0, 250) + "..."
+                  }
                 </p>
                 <div>
                   <div className="flex gap-1.5 flex-wrap mt-1 md:mt-2 space-x-0  md:space-x-2">

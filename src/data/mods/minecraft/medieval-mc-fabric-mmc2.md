@@ -2,6 +2,7 @@
 title: "Medieval MC [Fabric] (MMC2) - download RPG modpack for"
 title_ua: "Medieval MC [Fabric] (MMC2) - скачати середньовічний RPG модпак"
 description: "Medieval MC [Fabric] — це найпопулярніший середньовічний RPG модпак для Minecraft, який додає нові виміри, сотні квестів, магію, босів та унікальну систему виживання. Перетворіть свій світ на епічну фентезі-пригоду з реалістичною атмосферою."
+summary_ua: "Medieval MC [Fabric] MMC2 — це масштабний RPG модпак для Minecraft, що повністю змінює гру. Завантажуйте збірку, щоб досліджувати нові виміри, виконувати сотні унікальних квестів та опанувати магію. На вас чекають епічні битви з босами, реалістичне виживання та середньовічна атмосфера на версії 1.21.1."
 mod_name: "Medieval MC [Fabric] (MMC2)"
 game: "Minecraft"
 game_collection: "/mods/minecraft"
