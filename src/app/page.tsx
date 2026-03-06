@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <main className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow bg-white">
-      <h1 className="text-xl font-bold mb-6">Нові моди на FSBox</h1>
+      <h1 className="text-xl font-bold mb-6">Завантажуйте моди для ігор українською: найкращі модифікації, аддони та шейдери на FSBox</h1>
       <ul className="space-y-6 md:space-y-8">
         {allMods.map((mod, index) => {
           const versionTag = mod.tags && mod.tags.length > 0 ? mod.tags[mod.tags.length - 1] : '';
