@@ -38,13 +38,13 @@ export async function generateMetadata({ params }: { params: TagParams }): Promi
       title: title,
       description: description,
       images: [
-      {
-        url: "/img/preview.png",
-        width: 1200,
-        height: 630,
-        alt: "FSBox — кращі моди для ігор",
-      },
-    ],
+        {
+          url: "/img/preview.png",
+          width: 1200,
+          height: 630,
+          alt: "FSBox — кращі моди для ігор",
+        },
+      ],
       url: canonical,
       siteName: "FSBox",
       type: "website",
@@ -74,7 +74,7 @@ export default async function TagPage({ params }: { params: TagParams }) {
       <h1 className="text-3xl font-bold mb-6 text-center">
         Скачати моди для {game} {tag}
       </h1>
-      <p className="text-sm mb-3 pb-3 shadow">Моди для Minecraft 1.19.4 - це популярні доповнення, які дозволяють розширити можливості гри, додаючи нові блоки, предмети, біоми та функції. Завдяки їм ви можете створювати унікальні світи, експериментувати з механіками та робити гру ще цікавішою. Усі моди доступні українською мовою, що робить процес гри ще зручнішим і приємнішим. Завантажте моди для Minecraft 1.19.4 українською та відкрийте нові можливості у знайомому світі.</p>
+      <p className="text-sm mb-3 pb-3 shadow">Моди для <strong>{game} {tag}</strong> - це популярні доповнення, які дозволяють розширити можливості гри, додаючи нові блоки, предмети, біоми та функції. Завдяки їм ви можете створювати унікальні світи, експериментувати з механіками та робити гру ще цікавішою. Усі моди доступні українською мовою, що робить процес гри ще зручнішим і приємнішим. Завантажте моди для <strong>{game} {tag}</strong> українською та відкрийте нові можливості у знайомому світі.</p>
 
       <div className="flex flex-col gap-6">
         {filteredMods.map((mod: ModData) => (
