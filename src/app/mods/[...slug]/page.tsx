@@ -35,7 +35,6 @@ export async function generateMetadata({ params }: { params: SlugParams }): Prom
 
   const title = mod.title_ua;
   const lastVersion = getLastVersion(mod)
-  // const description = `${stripMarkdown(mod.description).slice(0, 150)}...`
   const description = `${stripMarkdown(mod.description).substring(0, 152).split(" ").slice(0, -1).join(" ")}...`
 
   return {

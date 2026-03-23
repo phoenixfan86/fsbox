@@ -19,8 +19,8 @@ export async function generateMetadata({
   const canonical = `https://fsbox.pp.ua/mods/${game}`;
 
   const gameTitle = game.charAt(0).toUpperCase() + game.slice(1);
-  const title = `Збірка модів на ${gameTitle}`;
-  const description = `Добірка модів для ${gameTitle}: моди на зброю та броню, моди на техніку і транспорт, моди на біоми, меблі та прикраси. Завантажуйте моди та робіть гру в ${gameTitle} цікавішою`;
+  const title = `Найкращі моди на ${gameTitle} 2026 - Завантажити збірки та модифікації`;
+  const description = `Шукаєте найкращі моди для ${gameTitle}? У нас зібрано безліч модифікацій: від крутої зброї та техніки до нових біомів. Завантажуйте безкоштовно та покращуйте свій геймплей!`;
   const keywords = `моди ${game}, ${game} mods, моди на зброю, моди на машини, шейдери, карти, інтерєри`;
 
   return {
@@ -63,13 +63,31 @@ export default async function GameModsPage({ params }: { params: Promise<{ game:
 
   const gameName = gameMods[0].game;
   const customContent = gameSpecificContent[game] || {
-    seoText: `<p>Завантажуйте найкращі моди для ${gameName} українською мовою...</p>`
+    seoText: `<h2>Найкращі модифікації для ${gameName} </h2> <p>У нашому каталозі ви знайдете тільки перевірені моди на ${gameName}.  Ми регулярно оновлюємо версії до новіших.  Особливу увагу приділяємо продуктивності (Sodium, Iris) та новим механікам.</p><p>Завантажуйте найкращі моди для ${gameName} українською мовою...</p>`
+  };
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": `Кращі моди на ${gameName}`,
+    "description": `Список найпопулярніших модифікацій для гри ${gameName}`,
+    "numberOfItems": gameMods.length,
+    "itemListElement": gameMods.map((mod, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "url": `https://fsbox.pp.ua/mods/${mod.gameSlug}/${mod.slug}`,
+      "name": mod.mod_name || mod.title_ua
+    }))
   };
 
   return (
     <section className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <h1 className="text-3xl font-bold mb-6">
-        Моди на {gameName} - Завантажити Найкращі Модифікації для {gameName}
+        Моди на {gameName} - Завантажити найкращі модифікації для {gameName}
       </h1>
       <ul className="space-y-4 md:space-y-8">
         {gameMods.map((mod) => (
@@ -99,15 +117,19 @@ export default async function GameModsPage({ params }: { params: Promise<{ game:
                 <p className="text-sm text-gray-700 mr-10">
                   {mod.summary_ua
                     ? mod.summary_ua
-                    : stripMarkdown(mod.content).slice(0, 250) + "..."
+                    : stripMarkdown(mod.content).substring(0, 200).split(" ").slice(0, -1).join(" ") + "..."
                   }
                 </p>
                 <div>
                   <div className="flex gap-1.5 flex-wrap mt-1 md:mt-2 space-x-0  md:space-x-2">
                     {mod.tags?.map((tag) => (
-                      <span key={tag} className="text-xs bg-gray-200 hover:bg-blue-500 hover:text-white duration-300 px-2 py-1 rounded-full">
+                      <Link
+                        key={tag}
+                        href={`/mods/tags/${tag}`}
+                        className="text-xs !text-gray-500 bg-gray-200 hover:!text-white hover:bg-(--primary-color-1) duration-300 px-2 py-1 rounded-full"
+                      >
                         {tag}
-                      </span>
+                      </Link>
                     ))}
                   </div>
                 </div>
