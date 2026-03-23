@@ -11,17 +11,17 @@ export function ModSchema({ mod, lastVersion }: ModSchemaProps) {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: mod.title_ua,
-    applicationCategory: "GameMod",
+    name: mod.mod_name || mod.title_ua,
+    applicationCategory: "GameApplication",
     operatingSystem: "Windows, Linux, macOS",
     isRelatedTo: {
       "@type": "VideoGame",
       name: mod.game,
     },
-    description: stripMarkdown(mod.description).slice(0, 200),
+    description: stripMarkdown(mod.description).substring(0, 152).split(" ").slice(0, -1).join(" "),
     aggregateRating: {
-      "@type": "AggregateRating", 
-      ratingValue: "4.8", 
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
       ratingCount: "53",
     },
     author: { "@type": "Person", name: mod.author },

@@ -1,4 +1,3 @@
-// app/sitemap.ts
 import { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
@@ -6,6 +5,7 @@ import matter from 'gray-matter'
 
 const hostname = 'https://fsbox.pp.ua'
 const modsDirectory = path.join(process.cwd(), 'src', 'data', 'mods')
+const mod_date = new Date().toISOString().split('T')[0]
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const urls: MetadataRoute.Sitemap = []
@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 1. Головна сторінка
   urls.push({
     url: hostname,
-    lastModified: new Date(),
+    lastModified: mod_date,
     changeFrequency: 'daily',
     priority: 1.0,
   })
@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   mainPages.forEach(page => {
     urls.push({
       url: `${hostname}${page.path}`,
-      lastModified: new Date(),
+      lastModified: mod_date,
       changeFrequency: 'daily',
       priority: page.priority,
     })
@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         // Додаємо сторінку гри
         urls.push({
           url: `${hostname}/mods/${game}`,
-          lastModified: new Date(),
+          lastModified: mod_date,
           changeFrequency: 'daily',
           priority: 0.9,
         })
@@ -76,7 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
             urls.push({
               url: `${hostname}${urlPath}`,
-              lastModified: mtime,
+              lastModified: mtime.toISOString().split('T')[0],
               changeFrequency: 'weekly',
               priority: 0.8,
             })

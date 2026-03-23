@@ -35,11 +35,12 @@ export async function generateMetadata({ params }: { params: SlugParams }): Prom
 
   const title = mod.title_ua;
   const lastVersion = getLastVersion(mod)
-  const description = `${stripMarkdown(mod.description).slice(0, 150)}...`
+  // const description = `${stripMarkdown(mod.description).slice(0, 150)}...`
+  const description = `${stripMarkdown(mod.description).substring(0, 152).split(" ").slice(0, -1).join(" ")}...`
 
   return {
     alternates: { canonical },
-    title: `Скачати ${mod.title_ua}для ${mod.game} ${lastVersion} - Огляд та Гайд`,
+    title: `${mod.mod_name} для ${mod.game} ${lastVersion} - Скачати останню версію, Огляд та Гайд`,
     description,
     keywords: `${mod.game},скачати мод, ${mod.mod_name}, модифікація, доповнення, скачати, українською, огляд, гайд`,
     openGraph: {
@@ -120,27 +121,6 @@ export default async function ModPage({ params }: { params: SlugParams }) {
           </li>
         </ul>
       </nav>
-
-      {/*<ul className="flex gap-2 text-[10px] md:text-xs mb-4">
-        <li className="">
-          <Link
-            href={`/`}
-            className="!text-(--color-1) hover:!text-(--primary-color-1)"
-          >Mods</Link>
-        </li>
-        <li className="before:content-['>'] before:mr-2">
-          <Link
-            href={`${mod.game_collection}`}
-            className="!text-(--color-1) hover:!text-(--primary-color-1)"
-          >{mod.game}</Link>
-        </li>
-        <li className="before:content-['>'] before:mr-2">
-          <Link
-            href={`${mod.game_collection}/${mod.slug}`}
-            className="!text-(--color-1) hover:!text-(--primary-color-1)"
-          >{mod.title_ua}</Link>
-        </li>
-      </ul>*/}
 
       <h1 className="text-3xl font-bold mb-2">{mod.title_ua} для {mod.game} {lastVersion}</h1>
       <p className="text-xs text-(--color-4) mb-4">Додано: {mod.date}</p>
