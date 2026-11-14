@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { gameSpecificContent } from "@/lib/gameContent";
+import { gameSeo } from "@/lib/gameSeo";
 import { getAllGames, getSortedModsData } from "@/lib/mods";
 import { getCachedModsData } from "@/lib/modCached";
 import { stripMarkdown } from "@/lib/stripMarkDown";
@@ -10,18 +11,57 @@ import OptimizedImage from "@/components/OptimizedImages";
 
 type GameParams = Promise<{ game: string }>;
 
+// export async function generateMetadata({
+//   params
+// }: {
+//   params: GameParams
+// }): Promise<Metadata> {
+//   const { game } = await params;
+//   const canonical = `https://fsbox.pp.ua/mods/${game}`;
+
+//   const gameTitle = game.charAt(0).toUpperCase() + game.slice(1);
+//   const title = `Найкращі моди на ${gameTitle} 2026 - Завантажити збірки та модифікації`;
+//   const description = `Шукаєте найкращі моди для ${gameTitle}? У нас зібрано безліч модифікацій: від крутої зброї та техніки до нових біомів. Завантажуйте безкоштовно та покращуйте свій геймплей!`;
+//   const keywords = `моди ${game}, ${game} mods, моди на зброю, моди на машини, шейдери, карти, інтерєри`;
+
+//   return {
+//     alternates: { canonical },
+//     title,
+//     description,
+//     keywords,
+//     openGraph: {
+//       title,
+//       description,
+//       images: [
+//         {
+//           url: "./img/preview.png",
+//           width: 1200,
+//           height: 630,
+//           alt: title,
+//         }
+//       ],
+//       url: canonical,
+//       type: "article",
+//       siteName: "FSBox",
+//     }
+//   };
+// }
 export async function generateMetadata({
-  params
+  params,
 }: {
-  params: GameParams
+  params: GameParams;
 }): Promise<Metadata> {
   const { game } = await params;
-  const canonical = `https://fsbox.pp.ua/mods/${game}`;
+  const seo = gameSeo[game];
+  const displayName = seo?.displayName ?? game;
 
-  const gameTitle = game.charAt(0).toUpperCase() + game.slice(1);
-  const title = `Найкращі моди на ${gameTitle} 2026 - Завантажити збірки та модифікації`;
-  const description = `Шукаєте найкращі моди для ${gameTitle}? У нас зібрано безліч модифікацій: від крутої зброї та техніки до нових біомів. Завантажуйте безкоштовно та покращуйте свій геймплей!`;
-  const keywords = `моди ${game}, ${game} mods, моди на зброю, моди на машини, шейдери, карти, інтерєри`;
+  const canonical = `https://fsbox.pp.ua/mods/${game}`;
+  const title = seo?.title ?? `Моди на ${displayName} безкоштовно | FSBox`;
+  const description =
+    seo?.description ??
+    `Скачати моди на ${displayName} безкоштовно. Добірка модифікацій українською.`;
+  const keywords =
+    seo?.keywords.join(", ") ?? `моди ${displayName}, ${displayName} mods`;
 
   return {
     alternates: { canonical },
@@ -31,21 +71,15 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      images: [
-        {
-          url: "./img/preview.png",
-          width: 1200,
-          height: 630,
-          alt: title,
-        }
-      ],
       url: canonical,
-      type: "article",
+      type: "website",
       siteName: "FSBox",
-    }
+      images: [
+        { url: "/img/preview.png", width: 1200, height: 630, alt: title },
+      ],
+    },
   };
 }
-
 
 export function generateStaticParams() {
   const games = getAllGames();
@@ -87,7 +121,7 @@ export default async function GameModsPage({ params }: { params: Promise<{ game:
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <h1 className="text-3xl font-bold mb-6">
-        Моди на {gameName} - Завантажити найкращі модифікації для {gameName}
+        {gameSeo[game]?.h1 ?? `Моди на ${gameName}`}
       </h1>
       <ul className="space-y-4 md:space-y-8">
         {gameMods.map((mod) => (

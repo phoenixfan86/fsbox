@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { getCachedModsData } from "@/lib/modCached";
 import { stripMarkdown } from "@/lib/stripMarkDown";
+import { getAllGames } from "@/lib/mods";
+import { gameSeo } from "@/lib/gameSeo";
 import { ModData } from "@/types/ModsData";
 import Pagination from "@/components/Pagination";
 import OptimizedImage from "@/components/OptimizedImages";
@@ -10,15 +12,23 @@ import OptimizedImage from "@/components/OptimizedImages";
 const MODS_PER_PAGE = 8;
 
 export const metadata: Metadata = {
-  title: "FSbox - скачати безкоштовно моди для Майнкрафт та для інших ігор",
-  keywords: "моди для ігор, скачати моди, моди українською, minecraft mods...",
-  description: "Cкачати моди на Майнкрафт, скачати моди для Stardew Valley...",
+  title: "Скачати моди для Minecraft та інших ігор безкоштовно | FSBox",
+  description:
+    "Скачати безкоштовно моди для Minecraft, Stardew Valley, Teardown, Terraria та інших ігор. Добірка модифікацій українською мовою з описом і інструкціями.",
+  keywords: [
+    "моди для ігор",
+    "скачати моди",
+    "моди для майнкрафт",
+    "моди українською",
+    "minecraft mods",
+  ],
   alternates: {
-    canonical: "https://fsbox.pp.ua/"
+    canonical: "https://fsbox.pp.ua/",
   },
   openGraph: {
-    title: "FSbox - скачати безкоштовно моди",
-    description: "Cкачати моди для Майнкрафт та інших ігор.",
+    title: "Скачати моди для Minecraft та інших ігор безкоштовно | FSBox",
+    description:
+      "Моди для Minecraft, Stardew Valley, Teardown, Terraria та інших ігор. Безкоштовно, українською мовою.",
     url: "https://fsbox.pp.ua/",
     siteName: "FSBox",
     type: "website",
@@ -30,16 +40,57 @@ export const metadata: Metadata = {
         alt: "FSBox - кращі моди для ігор",
       },
     ],
-  }
+  },
 };
+
+const SITE_URL = "https://fsbox.pp.ua";
 
 export default function Home() {
   const mods: ModData[] = getCachedModsData();
   const allMods = mods.slice(0, MODS_PER_PAGE);
   const totalPages = Math.ceil(mods.length / MODS_PER_PAGE);
+  const games = getAllGames();
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: "FSBox",
+        inLanguage: "uk",
+        description:
+          "Безкоштовні моди для Minecraft, Stardew Valley, Teardown, Terraria та інших ігор з описом українською мовою.",
+        publisher: { "@id": `${SITE_URL}/#organization` },
+      },
+      {
+        "@type": "Organization",
+        "@id": `${SITE_URL}/#organization`,
+        name: "FSBox",
+        url: SITE_URL,
+      },
+      {
+        "@type": "ItemList",
+        name: "Колекції модів за іграми",
+        numberOfItems: games.length,
+        itemListElement: games.map((game, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          url: `${SITE_URL}/mods/${game.slug}`,
+          name: gameSeo[game.slug]?.displayName ?? game.slug,
+        })),
+      },
+    ],
+  };
 
   return (
+
     <main className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <h1 className="text-xl font-bold mb-6">Завантажуйте моди для ігор українською: найкращі модифікації, аддони та шейдери на FSBox</h1>
       <ul className="space-y-6 md:space-y-8">
         {allMods.map((mod, index) => {
