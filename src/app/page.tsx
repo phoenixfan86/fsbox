@@ -91,7 +91,10 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <h1 className="text-xl font-bold mb-6">Завантажуйте моди для ігор українською: найкращі модифікації, аддони та шейдери на FSBox</h1>
+      <h1 className="text-xl font-bold mb-6">Моди на Minecraft, Stardew Valley та інші ігри на ПК</h1>
+      <p className="mb-8 text-gray-500 max-w-3xl">
+        FSBox - це каталог безкоштовних модів для ПК українською мовою. Тут ви знайдете моди на Майнкрафт для версій 1.12.2, 1.16.5 та 1.20.1, а також minecraft mods для завантажувачів Forge, Fabric і NeoForge. Окремо зібрано моди для Stardew Valley: нові персонажі, локації та автоматизація ферми. Шукаєте моды на ПК для інших ігор? У розділах є добірки для Teardown, Terraria, KSP, Project Zomboid і World of Warcraft. Кожен мод має опис українською, інструкцію зі встановлення і посилання на завантаження. Оберіть свою гру й почніть з найкращих модифікацій.
+      </p>
       <ul className="space-y-6 md:space-y-8">
         {allMods.map((mod, index) => {
           const versionTag = mod.tags && mod.tags.length > 0 ? mod.tags[mod.tags.length - 1] : '';
