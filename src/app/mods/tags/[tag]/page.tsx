@@ -10,24 +10,52 @@ type TagParams = Promise<{ tag: string }>;
 
 async function getModsByTag(tag: string) {
   const allMods = getCachedModsData();
+  const decodedTag = decodeURIComponent(tag);
+
   const filtered = allMods.filter((mod) =>
-    mod.tags?.some(
-      (t) => t.toLowerCase() === decodeURIComponent(tag).toLowerCase()
-    )
+    mod.tags?.some((t) => t.toLowerCase() === decodedTag.toLowerCase())
   );
 
-  const game = filtered[0]?.game ?? "Ігри";
+  const first = filtered[0];
+  const game = first?.game ?? "Ігри";
+  const gameSlug = first?.gameSlug ?? "";
 
-  return { mods: filtered, game };
+  return { mods: filtered, game, gameSlug, decodedTag };
 }
+
+function getCanonical(decodedTag: string, game: string, gameSlug: string) {
+  const isGameTag =
+    !!gameSlug &&
+    (decodedTag.toLowerCase() === gameSlug.toLowerCase() ||
+      decodedTag.toLowerCase() === game.toLowerCase());
+
+  return isGameTag
+    ? `https://fsbox.pp.ua/mods/${gameSlug}`
+    : `https://fsbox.pp.ua/mods/tags/${encodeURIComponent(decodedTag)}`;
+}
+
+// async function getModsByTag(tag: string) {
+//   const allMods = getCachedModsData();
+//   const filtered = allMods.filter((mod) =>
+//     mod.tags?.some(
+//       (t) => t.toLowerCase() === decodeURIComponent(tag).toLowerCase()
+//     )
+//   );
+
+//   const game = filtered[0]?.game ?? "Ігри";
+
+//   return { mods: filtered, game };
+// }
 
 export async function generateMetadata({ params }: { params: TagParams }): Promise<Metadata> {
   const { tag } = await params;
-  const { mods, game } = await getModsByTag(tag);
+  // const { mods, game } = await getModsByTag(tag);
+  const { mods, game, gameSlug, decodedTag } = await getModsByTag(tag);
 
   const title = `Моди для ${game} ${tag}: скачати безкоштовно | FSBox`;
   const description = `Шукаєте моди для ${game} ${tag}? Ми зібрали найкращі безкоштовні модифікації українською такі як ${mods.slice(0, 2).map(m => m.mod_name).join(', ')} - нові блоки, предмети, функції, що розширюють ігровий світ.`;
-  const canonical = `https://fsbox.pp.ua/mods/tags/${tag}`;
+  // const canonical = `https://fsbox.pp.ua/mods/tags/${tag}`;
+  const canonical = getCanonical(decodedTag, game, gameSlug);
 
 
 
@@ -55,11 +83,10 @@ export async function generateMetadata({ params }: { params: TagParams }): Promi
 
 export default async function TagPage({ params }: { params: TagParams }) {
   const { tag } = await params;
-  const { mods, game } = await getModsByTag(tag)
+  const { mods, game, gameSlug, decodedTag } = await getModsByTag(tag);
   const filteredMods = mods.filter(m => m.gameSlug === game || m.game.toLowerCase() === game.toLowerCase());
   const currentDate = new Date().getFullYear()
 
-  // Використовуємо filteredMods для хлібних крихт
   const gamePath = filteredMods.length > 0 && filteredMods[0].game_collection
     ? filteredMods[0].game_collection
     : `/mods/${game}`;
@@ -76,7 +103,7 @@ export default async function TagPage({ params }: { params: TagParams }) {
   }
 
   const description = `Моди для ${game} ${tag} українською мовою.`;
-  const canonical = `https://fsbox.pp.ua/mods/tags/${tag}`;
+  const canonical = getCanonical(decodedTag, game, gameSlug);
 
   const tagSchema = {
     "@context": "https://schema.org",
