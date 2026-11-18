@@ -4,10 +4,11 @@ import { getCachedModsData } from "@/lib/modCached";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Усі теги для модів | FSBox",
+  title: "Моди на майнкрафт за версією та тегами | FSBox",
   description:
-    "Перегляньте всі теги модів для Minecraft - знайдіть улюблені моди за версією, лоадером, тематикою чи типом. Зручна навігація українською мовою.",
+    "Знайдіть моди на майнкрафт за версією гри, лоадером і тематикою. Оберіть тег і скачайте мод безкоштовно з описом українською.",
 };
+
 
 export default async function TagsPage() {
   const allMods = getCachedModsData();
@@ -18,8 +19,8 @@ export default async function TagsPage() {
 
   return (
     <section className="md:w-[80%] py-[15px] px-[20px] md:py-[25px] md:px-[30px] shadow">
-      <h1 className="text-3xl font-bold mb-6">Список усіх тегів для модів</h1>
-      <p className="mb-2">Тут зібрані найкращі моди для Minecraft, Project Zomboid, WoW, KSP</p>
+      <h1 className="text-3xl font-bold mb-6">Моди на майнкрафт за версіями та тегами</h1>
+      <p className="mb-2">Обирайте моди на майнкрафт за версією гри, завантажувачем і тематикою. Також на сайті є моди для Project Zomboid, World of Warcraft і KSP. Оберіть тег, який вам потрібен, і скачайте мод безкоштовно.</p>
       <ul className="grid md:grid-cols-7 gap-2">
         {allTags.map((tag) => (
           <li key={tag}>

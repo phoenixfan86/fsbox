@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: { params: TagParams }): Promi
   const { tag } = await params;
   const { mods, game } = await getModsByTag(tag);
 
-  const title = `Скачати найкращі моди для ${game} ${tag} 2026`;
-  const description = `Шукаєте моди для ${game} ${tag}? Ми зібрали найкращі модифікації українською такі як ${mods.slice(0, 2).map(m => m.mod_name).join(', ')} - нові блоки, предмети, функції та пригоди, що розширюють ігровий світ.`;
+  const title = `Моди для ${game} ${tag}: скачати безкоштовно | FSBox`;
+  const description = `Шукаєте моди для ${game} ${tag}? Ми зібрали найкращі безкоштовні модифікації українською такі як ${mods.slice(0, 2).map(m => m.mod_name).join(', ')} - нові блоки, предмети, функції, що розширюють ігровий світ.`;
   const canonical = `https://fsbox.pp.ua/mods/tags/${tag}`;
 
 
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: { params: TagParams }): Promi
           url: "/img/preview.png",
           width: 1200,
           height: 630,
-          alt: "FSBox — кращі моди для ігор",
+          alt: title,
         },
       ],
       url: canonical,
@@ -57,6 +57,7 @@ export default async function TagPage({ params }: { params: TagParams }) {
   const { tag } = await params;
   const { mods, game } = await getModsByTag(tag)
   const filteredMods = mods.filter(m => m.gameSlug === game || m.game.toLowerCase() === game.toLowerCase());
+  const currentDate = new Date().getFullYear()
 
   // Використовуємо filteredMods для хлібних крихт
   const gamePath = filteredMods.length > 0 && filteredMods[0].game_collection
@@ -64,10 +65,6 @@ export default async function TagPage({ params }: { params: TagParams }) {
     : `/mods/${game}`;
 
   const displayGameName = filteredMods.length > 0 ? filteredMods[0].game : game;
-
-  // const filteredMods = mods.filter((mod: ModData) =>
-  //   mod.tags?.map(t => t.toLowerCase()).includes(tag.toLowerCase())
-  // );
 
   if (!filteredMods.length) {
     return (
@@ -152,9 +149,9 @@ export default async function TagPage({ params }: { params: TagParams }) {
         </ul>
       </nav>
       <h1 className="text-3xl font-bold mb-6 text-center">
-        Скачати найкращі моди для {game} {tag} в 2026
+        Моди для {game} {tag} в {currentDate}: завантажити безкоштовно
       </h1>
-      <p className="text-sm mb-3 pb-3 shadow">Моди для <strong>{game} {tag}</strong> - це популярні доповнення, які дозволяють розширити можливості гри, додаючи нові блоки, предмети, біоми та функції. Завдяки їм ви можете створювати унікальні світи, експериментувати з механіками та робити гру ще цікавішою. Усі моди доступні українською мовою, що робить процес гри ще зручнішим і приємнішим. Завантажте моди для <strong>{game} {tag}</strong> українською та відкрийте нові можливості у знайомому світі.</p>
+      <p className="text-sm mb-3 pb-3 shadow">Моди на <strong>{game} {tag}</strong> - це популярні доповнення, які дозволяють розширити можливості гри, додаючи нові блоки, предмети, біоми та функції. Завдяки їм ви можете створювати унікальні світи, експериментувати з механіками та робити гру ще цікавішою. Усі моди доступні українською мовою, що робить процес гри ще зручнішим і приємнішим. Завантажте моди для <strong>{game} {tag}</strong> українською та відкрийте нові можливості у знайомому світі.</p>
 
       <div className="flex flex-col gap-6">
 
