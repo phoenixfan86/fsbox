@@ -34,27 +34,12 @@ function getCanonical(decodedTag: string, game: string, gameSlug: string) {
     : `https://fsbox.pp.ua/mods/tags/${encodeURIComponent(decodedTag)}`;
 }
 
-// async function getModsByTag(tag: string) {
-//   const allMods = getCachedModsData();
-//   const filtered = allMods.filter((mod) =>
-//     mod.tags?.some(
-//       (t) => t.toLowerCase() === decodeURIComponent(tag).toLowerCase()
-//     )
-//   );
-
-//   const game = filtered[0]?.game ?? "Ігри";
-
-//   return { mods: filtered, game };
-// }
-
 export async function generateMetadata({ params }: { params: TagParams }): Promise<Metadata> {
   const { tag } = await params;
-  // const { mods, game } = await getModsByTag(tag);
   const { mods, game, gameSlug, decodedTag } = await getModsByTag(tag);
 
   const title = `Моди для ${game} ${tag}: скачати безкоштовно | FSBox`;
   const description = `Шукаєте моди для ${game} ${tag}? Ми зібрали найкращі безкоштовні модифікації українською такі як ${mods.slice(0, 2).map(m => m.mod_name).join(', ')} - нові блоки, предмети, функції, що розширюють ігровий світ.`;
-  // const canonical = `https://fsbox.pp.ua/mods/tags/${tag}`;
   const canonical = getCanonical(decodedTag, game, gameSlug);
 
 
